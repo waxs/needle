@@ -1,0 +1,117 @@
+/** ----------------------------------------
+     Body
+ ---------------------------------------- */
+
+body {
+    padding: 0.5rem 2rem;
+    font-family: "Helvetica Neue";
+    font-size: 18px;
+    line-height: 1;
+    color: #787879;
+}
+
+* {
+    border: 0
+}
+
+/** ----------------------------------------
+     Headings
+ ---------------------------------------- */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 1.5rem 0 0.5rem;
+    color: #3F3F3F;
+}
+
+p {
+    margin-bottom: 1.25rem;
+    font-size: 15px;
+    color: #3F3F3F;
+}
+
+/** ----------------------------------------
+     Code
+ ---------------------------------------- */
+
+code {
+    padding: 0;
+    font-size: 16px;
+    display: inline-block;
+    white-space: pre-wrap
+}
+
+/** ----------------------------------------
+     Table
+ ---------------------------------------- */
+
+table {
+    width: 100%;
+    border: 1px solid #C5C5C5 !important;
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+table > * {
+    border: 0;
+}
+
+tr, td, th {
+    margin: 0;
+    border-bottom: 1px solid #DDDDDD;
+    vertical-align: middle;
+}
+
+th, td {
+    padding: 0.5rem 1rem;
+}
+
+/** ----------------------------------------
+     Table Head
+ ---------------------------------------- */
+
+thead {
+    background: #F7F7F7;
+}
+
+th {
+    font-weight: bold;
+    text-transform: capitalize;
+    text-align: left;
+}
+
+/** ----------------------------------------
+     Table Content
+ ---------------------------------------- */
+
+tbody {
+
+}
+
+/** ----------------------------------------
+     Table Row
+ ---------------------------------------- */
+
+table tr:last-of-type {
+    border-bottom: 0;
+}
+
+tr {
+
+}
+
+tr:nth-of-type(even) {
+    background: #FBFBFC;
+}
+
+/** ----------------------------------------
+     Table Cell
+ ---------------------------------------- */
+
+td {
+    border-bottom: 1px solid #ddd;
+}

@@ -1,0 +1,51 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Needle Demo 3: Print</title>
+    <link rel="stylesheet" href="./assets/style.css">
+</head>
+<body>
+
+<!-- RESULTS -->
+<h2>Results</h2>
+<p>Using the print method to log results to the DOM, used for testing purposes. Look at the page source for the query
+    .</p>
+<code id="result"></code>
+
+<!-- ORIGINAL DATA -->
+<h2>Original</h2>
+<p>The original data that was loaded in the original state before manipulating.</p>
+<div id="original"></div>
+
+<!-- SCRIPTS -->
+<script src="./demo/data.js"></script>
+<script src="./demo/template.js"></script>
+<script src=".././dist/needle.js"></script>
+
+<script>
+
+    /** ----------------------------------------
+         Needle
+     ---------------------------------------- */
+
+    const needle = new Needle(data);
+
+    /** ----------------------------------------
+         Original Data
+     ---------------------------------------- */
+
+    needle
+        .template(data => html(data, '#original'));
+
+    /** ----------------------------------------
+         Query
+     ---------------------------------------- */
+
+    needle
+        .sort('age')
+        .print();
+
+</script>
+</body>
+</html>
