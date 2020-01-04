@@ -1,0 +1,20 @@
+{
+  "name": "needle",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/needle.js",
+  "scripts": {
+    "start": "webpack --config webpack.config.js --progress --profile --colors --watch --mode=development",
+    "build": "webpack --config webpack.config.js --progress --profile --bail --mode=production"
+  },
+  "author": "Sander Hidding",
+  "license": "MIT",
+  "devDependencies": {
+    "@babel/core": "^7.7.5",
+    "@babel/preset-env": "^7.7.6",
+    "babel-loader": "^8.0.6",
+    "webpack": "^4.41.2",
+    "webpack-cli": "^3.3.10",
+    "webpack-dev-server": "^3.9.0"
+  }
+}
