@@ -17,6 +17,7 @@ simple helpers to quickly differentiate your data using chained methods.
 3.1 [Numbers](#numbers)  
 3.2 [Calculate](#calculate)  
 3.3 [Dates](#dates)  
+3.4 [Matches](#matches)  
 4. [About](#about)  
 
 ## Getting started
