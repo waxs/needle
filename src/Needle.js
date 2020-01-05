@@ -45,6 +45,18 @@ class Needle {
     }
 
     /** ----------------------------------------
+        Filter Helper
+     ---------------------------------------- */
+
+    _deep(key, item) {
+        return Object.keys(item).filter(key => typeof item[key] === 'object' && item);
+    }
+
+    _find(key, value, data = this._data) {
+        return data.filter(item => item[key] === value);
+    }
+
+    /** ----------------------------------------
         Filter
      ---------------------------------------- */
 
@@ -58,13 +70,41 @@ class Needle {
         return this._chain(filter);
     }
 
-    _find(key, value) {
-        return this._data.filter(item => item[key] === value);
+    hasDeep(key) {
+        const array = [];
+
+        const finder = (key, data = this._data, prev) => {
+            data.forEach(item => {
+                const obj = prev || item;
+                const deep = this._deep(key, item);
+                item.hasOwnProperty(key) && array.push(obj)
+                deep.length && finder(key, deep.map(key => item[key]), obj);
+            });
+        }
+
+        finder(key);
+        return this._chain(array);
     }
 
     find(key, value) {
         const filter = this._find(key, value);
         return this._chain(filter);
+    }
+
+    findDeep(key, value) {
+        const array = [];
+
+        const finder = (key, value, data = this._data, prev) => {
+            data.forEach(item => {
+                const obj = prev || item;
+                const deep = this._deep(key, item);
+                item[key] === value && array.push(obj);
+                deep.length && finder(key, value, deep.map(key => item[key]), obj);
+             });
+        };
+
+        finder(key, value);
+        return this._chain(array);
     }
 
     /** ----------------------------------------

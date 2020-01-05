@@ -48,8 +48,10 @@ manipulate an array of contents. Let's dive a little deeper into the options you
     * `after()` take items from after a given date
     * `period()` take items from in between two dates
     * `is()` retrieve items with a bool value that is true
-    * `find()` find will retrieve objects with a key value pair match
     * `has()` retrieve items if a given key is present in the object
+    * `hasDeep()` retrieve items if a given key is present in a nested object
+    * `find()` find will retrieve objects with a key value pair match
+    * `findDeep()` find will retrieve objects with a nested key value pair match
     
 ### Examples
 This repository holds multiple examples of using Needle JS with a simple `index.html` that will visualise results and
@@ -337,6 +339,43 @@ const result = needle
 console.log(result);
 ```
 
+#### Has
+To retrieve items with a specific key present within the object use the `has()` method. This will only retrieve 
+items that have the given key available within the object. Specify the key as a parameter in the method. 
+
+```javascript
+const result = needle
+    .has('city')
+    .take();
+    
+console.log(result);
+```
+
+### Has Deep
+The `hasDeep()` method will look for nested keys inside an item and retrieve all items that match the given criteria.
+ This recursive function will demand more performance if large items are provided. 
+```javascript
+const data = [
+    {
+        active: true,
+        created: '1/1/2020',
+        name: 'Sander',
+        age: 30,
+        city: 'Amsterdam',
+        contact: {
+            website: 'http://sanderhidding.nl',
+            github: 'waxs'
+        }
+    }
+]
+
+const needle = new Needle(data);
+
+needle
+    .hasDeep('github')
+    .log();
+```
+
 #### Find
 To find a match on a specific value use the `find()` method. Be aware that find only works on the first layer of keys
  and does not check recursively for nested keys hold within the object. 
@@ -348,16 +387,30 @@ const result = needle
 console.log(result);
 ```
 
-#### Has
-To retrieve items with a specific key present within the object use the `has()` method. This will only retrieve 
-items that have the given key available within the object. Specify the key as a parameter in the method. 
-
+#### Find Deep
+The `findDeep()` method is an advanced way of looking for key value pairs within an item. The regular `find()` method
+ will only look for the first layer of keys, the `findDeep()` method will also look within nested objects inside the 
+ item. This process is more demanding and will take more performance from the browser. 
 ```javascript
-const result = needle
-    .has('city')
-    .take();
-    
-console.log(result);
+const data = [
+    {
+        active: true,
+        created: '1/1/2020',
+        name: 'Sander',
+        age: 30,
+        city: 'Amsterdam',
+        contact: {
+            website: 'http://sanderhidding.nl',
+            github: 'waxs'
+        }
+    }
+]
+
+const needle = new Needle(data);
+
+needle
+    .findDeep('github', 'waxs')
+    .log();
 ```
 
 ## About
