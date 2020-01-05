@@ -2,7 +2,7 @@
 Remember when jQuery was like a big thing and you used to chain methods just to work around some basic DOM 
 manipulation. Chaining is fun, but also a bit harsh on your memory. Despite all that, let's have some fun chaining 
 like back in the good 'ol days. Needle is a clean helper to find your needle in a haystack of data. Needle has some 
-simple helpers to quickly differentiate your data using chained methods. 
+simple helpers to quickly differentiate your data using chained methods being only `6KB` in size.
 
 ## Topics
 1. [Getting started](#getting-started)  
@@ -307,7 +307,7 @@ Using the before or after method a selection of items can be retrieved from eith
 Both a `key` and `value` need to be passed to retrieve all items that match the given query. 
 ```javascript
 const result = needle
-    .before('created', ['10/1/2020'])
+    .before('created', '10/1/2020')
     .take();
     
 console.log(result);
@@ -351,7 +351,7 @@ const result = needle
 console.log(result);
 ```
 
-### Has Deep
+#### Has Deep
 The `hasDeep()` method will look for nested keys inside an item and retrieve all items that match the given criteria.
  This recursive function will demand more performance if large items are provided. 
 ```javascript
