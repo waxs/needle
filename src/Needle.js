@@ -40,6 +40,13 @@ class Needle {
          Chain
      ---------------------------------------- */
 
+    /**
+     * The chain method returns a new instance
+     * of the Needle class.
+     *
+     * @param { array } data - new array of manipulated data
+     */
+
     _chain(data) {
         return new Needle(data);
     }
@@ -69,15 +76,39 @@ class Needle {
         Filter
      ---------------------------------------- */
 
+    /**
+     * Check for a boolean value of a specific
+     * key as passed as an argument. Will only
+     * look for first layer of keys.
+     *
+     * @param { string } key - selected key
+     */
+
     is(key) {
         const filter = this._data.filter(item => item[key]);
         return this._chain(filter);
     }
 
+    /**
+     * The has method will look if a given key
+     * is present within the object, will only
+     * look for the first layer of keys.
+     *
+     * @param { string } key - selected key
+     */
+
     has(key) {
         const filter = this._data.filter(item => item.hasOwnProperty(key));
         return this._chain(filter);
     }
+
+    /**
+     * The hasDeep method will look if a given key
+     * is present within the object and loop through
+     * available nested objects within the given item.
+     *
+     * @param { string } key - selected key
+     */
 
     hasDeep(key) {
         const array = [];
@@ -95,10 +126,30 @@ class Needle {
         return this._chain(array);
     }
 
+    /**
+     * The find method will return a specific
+     * key value pair within the object, the
+     * find method only look for the first
+     * layer of keys present in the item.
+     *
+     * @param { string } key - selected key
+     * @param { string } value - matching value
+     */
+
     find(key, value) {
         const filter = this._find(key, value);
         return this._chain(filter);
     }
+
+    /**
+     * The findDeep method will return a specific
+     * key value pair within the object, the
+     * findDeep method will also look for any
+     * nested object inside the item.
+     *
+     * @param { string } key - selected key
+     * @param { string } value - matching value
+     */
 
     findDeep(key, value) {
         const array = [];
@@ -142,15 +193,38 @@ class Needle {
         return this._chain(filter);
     }
 
+    /**
+     * The equal method will look for a matching
+     * item within the data array. This method
+     * uses the operator helper method.
+     *
+     * @param { string } key - selected key
+     * @param { string } value - matching value
+     */
+
     equal(key, value) {
         const filter = this._operator(key, '=', value);
         return new Needle(filter);
     }
 
+    /**
+     * The min method will map the data array
+     * and retrieve minimum of a given key.
+     *
+     * @param { string } key - selected key
+     */
+
     min(key) {
         const min = Math.min(...this._data.map(item => item[key]));
         return this.find(key, min);
     }
+
+    /**
+     * The max method will map the data array
+     * and retrieve maximum of a given key.
+     *
+     * @param { string } key - selected key
+     */
 
     max(key) {
         const max = Math.max(...this._data.map(item => item[key]));
@@ -160,6 +234,14 @@ class Needle {
     /** ----------------------------------------
          Calc
      ---------------------------------------- */
+
+    /**
+     * The sum method will retrieve the sum of
+     * a given key, meaning sum every value of
+     * the given key present within the data array.
+     *
+     * @param { string } key - selected key
+     */
 
     sum(key) {
         this._calc = this._data.reduce((total, item) => total + item[key], 0);
