@@ -162,13 +162,13 @@ class Needle {
      * required it will limit itself to the
      * total amount of items present.
      *
-     * @param { number } number - selected amount of items
+     * @param { number } amount - selected amount of items
      * @returns { array } - array of (manipulated) data
      */
 
-    take(number) {
-        const select = this._data.slice(0, number);
-        const all = !number || number >= this._data.length;
+    take(amount) {
+        const select = this._data.slice(0, amount);
+        const all = !amount || amount >= this._data.length;
         return all && this._data || select;
     }
 
@@ -185,14 +185,36 @@ class Needle {
     select(...keys) {
         const select = this._data.map(item => {
             const obj = {};
+
             keys.forEach(key => {
                 const deep = key.indexOf('.') !== -1 && this._objPath(key);
                 if(item[key] || item[deep[0]]) deep ? obj[deep.slice(-1)[0]] = this._objReduce(deep, item) : obj[key] = item[key];
             });
+
             return obj;
         });
 
         return this._chain(select);
+    }
+
+    /**
+     * The chunk method will return chunks of data
+     * based on a given amount per chunk. Meaning,
+     * the data will be defined into separate sections
+     * based on the amount declared as a parameter.
+     *
+     * @param { number } number - selected amount of items
+     * @returns { array } - will return an array with chunks
+     */
+
+    chunk(amount) {
+        let temp = [];
+
+        for (let i = 0; i < this._data.length; i+= amount) {
+            temp.push(this._data.slice(i, i + amount));
+        }
+
+        return temp;
     }
 
     /**
