@@ -35,6 +35,36 @@ p {
 }
 
 /** ----------------------------------------
+     Button
+ ---------------------------------------- */
+
+.buttons {
+    display: block;
+    overflow: auto;
+}
+
+button {
+    width: auto;
+    height: auto;
+    margin: 0.5rem 0;
+    padding: 0.5rem 0.75rem;
+    border: 1px solid #C5C5C5;
+    background: #F7F7F7;
+    font-size: 1em;
+    color: #787879;
+    display: inline-block;
+    outline: none;
+}
+
+#js-prev {
+    float: left;
+}
+
+#js-next {
+    float: right;
+}
+
+/** ----------------------------------------
      Code
  ---------------------------------------- */
 

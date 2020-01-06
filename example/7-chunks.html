@@ -1,0 +1,72 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Needle Demo 7: Chunks</title>
+    <link rel="stylesheet" href="./assets/style.css">
+</head>
+<body>
+
+<!-- RESULTS -->
+<h2>Results</h2>
+<p>Result have been <u>limited from created after 2020</u> and reduced to <u>selection of name, age and city</u>.
+    Look at the page source for the query.</p>
+
+<div class="buttons">
+    <button id="js-prev">Previous</button>
+    <button id="js-next">Next</button>
+</div>
+
+<div id="result"></div>
+
+<!-- ORIGINAL DATA -->
+<h2>Original</h2>
+<p>The original data that was loaded in the original state before manipulating.</p>
+<div id="original"></div>
+
+<!-- SCRIPTS -->
+<script src="./demo/data.js"></script>
+<script src="./demo/template.js"></script>
+<script src=".././dist/needle.js"></script>
+
+<script>
+
+    /** ----------------------------------------
+         Needle
+     ---------------------------------------- */
+
+    const needle = new Needle(data);
+
+    /** ----------------------------------------
+         Original Data
+     ---------------------------------------- */
+
+    needle
+        .template(data => html(data, '#original'));
+
+    /** ----------------------------------------
+         Chunk
+     ---------------------------------------- */
+
+    const chunks = needle
+        .chunk(2)
+        .start(data => html(data, '#result'));
+
+    /** ----------------------------------------
+         Events
+     ---------------------------------------- */
+
+    const prev = document.getElementById('js-prev');
+    const next = document.getElementById('js-next');
+
+    prev.addEventListener('click', () => {
+        chunks.prev().template(data => html(data, '#result'));
+    });
+
+    next.addEventListener('click', () => {
+        chunks.next().template(data => html(data, '#result'));
+    });
+
+</script>
+</body>
+</html>
