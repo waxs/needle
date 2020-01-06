@@ -180,12 +180,37 @@ original path to the value, meaning `contact.website` is reduced to a first laye
 
 #### Chunk
 The `chunk()` method will divide the data into separate chunks of data based on a given amount and return
- an array containing these chunks as separate arrays. 
- 
+ an array containing these chunks as separate arrays. Besides the chunks the method will also return some information
+  about the amount of chunks and size.
 ```javascript
 needle.chunk(5);
 ```
-The example above will return an array containing chunks of 5. 
+The example above will return an array containing chunks of 5. The `chunk()` method will however return an object, 
+with multiple sets of data and a `prev()` function as well as a `next()` function to retrieve the data set from the 
+next or previous chunk. Here is an example.
+```javascript
+{
+    chunks: [[...], [...]],
+    current: 0,
+    start: [...],
+    amount: 2,
+    size: 5,
+    prev: ƒ prev(),
+    next: ƒ next()
+}
+```
+In this case we assume we retrieved chunks with a `size` of 5. The `amount` of chunks is equal to 2 based on a 
+dataset of 10. The `start` key holds the first chunk and the `current` position of the chunk is equal to 0. Using the
+ `prev()` or `next()` function we can navigate through the chunks. 
+```javascript
+const chunks = needle.chunk(3);
+
+chunks
+    .next()
+    .log();
+```
+The example above will log the next set of chunks. The`next()` or `prev()` function can be extended with the 
+modifiers available within Needle. 
 
 #### Index
 To get an exact index use the `index()` method. This will take the third item from the array. It will return a single
