@@ -1,0 +1,52 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Needle Demo 6: Select</title>
+    <link rel="stylesheet" href="./assets/style.css">
+</head>
+<body>
+
+<!-- RESULTS -->
+<h2>Results</h2>
+<p>Result have been <u>limited from created after 2020</u> and reduced to <u>selection of name, age and city</u>.
+    Look at the page source for the query.</p>
+<div id="result"></div>
+
+<!-- ORIGINAL DATA -->
+<h2>Original</h2>
+<p>The original data that was loaded in the original state before manipulating.</p>
+<div id="original"></div>
+
+<!-- SCRIPTS -->
+<script src="./demo/data.js"></script>
+<script src="./demo/template.js"></script>
+<script src=".././dist/needle.js"></script>
+
+<script>
+
+    /** ----------------------------------------
+         Needle
+     ---------------------------------------- */
+
+    const needle = new Needle(data);
+
+    /** ----------------------------------------
+         Original Data
+     ---------------------------------------- */
+
+    needle
+        .template(data => html(data, '#original'));
+
+    /** ----------------------------------------
+         Query
+     ---------------------------------------- */
+
+    needle
+        .after('created', '1/1/2020')
+        .select('name', 'age', 'city')
+        .template(data => html(data, '#result'));
+
+</script>
+</body>
+</html>
