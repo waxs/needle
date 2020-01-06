@@ -216,15 +216,21 @@ class Needle {
             this._chunks.data.push(this._data.slice(i, i + amount));
         }
 
-        return {
+        const chunked = {
             chunks: this._chunks.data,
             current: this._chunks.selected,
-            start: this._chunks.data[0],
             amount: this._chunks.data.length,
             size: amount,
             prev: () => this._prevChunk(),
             next: () => this._nextChunk()
         };
+
+        chunked['start'] = callback => {
+            this.template(callback, this._chunks.data[0]);
+            return chunked;
+        }
+
+        return chunked;
     }
 
     _prevChunk() {
@@ -390,8 +396,8 @@ class Needle {
      * @param { function } callback - executable
      */
 
-    template(callback) {
-        return this._data.forEach(item =>  callback(item));
+    template(callback, data = this._data) {
+        return data.forEach(item =>  callback(item));
     }
 
     /** ----------------------------------------

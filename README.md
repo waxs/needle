@@ -211,6 +211,26 @@ chunks
 ```
 The example above will log the next set of chunks. The`next()` or `prev()` function can be extended with the 
 modifiers available within Needle. This makes it easy to individually manipulate every chunk of data. 
+```javascript
+const chunks = needle
+    .chunk(2)
+    .start(data => html(data));
+```
+And initial load can be created using the start function. This will be the first chunk of data. It uses an 
+implementation of the `template()` method. An example using events is added in the example folder. A example is shown
+ below.
+```javascript
+const prev = document.getElementById('js-prev');
+const next = document.getElementById('js-next');
+
+prev.addEventListener('click', () => {
+    chunks.prev().template(data => html(data));
+});
+
+next.addEventListener('click', () => {
+    chunks.next().template(data => html(data));
+});
+```
 
 #### Index
 To get an exact index use the `index()` method. This will take the third item from the array. It will return a single
