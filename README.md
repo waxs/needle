@@ -224,12 +224,7 @@ And initial load can be created using the start function. This will be the first
 implementation of the `template()` method. An example using events is added in the example folder. A example is shown
  below.
 ```javascript
-const prev = document.getElementById('js-prev');
 const next = document.getElementById('js-next');
-
-prev.addEventListener('click', () => {
-    chunks.prev().template(data => html(data));
-});
 
 next.addEventListener('click', () => {
     chunks.next().template(data => html(data));
