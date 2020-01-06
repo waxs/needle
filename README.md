@@ -26,6 +26,7 @@ manipulate an array of contents. Let's dive a little deeper into the options you
 
 * **Data**
     * `take()` will retrieve an amount of manipulated data
+    * `select()` create new items based on given keys
     * `index()` will retrieve a given index from the manipulated data
     * `get()` will return the latest state of the Needle object 
     * `first()` will return the first item from the manipulated data
@@ -127,6 +128,44 @@ present from the manipulated array. By default the take function will return all
 ```javascript
 needle.take(3);
 ```
+
+#### Select
+If needed a manipulated selection can be retrieved from the array with the `select()` method. With the `select()` 
+method a new object will be returned that contains the given selection of keys. Meaning the original item has been 
+reduced to the given keys. Let's look at a example. 
+```javascript
+const data = [
+    {
+        active: true,
+        created: '1/1/2020',
+        name: 'Sander',
+        age: 30,
+        city: 'Amsterdam',
+        contact: {
+            website: 'http://sanderhidding.nl',
+            github: 'waxs'
+        }
+    }
+]
+
+const needle = new Needle(data);
+
+needle
+    .select(['name', 'age', 'contact.website'])
+    .log();
+```
+This query will result in the following item to be returned. 
+```javascript
+[
+    {
+        name: 'Sander',
+        age: 30,
+        website: 'http://sanderhidding.nl'
+    }
+]
+```
+In the above example we also see how to reach nested values inside an object. The select method will also reduce the 
+original path to the value, meaning `contact.website` is reduced to a first layer key `website`.
 
 #### Index
 To get an exact index use the `index()` method. This will take the third item from the array. It will return a single
