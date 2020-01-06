@@ -15,16 +15,15 @@ simple helpers to quickly differentiate your data using chained methods being on
 2.4 [Template](#template) 
 3. [Manipulating](#manipulating)  
 3.1 [Numbers](#numbers)  
-3.2 [Calculate](#calculate)  
-3.3 [Dates](#dates)  
-3.4 [Matches](#matches)  
+3.2 [Dates](#dates)  
+3.3 [Matches](#matches)  
 4. [About](#about)  
 
 ## Getting started
-Needle has been build taking initiative use in account. There are multiple helpers to help you sort, retrieve or 
+Needle has been build taking intuitive use in account. There are multiple helpers to help you sort, retrieve or 
 manipulate an array of contents. Let's dive a little deeper into the options you can use with Needle. 
 
-* **Data**
+* **Retrieve Data**
     * `take()` will retrieve an amount of manipulated data
     * `select()` create new items based on given keys
     * `index()` will retrieve a given index from the manipulated data
@@ -32,13 +31,19 @@ manipulate an array of contents. Let's dive a little deeper into the options you
     * `first()` will return the first item from the manipulated data
     * `last()` will return the last item from the manipulated data
     * `count()` will count the amount of results and return a number
+
+* **Sorting**    
     * `sort()` will sort the results `asc` or `desc`
+    
+* **Debugging**    
     * `log()` will log results to the console
     * `print()` will print results to the DOM
     * `random()` will retrieve a random amount of items 
+    
+* **Template**
     * `template()` can be used to template results with custom markup
     
-* **Queries and manipulation**
+* **Numbers**
     * `smaller()` retrieve items smaller than a given parameter
     * `bigger()` retrieve items bigger than a given parameter
     * `between()` retrieve items in between to given parameters
@@ -46,9 +51,13 @@ manipulate an array of contents. Let's dive a little deeper into the options you
     * `min()` retrieve the minimum value from a given key within the data
     * `max()` retrieve a maximum value from a given key within the data
     * `sum()` sum an amount of numbers from a given key in current data
+    
+* **Dates**
     * `before()` take items from before a given date
     * `after()` take items from after a given date
     * `period()` take items from in between two dates
+    
+* **Matches**
     * `is()` retrieve items with a bool value that is true
     * `has()` retrieve items if a given key is present in the object
     * `hasDeep()` retrieve items if a given key is present in a nested object
@@ -334,12 +343,9 @@ const result = needle
 console.log(result);
 ```
 
-### Calculate
-To quickly sum a total amount of values use the `sum()` method and give it a key to select a value from the 
-manipulated array. The function will return the total value of all (leftover) items within the array. For example.
-
 #### Sum
-The example as shown below, based on the data object as present in the first example will result in 101. 
+To quickly sum a total amount of values use the `sum()` method and give it a key to select a value from the 
+manipulated array. The function will return the total value of all (leftover) items within the array. The example as shown below, based on the data object as present in the first example will result in 101. 
 
 ```javascript
 const result = needle
