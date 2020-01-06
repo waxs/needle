@@ -203,14 +203,14 @@ In this case we assume we retrieved chunks with a `size` of 5. The `amount` of c
 dataset of 10. The `start` key holds the first chunk and the `current` position of the chunk is equal to 0. Using the
  `prev()` or `next()` function we can navigate through the chunks. 
 ```javascript
-const chunks = needle.chunk(3);
+const chunks = needle.chunk(5);
 
 chunks
     .next()
     .log();
 ```
 The example above will log the next set of chunks. The`next()` or `prev()` function can be extended with the 
-modifiers available within Needle. 
+modifiers available within Needle. This makes it easy to individually manipulate every chunk of data. 
 
 #### Index
 To get an exact index use the `index()` method. This will take the third item from the array. It will return a single
