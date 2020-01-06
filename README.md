@@ -26,7 +26,7 @@ manipulate an array of contents. Let's dive a little deeper into the options you
 * **Retrieve Data**
     * `take()` will retrieve an amount of manipulated data
     * `select()` create new items based on given keys
-    * `chunk()` create chunks of data
+    * `chunk()` create chunks of data contains `next()`, `prev()` and `start()` function.
     * `index()` will retrieve a given index from the manipulated data
     * `get()` will return the latest state of the Needle object 
     * `first()` will return the first item from the manipulated data
@@ -192,7 +192,7 @@ next or previous chunk. Here is an example.
 {
     chunks: [[...], [...]],
     current: 0,
-    start: [...],
+    start: ƒ this.template(),
     amount: 2,
     size: 5,
     prev: ƒ prev(),
@@ -200,7 +200,11 @@ next or previous chunk. Here is an example.
 }
 ```
 In this case we assume we retrieved chunks with a `size` of 5. The `amount` of chunks is equal to 2 based on a 
-dataset of 10. The `start` key holds the first chunk and the `current` position of the chunk is equal to 0. Using the
+dataset of 10. The `start` key returns the first chunk as a `template()` method and the `current` position of the chunk
+ is 
+equal to
+ 0. Using
+ the
  `prev()` or `next()` function we can navigate through the chunks. 
 ```javascript
 const chunks = needle.chunk(5);
