@@ -42,6 +42,7 @@ manipulate an array of contents. Let's dive a little deeper into the options you
     * `smaller()` retrieve items smaller than a given parameter
     * `bigger()` retrieve items bigger than a given parameter
     * `between()` retrieve items in between to given parameters
+    * `equal()` retrieve an equal to item from the data
     * `min()` retrieve the minimum value from a given key within the data
     * `max()` retrieve a maximum value from a given key within the data
     * `sum()` sum an amount of numbers from a given key in current data
@@ -305,6 +306,16 @@ between method. It takes two parameters, a `key` and an `array` containing both 
 ```javascript
 const result = needle
     .between('age', [25, 35])
+    .take();
+    
+console.log(result);
+```
+
+#### Equal
+With the `equal()` method a specific number can be found inside the array of given items. 
+```javascript
+const result = needle
+    .equal('age', 30)
     .take();
     
 console.log(result);
