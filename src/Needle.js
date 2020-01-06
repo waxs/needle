@@ -116,18 +116,18 @@ class Needle {
     }
 
     smaller(key, value, date = false) {
-        const filter = this._operator(key, '<', value, date);
+        const filter = this._operator(key, '<=', value, date);
         return this._chain(filter);
     }
 
     bigger(key, value, date = false) {
-        const filter = this._operator(key, '>', value, date);
+        const filter = this._operator(key, '>=', value, date);
         return this._chain(filter);
     }
 
     between(key, values, date = false) {
         const filter = this._data.filter(item => {
-            return util.evaluate(item[key], '>', values[0], date) && util.evaluate(item[key], '<', values[1], date)
+            return util.evaluate(item[key], '>=', values[0], date) && util.evaluate(item[key], '<=', values[1], date)
         });
 
         return this._chain(filter);
