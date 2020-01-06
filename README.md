@@ -26,6 +26,7 @@ manipulate an array of contents. Let's dive a little deeper into the options you
 * **Retrieve Data**
     * `take()` will retrieve an amount of manipulated data
     * `select()` create new items based on given keys
+    * `chunk()` create chunks of data
     * `index()` will retrieve a given index from the manipulated data
     * `get()` will return the latest state of the Needle object 
     * `first()` will return the first item from the manipulated data
@@ -176,6 +177,15 @@ This query will result in the following item to be returned.
 ```
 In the above example we also see how to reach nested values inside an object. The select method will also reduce the 
 original path to the value, meaning `contact.website` is reduced to a first layer key `website`.
+
+#### Chunk
+The `chunk()` method will divide the data into separate chunks of data based on a given amount and return
+ an array containing these chunks as separate arrays. 
+ 
+```javascript
+needle.chunk(5);
+```
+The example above will return an array containing chunks of 5. 
 
 #### Index
 To get an exact index use the `index()` method. This will take the third item from the array. It will return a single
