@@ -56,6 +56,15 @@ class Needle {
         return data.filter(item => item[key] === value);
     }
 
+    _objPath(keys) {
+        return keys.split('.');
+    }
+
+    _objReduce(array, item) {
+        return array.map(key => key)
+            .reduce((array, key) => array[key], item);
+    }
+
     /** ----------------------------------------
         Filter
      ---------------------------------------- */
@@ -181,6 +190,18 @@ class Needle {
         const select = this._data.slice(0, number);
         const all = !number || number >= this._data.length;
         return all && this._data || select;
+    }
+
+    select(...keys) {
+        const select = this._data.map(item => {
+            const obj = {};
+            keys.forEach(key => {
+                const deep = key.indexOf('.') !== -1 && this._objPath(key);
+                if(item[key] || item[deep[0]]) deep ? obj[deep.slice(-1)[0]] = this._objReduce(deep, item) : obj[key] = item[key];
+            });
+            return obj;
+        });
+        return this._chain(select);
     }
 
     index(id) {
