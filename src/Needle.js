@@ -21,6 +21,7 @@ class Needle {
         model = model.length ? model : data;
         this._amount = data.length;
         this._calc = 0;
+        this._chunks = [];
         this._data = data;
     }
 
@@ -204,17 +205,38 @@ class Needle {
      * based on the amount declared as a parameter.
      *
      * @param { number } number - selected amount of items
-     * @returns { array } - will return an array with chunks
+     * @returns { object } - will return an object with chunk data
      */
 
     chunk(amount) {
-        let temp = [];
+        this._chunks['data'] = [];
+        this._chunks['current'] = 0;
 
         for (let i = 0; i < this._data.length; i+= amount) {
-            temp.push(this._data.slice(i, i + amount));
+            this._chunks.data.push(this._data.slice(i, i + amount));
         }
 
-        return temp;
+        return {
+            chunks: this._chunks.data,
+            current: this._chunks.selected,
+            start: this._chunks.data[0],
+            amount: this._chunks.data.length,
+            size: amount,
+            prev: () => this._prevChunk(),
+            next: () => this._nextChunk()
+        };
+    }
+
+    _prevChunk() {
+        const chunk = this._chunks;
+        chunk.current += chunk.current === 0 ? chunk.data.length - 1 : -1;
+        return this._chain(chunk.data[chunk.current]);
+    }
+
+    _nextChunk() {
+        const chunk = this._chunks;
+        chunk.current += chunk.current < chunk.data.length - 1 ? 1 : -Math.abs(chunk.data.length - 1);
+        return this._chain(chunk.data[chunk.current]);
     }
 
     /**
