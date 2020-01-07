@@ -18,5 +18,15 @@
     "webpack": "^4.41.2",
     "webpack-cli": "^3.3.10",
     "webpack-dev-server": "^3.9.0"
+  },
+  "jest": {
+    "modulePaths": [
+      "<rootDir>"
+    ],
+    "moduleNameMapper": {
+      "^@build(.*)$": "<rootDir>/dist$1",
+      "^@js(.*)$": "<rootDir>/src$1",
+      "^@mock(.*)$": "<rootDir>/example$1"
+    }
   }
 }

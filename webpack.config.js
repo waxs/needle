@@ -34,6 +34,11 @@ module.exports = {
         ]
     },
     resolve: {
+        alias: {
+            '@build': path.resolve(__dirname, 'dist/'),
+            '@js': path.resolve(__dirname, 'src/'),
+            '@mock': path.resolve(__dirname, 'example/')
+        },
         extensions: ['*', '.js']
     }
 };
