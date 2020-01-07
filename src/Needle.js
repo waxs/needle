@@ -287,7 +287,7 @@ class Needle {
 
     first() {
         const select = this._data[0];
-        return this._chain(select);
+        return this._chain([select]);
     }
 
     /**
@@ -299,7 +299,7 @@ class Needle {
 
     last() {
         const select = this._data.slice(-1)[0];
-        return this._chain(select);
+        return this._chain([select]);
     }
 
     /**
