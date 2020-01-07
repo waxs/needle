@@ -37,7 +37,7 @@ module.exports = {
         alias: {
             '@build': path.resolve(__dirname, 'dist/'),
             '@js': path.resolve(__dirname, 'src/'),
-            '@mock': path.resolve(__dirname, 'example/')
+            '@mock': path.resolve(__dirname, 'mockup/')
         },
         extensions: ['*', '.js']
     }
