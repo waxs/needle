@@ -12,7 +12,7 @@ import Needle from '@js/Needle';
 const needle = new Needle(data);
 
 /** ----------------------------------------
-     Test Find
+     Test has()
  ---------------------------------------- */
 
 describe('Using has() method for first layer key match', () => {

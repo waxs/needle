@@ -12,7 +12,7 @@ import Needle from '@js/Needle';
 const needle = new Needle(data);
 
 /** ----------------------------------------
-     Test Find
+     Test hasDeep()
  ---------------------------------------- */
 
 describe('Using hasDeep() method for nested key match', () => {

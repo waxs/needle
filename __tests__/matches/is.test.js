@@ -12,11 +12,11 @@ import Needle from '@js/Needle';
 const needle = new Needle(data);
 
 /** ----------------------------------------
-     Test Find
+     Test is()
  ---------------------------------------- */
 
-describe('Using has() method for first layer key match', () => {
-    test('It should display item: Nicole', () => {
+describe('Using is() method for bool key match', () => {
+    test('It should display items: Sander and John', () => {
         const input = data;
 
         const output = [

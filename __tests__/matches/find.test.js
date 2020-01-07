@@ -12,7 +12,7 @@ import Needle from '@js/Needle';
 const needle = new Needle(data);
 
 /** ----------------------------------------
-     Test Find
+     Test find()
  ---------------------------------------- */
 
 describe('Using find() method for first layer key match', () => {
