@@ -19,8 +19,9 @@ simple helpers to quickly differentiate your data using chained methods being on
 3.3 [Matches](#matches) 
 4. [Handle](#handle)   
 4.1 [CRUD](#crud)   
-4.2 [Store](#store)   
-5. [About](#about)  
+4.2 [Store](#store) 
+5. [Testing](#testing)    
+6. [About](#about)  
 
 ## Getting started
 Needle has been build taking intuitive use in account. There are multiple helpers to help you sort, retrieve or 
@@ -539,6 +540,10 @@ needle
     .findDeep('github', 'waxs')
     .log();
 ```
+
+## Testing
+Needle methods can be tested using Jest, running the `npm run test` command will execute a number of test to make 
+sure basic functionality is working as expected. Test scripts can be found in the `__test__` folder.  
 
 ## About
 This repository is mainly intended as an experiment and to have some fun, a folder with examples is available within 
