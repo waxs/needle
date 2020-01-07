@@ -15,7 +15,7 @@ const needle = new Needle(data);
      Test period()
  ---------------------------------------- */
 
-describe('Using before() method for date range match', () => {
+describe('Using period() method for date range match', () => {
     test('It should display item: Sander', () => {
         const input = data;
 
