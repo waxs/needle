@@ -6,6 +6,34 @@
     <title>Needle</title>
 </head>
 <body>
-    <script src="./dist/needle.min.js"></script>
+
+<div id="result"></div>
+
+<!-- SCRIPTS -->
+<script src="example/demo/simple.js"></script>
+<script src="./example/demo/template.js"></script>
+<script src="./dist/needle.js"></script>
+
+<script>
+
+    /** ----------------------------------------
+        Needle
+     ---------------------------------------- */
+
+    const needle = new Needle(data, {
+        'sander': 'hallo'
+    });
+
+    /** ----------------------------------------
+        Query
+     ---------------------------------------- */
+
+    const result = needle
+        .find('name', 'Sander')
+        .take();
+
+    console.log(result);
+
+</script>
 </body>
 </html>

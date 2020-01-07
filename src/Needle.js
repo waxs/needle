@@ -23,6 +23,7 @@ class Needle {
         this._calc = 0;
         this._chunks = [];
         this._data = data;
+        this._settings = settings;
     }
 
     /** ----------------------------------------
@@ -46,6 +47,14 @@ class Needle {
 
     set data(array) {
         this._data = array;
+    }
+
+    /** ----------------------------------------
+         Settings
+     ---------------------------------------- */
+
+    get config() {
+        return this._settings;
     }
 
     /** ----------------------------------------
@@ -167,7 +176,7 @@ class Needle {
      * @returns { array } - array of (manipulated) data
      */
 
-    take(amount) {
+    take(amount = this._data.length) {
         const select = this._data.slice(0, amount);
         const all = !amount || amount >= this._data.length;
         return all && this._data || select;
@@ -795,7 +804,7 @@ class Needle {
         store.push({
             name: name,
             id: 1,
-            data: new Needle(this._data),
+            data: this._data,
             time: util.stamp()
         });
 
