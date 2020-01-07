@@ -121,6 +121,10 @@ needle
 The example above will return the first object in the array and log the result to the console. This is because 
 Sara is lacking a city, and the `has()` method returns only items that have a given key present in the object. 
 
+![Example](http://sanderhidding.nl/assets/needle-example.jpg)
+The example folder contains multiple simple queries and visualisations in tables to illustrate the use of Needle in 
+real time. 
+
 ### Initiate Needle JS
 To use Needle we initiate the class as follows, the class expects an array of objects. 
 stick with a clean setup for now.
