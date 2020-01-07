@@ -17,10 +17,10 @@ simple helpers to quickly differentiate your data using chained methods being on
 3.1 [Numbers](#numbers)  
 3.2 [Dates](#dates)  
 3.3 [Matches](#matches) 
-3. [Handle](#handle)   
-3.1 [CRUD](#crud)   
-3.2 [Store](#store)   
-4. [About](#about)  
+4. [Handle](#handle)   
+4.1 [CRUD](#crud)   
+4.2 [Store](#store)   
+5. [About](#about)  
 
 ## Getting started
 Needle has been build taking intuitive use in account. There are multiple helpers to help you sort, retrieve or 
@@ -68,7 +68,7 @@ manipulate an array of contents. Let's dive a little deeper into the options you
     * `find()` find will retrieve objects with a key value pair match
     * `findDeep()` find will retrieve objects with a nested key value pair match
     
-* **CRUD**
+* **Basic CRUD**
     * `create()` create new object in the data set
     * `read()` retrieve single item from the current data set
     * `update()` update single item from data set
