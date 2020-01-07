@@ -16,7 +16,10 @@ simple helpers to quickly differentiate your data using chained methods being on
 3. [Manipulating](#manipulating)  
 3.1 [Numbers](#numbers)  
 3.2 [Dates](#dates)  
-3.3 [Matches](#matches)  
+3.3 [Matches](#matches) 
+3. [Handle](#handle)   
+3.1 [CRUD](#crud)   
+3.2 [Store](#store)   
 4. [About](#about)  
 
 ## Getting started
@@ -64,6 +67,20 @@ manipulate an array of contents. Let's dive a little deeper into the options you
     * `hasDeep()` retrieve items if a given key is present in a nested object
     * `find()` find will retrieve objects with a key value pair match
     * `findDeep()` find will retrieve objects with a nested key value pair match
+    
+* **CRUD**
+    * `create()` create new object in the data set
+    * `read()` retrieve single item from the current data set
+    * `update()` update single item from data set
+    * `updateValue()` update single value from item in data set
+    * `updateAll()` update all items from data set
+    * `delete()` delete index from data set
+    * `deleteValue()` delete single value from item in data set
+    * `deleteAll()` delete all items from data set
+    
+* **Store**
+    * `save()` save a data set to the store
+    * `retrieve()` retrieve a single set from the store
     
 ### Examples
 This repository holds multiple examples of using Needle JS with a simple `index.html` that will visualise results and
@@ -200,7 +217,7 @@ next or previous chunk. Here is an example.
 }
 ```
 In this case we assume we retrieved chunks with a `size` of 5. The `amount` of chunks is equal to 2 based on a 
-dataset of 10. The `start` key returns the first chunk as a `template()` method and the `current` position of the chunk
+data set of 10. The `start` key returns the first chunk as a `template()` method and the `current` position of the chunk
  is 
 equal to
  0. Using

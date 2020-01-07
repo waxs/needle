@@ -659,6 +659,162 @@ class Needle {
         return this._chain(array);
     }
 
+    /** ----------------------------------------
+         Handle
+     ---------------------------------------- */
+
+    /**
+     * The create method will push a new object
+     * to the data set. This can be useful if a user
+     * is able to interact with a set off data.
+     *
+     * @param { object } obj - new object
+     */
+
+    create(obj) {
+       this._data.push(obj);
+       this._chain(this._data);
+    }
+    
+    /**
+     * Retrieve a specific item from the data set.
+     *
+     * @returns { object } - item from data set
+     */
+
+    read(index) {
+        return this._data[index];
+    }
+
+    /**
+     * The update method will basically replace
+     * an excising item within the data set. 
+     *
+     * @params { number } index - index of item
+     * @params { object } obj - new item
+     */
+    
+    update(index, obj) {
+        this._data[index] = obj;
+        this._chain(this._data);
+    }
+
+    /**
+     * Will update a single item key within the 
+     * current data set to a given value.
+     *
+     * @params { number } index - index of item
+     * @params { string } key - target key
+     * @params { any } value - new value for key
+     */
+    
+    updateValue(index, key, value) {
+        this._data[index][key] = value;
+        this._chain(this._data);
+    }
+
+    /**
+     * Will update every key within the current
+     * data set to a given value.
+     *
+     * @params { string } key - target key
+     * @params { any } value - new value for key
+     */
+
+    updateAll(key, value) {
+        this._data.forEach(item => item[key] = value);
+        this._chain(this._data);
+    }
+
+    /**
+     * Delete a single item from the current
+     * data set. Will take the index number
+     * of the item to be removed.
+     *
+     * @params { number } index - index of item
+     */
+    
+    delete(index) {
+        delete this._data[index];
+        this._chain(this._data);
+    }
+
+    /**
+     * With the deleteValue method a single
+     * key can be removed from a given item
+     * within the current data set.
+     *
+     * @params { number } index - index of item
+     * @params { string } key - key to be removed from item
+     */
+
+    deleteValue(index, key) {
+        delete this._data[index][key];
+        this._chain(this._data);
+    }
+
+    /**
+     * The deleteAll method will clear
+     * the current data set.
+     */
+
+    deleteAll() {
+        this._data = [];
+        this._chain(this._data);
+    }
+
+    /** ----------------------------------------
+        Store
+     ---------------------------------------- */
+
+    /**
+     * Using this get function the store can
+     * be retrieved for further manipulation.
+     *
+     * @returns { array } - store
+     */
+
+    get store() {
+        return store;
+    }
+
+    /**
+     * The save method will push a collection
+     * of data to the store. This means selections
+     * can be saved from time to time to create
+     * a snapshot of the current data manipulation.
+     *
+     * @param { string } name - give the snapshot a name
+     * @returns { string } - will return identifier name of store
+     */
+
+    save(name) {
+        name = name || util.unique();
+        store.forEach(item => item.id++);
+
+        store.push({
+            name: name,
+            id: 1,
+            data: new Needle(this._data),
+            time: util.stamp()
+        });
+
+        store.reverse();
+        return name;
+    }
+
+    /**
+     * The retrieve method will return a
+     * saved data set from the store by a given
+     * name or identifier.
+     *
+     * @param { string } name - name of data set
+     * @returns { object } - will return item from store
+     */
+
+    retrieve(name) {
+        return this._find('name', name, store);
+    }
 
 }
 
