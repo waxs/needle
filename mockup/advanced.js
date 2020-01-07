@@ -32,6 +32,7 @@ export const data = [
             'design',
             'ux'
         ],
+        items: [1, 2, 3],
         contact: {
             mail: 'nicole@example.com'
         }
