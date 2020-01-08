@@ -24,7 +24,7 @@ class Needle {
         this._chunks = [];
         this._data = data;
         this._settings = settings;
-        this._trail = trail || { exe: [] };
+        this._trail = trail || { exe: [], data: [], prev: [] };
     }
 
     /** ----------------------------------------
@@ -419,7 +419,8 @@ class Needle {
      * @param { function } callback - executable
      */
 
-    template(callback, data = this._hasTrail() || this._data) {
+    template(callback, data = this._data) {
+        if(this._hasTrail()) return this._data.forEach(item => callback(item));
         return data.forEach(item =>  callback(item));
     }
 
@@ -726,6 +727,20 @@ class Needle {
      ---------------------------------------- */
 
     /**
+     * Will check if a trail can be closed and
+     * execute the trail. It will concat any
+     * results produced by the trail and push
+     * these to the data array creating a extended
+     * data set based on given query chain.
+     */
+
+    _hasTrail() {
+        if(!this._trail.exe.length) return;
+        this._data = [].concat.apply([], this._exeTrail());
+        return this._chain(this._data);
+    }
+
+    /**
      * The addTrail method will create a new
      * function trail that can be executed once
      * the trail ends.
@@ -748,18 +763,13 @@ class Needle {
     }
 
     /**
-     * Will check if a trail can be closed and
-     * execute the trail. It will concat any
-     * results produced by the trail and push
-     * these to the data array creating a extended
-     * data set based on given query chain.
+     * Will reset the trail to it's native state
+     * and make sure that other chained methods
+     * will execute without interference.
      */
 
-    _hasTrail() {
-        const result = this._trail.exe.length && this._exeTrail();
-        if(!result) return;
-        const flatten = [].concat.apply([], result);
-        flatten.map(item => !this._data.includes(item) && this._data.push(item));
+    _resetTrail() {
+        this._trail = { exe: [], data: [], prev: [] };
     }
 
     /**
@@ -771,13 +781,23 @@ class Needle {
      */
 
     _exeTrail() {
+        let executed = [];
         let setData = [];
 
-        return this._trail.exe.map(fn => {
+        const result = this._trail.exe.map(fn => {
             if(fn.type === 'or') setData = this._trail.data;
             if(fn.type === 'and') setData = this._trail.prev;
+
+            executed.push(fn.type);
             return fn.exe(...fn.args, setData);
         });
+
+        if(!executed.includes('and')) {
+            result.push(this._trail.prev)
+        }
+
+        this._resetTrail();
+        return result;
     }
 
     /**
