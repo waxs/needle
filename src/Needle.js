@@ -17,13 +17,14 @@ const store = [];
 
 class Needle {
 
-    constructor(data = [], settings) {
+    constructor(data = [], trail, settings) {
         model = model.length ? model : data;
         this._amount = data.length;
         this._calc = 0;
         this._chunks = [];
         this._data = data;
         this._settings = settings;
+        this._trail = trail || { exe: [] };
     }
 
     /** ----------------------------------------
@@ -70,7 +71,7 @@ class Needle {
      */
 
     _chain(data) {
-        return new Needle(data);
+        return new Needle(data, this._trail);
     }
 
     /** ----------------------------------------
@@ -157,8 +158,8 @@ class Needle {
      * @returns { array } - filtered data
      */
 
-    _operator(key, type, value, date = false) {
-        return this._data.filter(item => util.evaluate(item[key], type, value, date));
+    _operator(key, type, value, date = false, data = this._data) {
+        return data.filter(item => util.evaluate(item[key], type, value, date));
     }
 
     /** ----------------------------------------
@@ -177,6 +178,7 @@ class Needle {
      */
 
     take(amount = this._data.length) {
+        this._hasTrail();
         const select = this._data.slice(0, amount);
         const all = !amount || amount >= this._data.length;
         return all && this._data || select;
@@ -193,6 +195,8 @@ class Needle {
      */
 
     select(...keys) {
+        this._hasTrail();
+
         const select = this._data.map(item => {
             const obj = {};
 
@@ -218,6 +222,7 @@ class Needle {
      */
 
     chunk(amount) {
+        this._hasTrail();
         this._chunks['data'] = [];
         this._chunks['current'] = 0;
 
@@ -263,6 +268,7 @@ class Needle {
      */
 
     index(id) {
+        this._hasTrail();
         return this._data[id];
     }
 
@@ -275,6 +281,7 @@ class Needle {
      */
 
     get() {
+        this._hasTrail();
         return this._chain(this._data);
     }
 
@@ -286,6 +293,7 @@ class Needle {
      */
 
     first() {
+        this._hasTrail();
         const select = this._data[0];
         return this._chain([select]);
     }
@@ -298,6 +306,7 @@ class Needle {
      */
 
     last() {
+        this._hasTrail();
         const select = this._data.slice(-1)[0];
         return this._chain([select]);
     }
@@ -311,6 +320,7 @@ class Needle {
      */
 
     count() {
+        this._hasTrail();
         return this._amount;
     }
 
@@ -330,6 +340,7 @@ class Needle {
      */
 
     sort(key, type = 'asc') {
+        this._hasTrail();
         const sort = util.arrange(this._data, key, type);
         return this._chain(sort);
     }
@@ -349,6 +360,7 @@ class Needle {
      */
 
     log(number) {
+        this._hasTrail();
         console.log(number && this.take(number) || this._data);
     }
 
@@ -367,6 +379,7 @@ class Needle {
      */
 
     print(el) {
+        this._hasTrail();
         const result = document.querySelector('#result' || el) || document.body;
         result.textContent = [this._data].map(item => JSON.stringify(item));
     }
@@ -382,6 +395,7 @@ class Needle {
      */
 
     random(number = 1) {
+        this._hasTrail();
         let array = [];
 
         while (array.length !== number || array.length === this._data.length) {
@@ -405,7 +419,7 @@ class Needle {
      * @param { function } callback - executable
      */
 
-    template(callback, data = this._data) {
+    template(callback, data = this._hasTrail() || this._data) {
         return data.forEach(item =>  callback(item));
     }
 
@@ -425,6 +439,7 @@ class Needle {
      */
 
     smaller(key, value, date = false) {
+        this._hasTrail();
         const filter = this._operator(key, '<=', value, date);
         return this._chain(filter);
     }
@@ -441,6 +456,7 @@ class Needle {
      */
 
     bigger(key, value, date = false) {
+        this._hasTrail();
         const filter = this._operator(key, '>=', value, date);
         return this._chain(filter);
     }
@@ -457,6 +473,8 @@ class Needle {
      */
 
     between(key, values, date = false) {
+        this._hasTrail();
+
         const filter = this._data.filter(item => {
             return util.evaluate(item[key], '>=', values[0], date) && util.evaluate(item[key], '<=', values[1], date)
         });
@@ -475,19 +493,21 @@ class Needle {
      */
 
     equal(key, value) {
+        this._hasTrail();
         const filter = this._operator(key, '=', value);
-        return new Needle(filter);
+        return this._chain(filter);
     }
 
     /**
      * The min method will map the data array
      * and retrieve minimum of a given key.
      *
-     * @param { number } key - selected key
+     * @param { string } key - selected key
      * @returns { Needle } object - new instance
      */
 
     min(key) {
+        this._hasTrail();
         const min = Math.min(...this._data.map(item => item[key]));
         return this.find(key, min);
     }
@@ -496,13 +516,40 @@ class Needle {
      * The max method will map the data array
      * and retrieve maximum of a given key.
      *
-     * @param { number } key - selected key
+     * @param { string } key - selected key
      * @returns { Needle } object - new instance
      */
 
     max(key) {
+        this._hasTrail();
         const max = Math.max(...this._data.map(item => item[key]));
         return this.find(key, max);
+    }
+
+    /**
+     * Return all positive values from an array
+     *
+     * @param { string } key - selected key
+     * @returns { Needle } object - new instance
+     */
+
+    positive(key) {
+        this._hasTrail();
+        const filter = this._operator(key, '>=', 0);
+        return this._chain(filter);
+    }
+
+    /**
+     * Return all negative values from an array
+     *
+     * @param { string } key - selected key
+     * @returns { Needle } object - new instance
+     */
+
+    negative(key) {
+        this._hasTrail();
+        const filter = this._operator(key, '<', 0);
+        return this._chain(filter);
     }
 
     /**
@@ -515,6 +562,7 @@ class Needle {
      */
 
     sum(key) {
+        this._hasTrail();
         this._calc = this._data.reduce((total, item) => total + item[key], 0);
         return this._calc;
     }
@@ -582,6 +630,7 @@ class Needle {
      */
 
     is(key) {
+        this._hasTrail();
         const filter = this._data.filter(item => item[key]);
         return this._chain(filter);
     }
@@ -596,6 +645,7 @@ class Needle {
      */
 
     has(key) {
+        this._hasTrail();
         const filter = this._data.filter(item => item.hasOwnProperty(key));
         return this._chain(filter);
     }
@@ -610,6 +660,7 @@ class Needle {
      */
 
     hasDeep(key) {
+        this._hasTrail();
         const array = [];
 
         const finder = (key, data = this._data, prev) => {
@@ -637,6 +688,7 @@ class Needle {
      */
 
     find(key, value) {
+        this._hasTrail();
         const filter = this._find(key, value);
         return this._chain(filter);
     }
@@ -653,6 +705,7 @@ class Needle {
      */
 
     findDeep(key, value) {
+        this._hasTrail();
         const array = [];
 
         const finder = (key, value, data = this._data, prev) => {
@@ -666,6 +719,151 @@ class Needle {
 
         finder(key, value);
         return this._chain(array);
+    }
+
+    /** ----------------------------------------
+         Combinators
+     ---------------------------------------- */
+
+    /**
+     * The addTrail method will create a new
+     * function trail that can be executed once
+     * the trail ends.
+     *
+     * @param { bool } trail - should push trail
+     * @param { string } fn - name of function
+     * @param { array } args - arguments specified
+     */
+
+    _addTrail(trail, fn, ...args) {
+        const or = ['orWhere'];
+        const and = ['andWhere'];
+
+        trail && this._trail['exe'].push({
+            type: (and.includes(fn) && 'and') || (or.includes(fn) && 'or'),
+            name: '_' + fn,
+            args: args,
+            exe: this['_' + fn].bind(this)
+        });
+    }
+
+    /**
+     * Will check if a trail can be closed and
+     * execute the trail. It will concat any
+     * results produced by the trail and push
+     * these to the data array creating a extended
+     * data set based on given query chain.
+     */
+
+    _hasTrail() {
+        const result = this._trail.exe.length && this._exeTrail();
+        if(!result) return;
+        const flatten = [].concat.apply([], result);
+        flatten.map(item => !this._data.includes(item) && this._data.push(item));
+    }
+
+    /**
+     * If chain is available the executing will
+     * process all stacked queries and resolve the
+     * results in a new array. This array will be
+     * flattened by the hasTrail() method if
+     * criteria are matched.
+     */
+
+    _exeTrail() {
+        let setData = [];
+
+        return this._trail.exe.map(fn => {
+            console.log(this._trail);
+
+            if(fn.type === 'or') setData = this._trail.data;
+            if(fn.type === 'and') setData = this._trail.prev;
+
+            return fn.exe(...fn.args, setData);
+        });
+    }
+
+    /**
+     * The where operator can execute a series
+     * of commands, combining multiple criteria
+     * that need to be matched.
+     *
+     * @param { string } key - selected key
+     * @param { string } type - operator type
+     * @param { string | number } value - matching value
+     * @returns { Needle } object - new instance
+     */
+
+    where(key, type, value) {
+        this._hasTrail();
+        this._trail['data'] = this._data;
+        const filter = this._operator(key, type, value);
+        this._trail['prev'] = filter;
+        return this._chain(filter);
+    }
+
+    /**
+     * The orWhere will create a new trail function
+     * that will be executed once the trail comes
+     * to an end.
+     *
+     * @param { string } key - selected key
+     * @param { string } type - operator type
+     * @param { string | number } value - matching value
+     * @returns { Needle } object - new instance
+     */
+
+    orWhere(key, type, value) {
+        this._addTrail(true, 'orWhere', key, type, value);
+        return this._chain(this._data);
+    }
+
+    /**
+     * The actual executable function that will
+     * be resolved once the trail ends related
+     * to the orWhere() method. The or will
+     * resolve from previous data set.
+     *
+     * @param { string } key - selected key
+     * @param { string } type - operator type
+     * @param { string | number } value - matching value
+     * @returns { array } - results from operation
+     */
+
+    _orWhere(key, type, value, data) {
+        return this._operator(key, type, value, false, data);
+    }
+
+    /**
+     * The orWhere will create a new trail function
+     * that will be executed once the trail comes
+     * to an end.
+     *
+     * @param { string } key - selected key
+     * @param { string } type - operator type
+     * @param { string | number } value - matching value
+     * @returns { Needle } object - new instance
+     */
+
+    andWhere(key, type, value) {
+        this._addTrail(true, 'andWhere', key, type, value);
+        return this._chain(this._data);
+    }
+
+    /**
+     * The actual executable function that will
+     * be resolved once the trail ends related
+     * to the andWhere() method. The and will
+     * resolve from original data set.
+     *
+     * @param { string } key - selected key
+     * @param { string } type - operator type
+     * @param { string | number } value - matching value
+     * @returns { array } - results from operation
+     */
+
+    _andWhere(key, type, value, data) {
+        return this._operator(key, type, value, false, data);
     }
 
     /** ----------------------------------------
@@ -692,6 +890,7 @@ class Needle {
      */
 
     read(index) {
+        this._hasTrail();
         return this._data[index];
     }
 
@@ -704,6 +903,7 @@ class Needle {
      */
     
     update(index, obj) {
+        this._hasTrail();
         this._data[index] = obj;
         this._chain(this._data);
     }
@@ -718,6 +918,7 @@ class Needle {
      */
     
     updateValue(index, key, value) {
+        this._hasTrail();
         this._data[index][key] = value;
         this._chain(this._data);
     }
@@ -731,6 +932,7 @@ class Needle {
      */
 
     updateAll(key, value) {
+        this._hasTrail();
         this._data.forEach(item => item[key] = value);
         this._chain(this._data);
     }
@@ -744,6 +946,7 @@ class Needle {
      */
     
     delete(index) {
+        this._hasTrail();
         delete this._data[index];
         this._chain(this._data);
     }
@@ -758,6 +961,7 @@ class Needle {
      */
 
     deleteValue(index, key) {
+        this._hasTrail();
         delete this._data[index][key];
         this._chain(this._data);
     }
@@ -768,6 +972,7 @@ class Needle {
      */
 
     deleteAll() {
+        this._hasTrail();
         this._data = [];
         this._chain(this._data);
     }
