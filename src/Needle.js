@@ -774,11 +774,8 @@ class Needle {
         let setData = [];
 
         return this._trail.exe.map(fn => {
-            console.log(this._trail);
-
             if(fn.type === 'or') setData = this._trail.data;
             if(fn.type === 'and') setData = this._trail.prev;
-
             return fn.exe(...fn.args, setData);
         });
     }
