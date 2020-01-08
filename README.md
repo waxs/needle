@@ -17,6 +17,7 @@ simple helpers to quickly differentiate your data using chained methods being on
 3.1 [Numbers](#numbers)  
 3.2 [Dates](#dates)  
 3.3 [Matches](#matches) 
+3.4 [Combinations](#combinations) 
 4. [Handle](#handle)   
 4.1 [CRUD](#crud)   
 4.2 [Store](#store) 
