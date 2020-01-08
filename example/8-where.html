@@ -2,14 +2,16 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Needle Demo 7: Chunks</title>
+    <title>Needle Demo 8: Where</title>
     <link rel="stylesheet" href="./assets/style.css">
 </head>
 <body>
 
 <!-- RESULTS -->
 <h2>Results</h2>
-<p>The where method can make exceptions within a query, in this case we </p>
+<p>The where method can make exceptions within a query, in this case we limit the results <u>age below 30</u> and
+    <u>above the age of 20</u> or where <u>name is equal to Lisa</u> or <u>city is equal to Amsterdam</u>. Results are
+    <u>limited on name, age and city</u>.</p>
 <div id="result"></div>
 
 <!-- ORIGINAL DATA -->
@@ -43,7 +45,6 @@
      ---------------------------------------- */
 
     needle
-        .is('active')
         .where('age', '<', 30)
             .andWhere('age', '>', 20)
             .orWhere('name', '=', 'Lisa')
