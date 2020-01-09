@@ -11,6 +11,50 @@ const stamp = () => Math.floor(Date.now() / 1000);
 const unix = date => new Date(date).getTime() / 1000;
 
 /** ----------------------------------------
+     Is Numberic
+ ---------------------------------------- */
+
+const isNumeric = value => {
+    return !isNaN(parseFloat(value)) && isFinite(value);
+}
+
+/** ----------------------------------------
+    Is Array
+ ---------------------------------------- */
+
+const isType = value => {
+    return Array.isArray(value) && 'array' || typeof value;
+}
+
+const isArray = value => {
+    return Array.isArray(value);
+}
+
+const singleArray = value => {
+    return isArray && value.length === 1 && value[0] || value;
+}
+
+/** ----------------------------------------
+     Compare
+ ---------------------------------------- */
+
+const compareArray = (key, value, data) => {
+    return data.filter(item => item[key] && item[key].some(index => value.includes(index)));
+}
+
+const compareBool = (key, value, data) => {
+    return data.filter(item => item[key]);
+}
+
+const compareValue = (key, value, data) => {
+    return data.filter(item => item[key] && item[key] === value);
+}
+
+const compareInArray = (item, key, value) => {
+    return isArray(item[key]) ? item[key].includes(value) : item[key] === value;
+}
+
+/** ----------------------------------------
      Operator
  ---------------------------------------- */
 
@@ -57,7 +101,15 @@ const unique = () => (((1+Math.random())*0x10000)|0).toString(16).substring(1);
 
 export {
     arrange,
+    compareArray,
+    compareBool,
+    compareValue,
+    compareInArray,
     evaluate,
+    isArray,
+    isType,
+    singleArray,
+    isNumeric,
     stamp,
     unique,
     unix
