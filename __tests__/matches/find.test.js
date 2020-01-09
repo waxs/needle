@@ -47,3 +47,57 @@ describe('Using find() method for first layer key match', () => {
         expect(query).toEqual(output);
     });
 });
+
+describe('Using find() method for value in array match', () => {
+    test('It should display item: Sander', () => {
+        const input = data;
+
+        const output = [
+            {
+                active: true,
+                name: 'Sander',
+                categories: [
+                    'development',
+                    'ux'
+                ]
+            }
+        ];
+
+        const query = needle
+            .select('active', 'name', 'categories')
+            .find('categories', 'development')
+            .take();
+
+        expect(query).toEqual(output);
+    });
+});
+
+describe('Using find() method for multiple value in array match', () => {
+    test('It should display item: Sander and Nicole', () => {
+        const input = data;
+
+        const output = [
+            {
+                name: 'Sander',
+                categories: [
+                    'development',
+                    'ux'
+                ]
+            },
+            {
+                name: 'Nicole',
+                categories: [
+                    'design',
+                    'ux'
+                ]
+            }
+        ];
+
+        const query = needle
+            .select('name', 'categories')
+            .find('categories', ['design', 'development'])
+            .take();
+
+        expect(query).toEqual(output);
+    });
+});
