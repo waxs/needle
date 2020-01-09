@@ -104,7 +104,17 @@ class Needle {
      */
 
     _find(key, value, data = this._data) {
-        return data.filter(item => item[key] === value);
+        value = util.singleArray(value);
+        const valueType = util.isType(value);
+
+        const fnType = {
+            'array': () => data.filter(item => item[key] && item[key].some(index => value.includes(index))),
+            'boolean': () => data.filter(item => item[key]),
+            'string': () => data.filter(item => item[key] && util.compareInArray(item, key, value)),
+            'number': () => data.filter(item => item[key] && util.compareInArray(item, key, value))
+        };
+
+        return fnType[valueType]();
     }
 
     /** ----------------------------------------
@@ -722,8 +732,25 @@ class Needle {
         return this._chain(array);
     }
 
+    /**
+     * The find method will return a specific
+     * key value pair within the object, the
+     * find method only look for the first
+     * layer of keys present in the item.
+     *
+     * @param { string } key - selected key
+     * @param { string } value - matching value
+     * @returns { Needle } object - new instance
+     */
+
+    contains(key, value) {
+        this._hasTrail();
+        const filter = this._find(key, value);
+        return this._chain(filter);
+    }
+
     /** ----------------------------------------
-         Combinators
+         Combinations
      ---------------------------------------- */
 
     /**
