@@ -98,13 +98,12 @@ class Needle {
      * and value to find matching pairs.
      *
      * @param { string } key - selected key
-     * @param { string } value - operator type
+     * @param { string | bool | array | number } value - matching value
      * @param { array } data - array of objects
      * @returns { array } new array of filtered items
      */
 
     _find(key, value, data = this._data) {
-        console.log('dexe');
         value = util.singleArray(value);
         const valueType = util.isType(value);
 
@@ -695,7 +694,7 @@ class Needle {
      * layer of keys present in the item.
      *
      * @param { string } key - selected key
-     * @param { string } value - matching value
+     * @param { string | bool | array | number } value - matching value
      * @returns { Needle } object - new instance
      */
 
@@ -712,7 +711,7 @@ class Needle {
      * nested object inside the item.
      *
      * @param { string } key - selected key
-     * @param { string } value - matching value
+     * @param { string | bool | array | number } value - matching value
      * @returns { Needle } object - new instance
      */
 
@@ -724,6 +723,7 @@ class Needle {
             data.forEach(item => {
                 const obj = prev || item;
                 const deep = this._deep(key, item);
+                if(obj === item) this._find(key, value, [item]).length > 0 && array.push(obj);
                 deep.length === 0 && this._find(key, value, [item]).length > 0 && array.push(obj);
                 deep.length && finder(key, value, deep.map(key => item[key]), obj);
             });
