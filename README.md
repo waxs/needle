@@ -527,6 +527,31 @@ const result = needle
     
 console.log(result);
 ```
+Find will also work with arrays, bools and numbers. Also an array of matches can be declared, to find multiple 
+records holding arrays of their own. If any match can be made the item will be retrieved.
+```javascript
+const data = [
+    {
+        active: true,
+        created: '12/2/2020',
+        name: 'Sander',
+        age: 30,
+        city: 'Amsterdam',
+        hobbies: [
+            'Music',
+            'Movies'
+        ]
+    }
+]
+
+const needle = new Needle(data);
+
+const result = needle
+    .find('hobbies', ['Sports', 'Movies'])
+    .take();
+    
+console.log(result);
+```
 
 #### Find Deep
 The `findDeep()` method is an advanced way of looking for key value pairs within an item. The regular `find()` method
