@@ -636,13 +636,12 @@ however no guarantee that your dataset will hold up. Overall performance will va
 strings or array's containing multiple strings. It's always wise to limit your dataset as much as possible to achieve
  a better performance. If you like to experience performance yourself generate some JSON online and pass it to Needle. 
 
-Some tips on making the most out of the limitations of JS. 
- 
-    * Chain your queries wisely, limit the size first with simple queries.
-    * Some queries are more expensive to run, if you limit your dataset using the `select()` method first your 
-     second query will have less intense data to work with.
-    * Most API's have options to limit data, don't take it to far, have a talk with your backend engineer, or use 
-    native functions to specify your needs first ;)
+**Some tips on making the most out of the limitations of JS.** 
+* Chain your queries wisely, limit the size first with simple queries.
+* Some queries are more expensive to run, if you limit your dataset using the `select()` method first your 
+      second query will have less intense data to work with.
+* Most API's have options to limit data, don't take it to far, have a talk with your backend engineer, or use 
+     native functions to specify your needs first ;)
 
 ## About
 This repository is mainly intended as an experiment and to have some fun, a folder with examples is available within 
