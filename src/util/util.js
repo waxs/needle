@@ -79,7 +79,7 @@ const evaluate = (item, operator, value, date) => {
 
 const arrange = (array, key, type) => {
     const asc = (a, b) => b[key] < a[key] ? 1 : b[key] > a[key] ? -1 : 0;
-    const desc = (a, b) => a[key] < b[key] ? 1 : a[key] > b[key] ? 1 : 0;
+    const desc = (a, b) => a[key] < b[key] ? 1 : a[key] > b[key] ? -1 : 0;
 
     const sortType = {
         'asc': () => array.sort(asc),
