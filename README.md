@@ -638,10 +638,11 @@ strings or array's containing multiple strings. It's always wise to limit your d
 
 Some tips on making the most out of the limitations of JS. 
  
-    * Chain your queries wisely, limit the size with simple queries.
+    * Chain your queries wisely, limit the size first with simple queries.
     * Some queries are more expensive to run, if you limit your dataset using the `select()` method first your 
      second query will have less intense data to work with.
-    * Most API's have options to limit data, don't take it to far, have a talk with your backend engineer ;)
+    * Most API's have options to limit data, don't take it to far, have a talk with your backend engineer, or use 
+    native functions to specify your needs first ;)
 
 ## About
 This repository is mainly intended as an experiment and to have some fun, a folder with examples is available within 
