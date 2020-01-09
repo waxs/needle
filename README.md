@@ -2,7 +2,7 @@
 Remember when jQuery was like a big thing and you used to chain methods just to work around some basic DOM 
 manipulation. Chaining is fun, but also a bit harsh on your memory. Despite all that, let's have some fun chaining 
 like back in the good 'ol days. Needle is a clean helper to find your needle in a haystack of data. Needle has some 
-simple helpers to quickly differentiate your data using chained methods being only `8.3KB` in size.
+simple helpers to quickly differentiate your data using chained methods being only `10.7KB` in size.
 
 ## Topics
 1. [Getting started](#getting-started)  
