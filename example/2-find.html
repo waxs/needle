@@ -9,7 +9,7 @@
 
 <!-- RESULTS -->
 <h2>Results</h2>
-<p>Result have been <u>limited to city "London"</u>. Look at the page source
+<p>Result have been <u>limited to hobbies "Sports" and "Movies"</u>. Look at the page source
     for
     the query.</p>
 <div id="result"></div>
@@ -44,7 +44,7 @@
      ---------------------------------------- */
 
     needle
-        .find('city', 'London')
+        .find('hobbies', ['Sports', 'Movies'])
         .template(data => html(data, '#result'));
 
 </script>
