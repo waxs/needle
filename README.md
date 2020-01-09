@@ -22,6 +22,7 @@ simple helpers to quickly differentiate your data using chained methods being on
 4.1 [CRUD](#crud)   
 4.2 [Store](#store) 
 5. [Testing](#testing)    
+5.1 [Stress Test](#stres-test)  
 6. [About](#about)  
 
 ## Getting started
@@ -601,6 +602,21 @@ console.log(result);
 ## Testing
 Needle methods can be tested using Jest, running the `npm run test` command will execute a number of test to make 
 sure basic functionality is working as expected. Test scripts can be found in the `__test__` folder.  
+
+#### Stress Test   
+We did a stress test on working with a large data set. We can never assume, at least not for now, that JS 
+will outperform the magic of SQL, and this is also not what we were aiming for. In this case Needle hold up pretty well 
+going through a massive `7.5MB` mockup file containing over `250.000 lines` of data with over `5500 unique items`. This is 
+however no guarantee that your dataset will hold up. Overall performance will vary, some keys might hold extensive 
+strings or array's containing multiple strings. It's always wise to limit your dataset as much as possible to achieve
+ a better performance. If you like to experience performance yourself generate some JSON online and pass it to Needle. 
+
+Some tips on making the most out of the limitations of JS. 
+ 
+    * Chain your queries wisely, limit the size with simple queries.
+    * Some queries are more expensive to run, if you limit your dataset using the `select()` method first your 
+     second query will have less intense data to work with.
+    * Most API's have options to limit data, don't take it to far, have a talk with your backend engineer ;)
 
 ## About
 This repository is mainly intended as an experiment and to have some fun, a folder with examples is available within 
