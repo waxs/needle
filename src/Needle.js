@@ -46,6 +46,19 @@ class Needle {
      * array of object to Needle.
      */
 
+    get info() {
+        return {
+            original: model.length,
+            length: this.data.length
+        }
+    }
+
+    /**
+     * Set new data in constructor, using this
+     * setter as an alternative for passing
+     * array of object to Needle.
+     */
+
     set data(array) {
         this._data = array;
     }
@@ -424,14 +437,18 @@ class Needle {
      * With the template method a callback will be
      * executed for every item present within the
      * data array. The data of each item will be
-     * passed into the callback.
+     * passed into the callback. The template method
+     * will also return a object containing information
+     * about the results.
      *
      * @param { function } callback - executable
+     * @returns { object } - containing info about the query
      */
 
     template(callback, data = this._data) {
         if(this._hasTrail()) return this._data.forEach(item => callback(item));
-        return data.forEach(item =>  callback(item));
+        data.forEach(item =>  callback(item))
+        return this.info;
     }
 
     /** ----------------------------------------
@@ -723,8 +740,8 @@ class Needle {
             data.forEach(item => {
                 const obj = prev || item;
                 const deep = this._deep(key, item);
-                if(obj === item) this._find(key, value, [item]).length > 0 && array.push(obj);
-                deep.length === 0 && this._find(key, value, [item]).length > 0 && array.push(obj);
+                if(obj === item) this._find(key, value, [item]).length > 0 && !array.includes(obj) && array.push(obj);
+                (deep.length === 0 || Object.keys(item).includes(key)) && this._find(key, value, [item]).length > 0 && !array.includes(obj) && array.push(obj);
                 deep.length && finder(key, value, deep.map(key => item[key]), obj);
             });
         };
