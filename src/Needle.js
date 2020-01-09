@@ -88,7 +88,7 @@ class Needle {
      */
 
     _deep(key, item) {
-        return Object.keys(item).filter(key => typeof item[key] === 'object' && item);
+        return Object.keys(item).filter(key => !util.isArray(item[key]) && typeof item[key] === 'object' && item);
     }
 
     /**
@@ -104,6 +104,7 @@ class Needle {
      */
 
     _find(key, value, data = this._data) {
+        console.log('dexe');
         value = util.singleArray(value);
         const valueType = util.isType(value);
 
@@ -723,30 +724,13 @@ class Needle {
             data.forEach(item => {
                 const obj = prev || item;
                 const deep = this._deep(key, item);
-                item[key] === value && array.push(obj);
+                deep.length === 0 && this._find(key, value, [item]).length > 0 && array.push(obj);
                 deep.length && finder(key, value, deep.map(key => item[key]), obj);
             });
         };
 
         finder(key, value);
         return this._chain(array);
-    }
-
-    /**
-     * The find method will return a specific
-     * key value pair within the object, the
-     * find method only look for the first
-     * layer of keys present in the item.
-     *
-     * @param { string } key - selected key
-     * @param { string } value - matching value
-     * @returns { Needle } object - new instance
-     */
-
-    contains(key, value) {
-        this._hasTrail();
-        const filter = this._find(key, value);
-        return this._chain(filter);
     }
 
     /** ----------------------------------------
