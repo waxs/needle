@@ -166,7 +166,10 @@ the chain.
 
 #### Take
 The take method receives an argument to specify the amount of items, this will "take" the first amount of items 
-present from the manipulated array. By default the take function will return all the items if no parameter is specified.
+present from the manipulated array. By default the take function will return all the items if no parameter is 
+specified. If you need additional info, a second parameter can be declared being a bool value. This will return an 
+object with an additional info object. If you don't want to limit the amount of results given but need the info as 
+well the first parameter can be declared as `all`, meanin `needle.take('all', true)`.
 ```javascript
 needle.take(3);
 ```

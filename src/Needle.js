@@ -41,13 +41,13 @@ class Needle {
     }
 
     /**
-     * Set new data in constructor, using this
-     * setter as an alternative for passing
-     * array of object to Needle.
+     * Retrieve information about the query
+     * results and changes.
      */
 
     get info() {
         return {
+            chunks: { ...this._chunks },
             original: model.length,
             length: this.data.length
         }
@@ -197,14 +197,17 @@ class Needle {
      * total amount of items present.
      *
      * @param { number } amount - selected amount of items
+     * @param { bool } info - will return info about the query if true
      * @returns { array } - array of (manipulated) data
      */
 
-    take(amount = this._data.length) {
+    take(amount = this._data.length, info) {
         this._hasTrail();
+        if(util.isType(amount) === 'string' && amount === 'all') amount = this._data.length;
         const select = this._data.slice(0, amount);
         const all = !amount || amount >= this._data.length;
-        return all && this._data || select;
+        const result = all && this._data || select;
+        return info && { data: result, info: this.info } || result;
     }
 
     /**
