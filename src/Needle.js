@@ -29,6 +29,7 @@ class Needle {
             length: this._data.length
         };
         this._settings = settings;
+        this._stamp = {};
         this._trail = trail || { exe: [], data: [], prev: [] };
     }
 
@@ -57,7 +58,8 @@ class Needle {
 
     /**
      * Retrieve information about the query
-     * results and changes.
+     * results and changes. Set the result length
+     * if has end of query pipe.
      */
 
     get info() {
@@ -213,7 +215,7 @@ class Needle {
         const all = !amount || amount >= this._data.length;
         const result = all && this._data || select;
         this.info = result.length;
-        return info && { data: result, info: this.info } || result;
+        return info && { results: result, info: this.info } || result;
     }
 
     /**
@@ -455,8 +457,8 @@ class Needle {
      */
 
     template(callback, data = this._data) {
-        if(this._hasTrail()) return this._data.forEach(item => callback(item));
-        data.forEach(item =>  callback(item))
+        if(this._hasTrail()) return this._data.forEach(callback, this);
+        data.forEach(callback, { needle: this, info: this.info });
         return this.info;
     }
 
