@@ -23,6 +23,11 @@ class Needle {
         this._calc = 0;
         this._chunks = [];
         this._data = data;
+        this._info = {
+            chunks: { ...this._chunks },
+            original: model.length,
+            length: this._data.length
+        };
         this._settings = settings;
         this._trail = trail || { exe: [], data: [], prev: [] };
     }
@@ -41,19 +46,6 @@ class Needle {
     }
 
     /**
-     * Retrieve information about the query
-     * results and changes.
-     */
-
-    get info() {
-        return {
-            chunks: { ...this._chunks },
-            original: model.length,
-            length: this.data.length
-        }
-    }
-
-    /**
      * Set new data in constructor, using this
      * setter as an alternative for passing
      * array of object to Needle.
@@ -61,6 +53,19 @@ class Needle {
 
     set data(array) {
         this._data = array;
+    }
+
+    /**
+     * Retrieve information about the query
+     * results and changes.
+     */
+
+    get info() {
+        return this._info;
+    }
+
+    set info(length) {
+        this._info['length'] = length;
     }
 
     /** ----------------------------------------
@@ -207,6 +212,7 @@ class Needle {
         const select = this._data.slice(0, amount);
         const all = !amount || amount >= this._data.length;
         const result = all && this._data || select;
+        this.info = result.length;
         return info && { data: result, info: this.info } || result;
     }
 
