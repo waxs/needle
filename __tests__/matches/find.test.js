@@ -101,3 +101,27 @@ describe('Using find() method for multiple value in array match', () => {
         expect(query).toEqual(output);
     });
 });
+
+describe('Using find() method for active key matching', () => {
+    test('It should display item: Sander and John', () => {
+        const input = data;
+
+        const output = [
+            {
+                active: true,
+                name: 'Sander'
+            },
+            {
+                active: true,
+                name: 'John'
+            }
+        ];
+
+        const query = needle
+            .select('active', 'name')
+            .find('active', true)
+            .take();
+
+        expect(query).toEqual(output);
+    });
+});
