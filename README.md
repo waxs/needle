@@ -33,10 +33,11 @@ manipulate an array of contents. Let's dive a little deeper into the options you
     * `take()` will retrieve an amount of manipulated data
     * `select()` create new items based on given keys
     * `chunk()` create chunks of data contains `next()`, `prev()` and `start()` function.
-    * `index()` will retrieve a given index from the manipulated data
+    * `values()` will retrieve an array of values from the data set
+    * `index()` will retrieve a given index from the data set
     * `get()` will return the latest state of the Needle object 
-    * `first()` will return the first item from the manipulated data
-    * `last()` will return the last item from the manipulated data
+    * `first()` will return the first item from the data set
+    * `last()` will return the last item from the data set
     * `count()` will count the amount of results and return a number
 
 * **Sorting**    
@@ -264,6 +265,14 @@ const next = document.getElementById('js-next');
 next.addEventListener('click', () => {
     chunks.next().template(data => html(data));
 });
+```
+
+#### Values
+The `values()` method can be used to retrieve a single set of values based on a given key. An array with the 
+remaining values will be returned, meaning this method will not return a new instance. The method will look for 
+nested keys inside an item and provide the matching value.
+```javascript
+needle.values('age');
 ```
 
 #### Index
