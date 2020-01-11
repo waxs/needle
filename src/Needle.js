@@ -280,7 +280,7 @@ class Needle {
         chunked['start'] = callback => {
             this.template(callback, this._chunks.data[0]);
             return chunked;
-        }
+        };
 
         return chunked;
     }
@@ -314,10 +314,10 @@ class Needle {
             data.forEach(item => {
                 const obj = prev || item;
                 const deep = this._deep(key, item);
-                item.hasOwnProperty(key) && array.push(item[key])
+                item.hasOwnProperty(key) && array.push(item[key]);
                 deep.length && finder(key, deep.map(key => item[key]), obj);
             });
-        }
+        };
 
         finder(key);
         return array;
@@ -562,7 +562,7 @@ class Needle {
         this._hasTrail();
 
         const filter = this._data.filter(item => {
-            return util.evaluate(item[key], '>=', values[0], date) && util.evaluate(item[key], '<=', values[1], date)
+            return util.evaluate(item[key], '>=', values[0], date) && util.evaluate(item[key], '<=', values[1], date);
         });
 
         return this._chain(filter);
@@ -753,10 +753,10 @@ class Needle {
             data.forEach(item => {
                 const obj = prev || item;
                 const deep = this._deep(key, item);
-                item.hasOwnProperty(key) && array.push(obj)
+                item.hasOwnProperty(key) && array.push(obj);
                 deep.length && finder(key, deep.map(key => item[key]), obj);
             });
-        }
+        };
 
         finder(key);
         return this._chain(array);
@@ -879,7 +879,7 @@ class Needle {
         });
 
         if(!executed.includes('and')) {
-            result.push(this._trail.prev)
+            result.push(this._trail.prev);
         }
 
         this._resetTrail();
