@@ -11,6 +11,9 @@ const common = require('./webpack.common.config.js');
 
 module.exports = merge(common, {
     mode: 'development',
+    optimization: {
+        minimize: false
+    },
     output: {
         filename: 'needle.js'
     }
