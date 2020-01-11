@@ -11,6 +11,136 @@ const stamp = () => Math.floor(Date.now() / 1000);
 const unix = date => Math.round(new Date().getTime() / 1000);
 
 /** ----------------------------------------
+    Date Converter
+ ---------------------------------------- */
+
+const yearLeap = () => new Date().getFullYear() % 4 === 0;
+
+const dateOptions = year => {
+    return [
+        {
+            index: 0,
+            month: 'jan',
+            days: 31
+        },
+        {
+            index: 1,
+            month: 'feb',
+            days: yearLeap ? 28 : 29
+        },
+        {
+            index: 2,
+            month: 'mar',
+            days: 31
+        },
+        {
+            index: 3,
+            month: 'apr',
+            days: 30
+        },
+        {
+            index: 4,
+            month: 'may',
+            days: 31
+        },
+        {
+            index: 5,
+            month: 'jun',
+            days: 30
+        },
+        {
+            index: 6,
+            month: 'jul',
+            days: 31
+        },
+        {
+            index: 7,
+            month: 'aug',
+            days: 31
+        },
+        {
+            index: 8,
+            month: 'sep',
+            days: 30
+        },
+        {
+            index: 9,
+            month: 'oct',
+            days: 31
+        },
+        {
+            index: 10,
+            month: 'nov',
+            days: 30
+        },
+        {
+            index: 11,
+            month: 'dec',
+            days: 31
+        }
+    ];
+};
+
+const durationOption = () => {
+    const date = new Date();
+    const month = date.getMonth();
+    const year = date.getFullYear();
+
+    return [
+        {
+            name: 'days',
+            amount: 1
+        },
+        {
+            name: 'weeks',
+            amount: 7
+        },
+        {
+            name: 'months',
+            year: year,
+            month: month,
+            amount: 30
+        },
+        {
+            name: 'quarter',
+            year: year,
+            amount: Math.round((yearLeap ? 366 : 365) / 4)
+        },
+        {
+            name: 'year',
+            year: year,
+            amount: yearLeap ? 366 : 365
+        }
+    ];
+};
+
+const convertDate = (value, convert, direction = 'history') => {
+    const date = convert ? new Date(convert) : new Date();
+
+    const dir = {
+        history: date.getTime() - (value * 24 * 60 * 60 * 1000),
+        future: date.getTime() + (value * 24 * 60 * 60 * 1000)
+    };
+
+    const calc = new Date(dir[direction]);
+
+    const day = calc.getDate();
+    const month = calc.getMonth() + 1;
+    const year = calc.getFullYear();
+
+    return calc;
+};
+
+const convertDateType = (type, value, date = new Date()) => {
+    time = date.getTime();
+
+    const types = {
+        days: time - (value * 24 * 60 * 60 * 1000),
+        hours: time - (value * 24 * 60 * 60 * 1000),
+    };
+};
+
+/** ----------------------------------------
      Is Numberic
  ---------------------------------------- */
 
@@ -118,6 +248,10 @@ export {
     compareBool,
     compareValue,
     compareInArray,
+    convertDate,
+    convertDateType,
+    dateOptions,
+    durationOption,
     evaluate,
     isArray,
     isType,

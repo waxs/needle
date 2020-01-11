@@ -702,6 +702,58 @@ class Needle {
         return this.between(key, values, true);
     }
 
+    /**
+     * Shorthand for working with months, this
+     * method accepts the name of the month and
+     * year to select a period of dates.
+     *
+     * @param { string } key - selected key
+     * @param { string } month - selected month
+     * @param { number } year - selected year
+     * @returns { Needle } object - new instance
+     */
+
+    month(key, month, year) {
+        const months = util.dateOptions();
+        const date = this._find('month', month, months)[0];
+        const start = util.convertDate(0, `${ date.month }/1/${ year }`);
+        const end = util.convertDate(0, `${ date.month }/${ date.days }/${ year }`);
+        return this.between(key, [start, end], true);
+    }
+
+    /**
+     * Shorthand for working with years, this
+     * method accepts the year where the selection
+     * needs to take place.
+     *
+     * @param { string } key - selected key
+     * @param { number } year - selected year
+     * @returns { Needle } object - new instance
+     */
+
+    year(key, year) {
+        return this.between(key, [`1/1/${ year }`, `12/31/${ year }`], true);
+    }
+
+    _visualDate(amount, selector) {
+        const type = util.isType(amount);
+        selector = type !== 'number' ? amount : selector;
+        const duration = util.durationOption();
+        return this._find('name', selector, duration);
+    }
+
+    last(key, amount, selector) {
+        const match = this._visualDate(amount, selector);
+        const convert = util.convertDate(amount, match.amount * amount);
+        return this.between(key, [convert, new Date()], true);
+    }
+
+    next(key, amount, selector) {
+        const match = this._visualDate(amount, selector);
+        const convert = util.convertDate(amount, match.amount * amount, 'future');
+        return this.between(key, [new Date(), convert], true);
+    }
+
     /** ----------------------------------------
          Matches
      ---------------------------------------- */
