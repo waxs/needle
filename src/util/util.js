@@ -102,12 +102,12 @@ const durationOption = () => {
             amount: 30
         },
         {
-            name: 'quarter',
+            name: 'quarters',
             year: year,
             amount: Math.round((yearLeap ? 366 : 365) / 4)
         },
         {
-            name: 'year',
+            name: 'years',
             year: year,
             amount: yearLeap ? 366 : 365
         }

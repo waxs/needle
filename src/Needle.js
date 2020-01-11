@@ -735,22 +735,47 @@ class Needle {
         return this.between(key, [`1/1/${ year }`, `12/31/${ year }`], true);
     }
 
-    _visualDate(amount, selector) {
-        const type = util.isType(amount);
-        selector = type !== 'number' ? amount : selector;
+    /**
+     * Shorthand for working with years, this
+     * method accepts the year where the selection
+     * needs to take place.
+     *
+     * @param { string } selector - selected type
+     * @returns { object } - match for date options
+     */
+
+    _namedDates(selector) {
         const duration = util.durationOption();
-        return this._find('name', selector, duration);
+        return this._find('name', selector, duration)[0];
     }
 
+    /**
+     * Take last amount of "years", "months", "days" etc.
+     * Needs a key (holding a date value) an amount
+     * and the type of selector for instance "months".
+     *
+     * @param { string } selector - selected type
+     * @returns { object } - match for date options
+     */
+
     last(key, amount, selector) {
-        const match = this._visualDate(amount, selector);
-        const convert = util.convertDate(amount, match.amount * amount);
+        const match = this._namedDates(selector);
+        const convert = util.convertDate(match.amount * amount);
         return this.between(key, [convert, new Date()], true);
     }
 
+    /**
+     * Take next amount of "years", "months", "days" etc.
+     * Needs a key (holding a date value) an amount
+     * and the type of selector for instance "months".
+     *
+     * @param { string } selector - selected type
+     * @returns { object } - match for date options
+     */
+
     next(key, amount, selector) {
-        const match = this._visualDate(amount, selector);
-        const convert = util.convertDate(amount, match.amount * amount, 'future');
+        const match = this._namedDates(selector);
+        const convert = util.convertDate(match.amount * amount, new Date(), 'future');
         return this.between(key, [new Date(), convert], true);
     }
 
