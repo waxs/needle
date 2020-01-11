@@ -2,7 +2,7 @@
 Remember when jQuery was like a big thing and you used to chain methods just to work around some basic DOM 
 manipulation. Chaining is fun, but also a bit harsh on your memory. Despite all that, let's have some fun chaining 
 like back in the good 'ol days. Needle is a clean helper to find your needle in a haystack of data. Needle has some 
-simple helpers to quickly differentiate your data using chained methods being only `10.7KB` in size.
+simple helpers to quickly differentiate your data using chained methods being only `12.5KB` in size.
 
 ## Topics
 1. [Getting started](#getting-started)  
@@ -41,6 +41,7 @@ manipulate an array of contents. Let's dive a little deeper into the options you
 
 * **Sorting**    
     * `sort()` will sort the results `asc` or `desc`
+    * `sortDate()` will sort the results on date `asc` or `desc`
     
 * **Debugging**    
     * `log()` will log results to the console
@@ -169,7 +170,7 @@ The take method receives an argument to specify the amount of items, this will "
 present from the manipulated array. By default the take function will return all the items if no parameter is 
 specified. If you need additional info, a second parameter can be declared being a bool value. This will return an 
 object with an additional info object. If you don't want to limit the amount of results given but need the info as 
-well the first parameter can be declared as `all`, meanin `needle.take('all', true)`.
+well the first parameter can be declared as `all`, meaning `needle.take('all', true)`.
 ```javascript
 needle.take(3);
 ```
@@ -305,12 +306,20 @@ console.log(result.count());
 ### Sorting
 Besides setting `random()` results, a sorted array can also be retrieved using the `sort()` method. This will take 
 two arguments, a `key` and and the direction either ascending with the `asc` string (will be the default) or 
-descending using `desc`. It can be used on strings and numbers.
- 
+descending using `desc`. It can be used on strings and numbers. 
 ```javascript
 const result = needle
     .sort('age')
-    .take()
+    .take();
+
+console.log(result);
+``` 
+If needed the same thing can be achieved running date values, there is an separate method available fro preforming 
+this sort called `sortDate()`. Behind the scenes values will be converted into a date. Value must be a valid date.
+```javascript
+const result = needle
+    .sort('created')
+    .take();
 
 console.log(result);
 ``` 
