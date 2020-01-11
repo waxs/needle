@@ -4,8 +4,8 @@
   "description": "",
   "main": "src/needle.js",
   "scripts": {
-    "start": "webpack --config webpack.config.js --progress --profile --colors --watch --mode=development",
-    "build": "webpack --config webpack.config.js --progress --profile --bail --mode=production",
+    "start": "webpack --env=dev --config webpack.config.js --progress --profile --colors --watch",
+    "build": "webpack --env=prod --config webpack.config.js --progress --profile --bail",
     "test": "jest"
   },
   "author": "Sander Hidding",
@@ -17,7 +17,8 @@
     "jest": "^24.9.0",
     "webpack": "^4.41.2",
     "webpack-cli": "^3.3.10",
-    "webpack-dev-server": "^3.9.0"
+    "webpack-dev-server": "^3.9.0",
+    "webpack-merge": "^4.2.2"
   },
   "jest": {
     "modulePaths": [
