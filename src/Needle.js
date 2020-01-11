@@ -298,12 +298,11 @@ class Needle {
     }
 
     /**
-     * The chunk method will return chunks of data
-     * based on a given amount per chunk. Meaning,
-     * the data will be defined into separate sections
-     * based on the amount declared as a parameter.
+     * The values method will retrieve an array of values
+     * matching a key available in the item. This function
+     * will not chain at is an end of the road utility.
      *
-     * @param { number } number - selected amount of items
+     * @param { string } key - selected key to be retrieved
      * @returns { object } - will return an object with chunk data
      */
 
@@ -312,16 +311,16 @@ class Needle {
         const array = [];
 
         const finder = (key, data = this._data, prev) => {
-            data.map(item => {
+            data.forEach(item => {
                 const obj = prev || item;
-                const deep = Object.keys(item).includes(key);
-                deep && array.push(obj[key]);
-                console.log(deep);
-                !deep && finder(key, deep.map(key => item[key]), obj);
+                const deep = this._deep(key, item);
+                item.hasOwnProperty(key) && array.push(item[key])
+                deep.length && finder(key, deep.map(key => item[key]), obj);
             });
         }
 
-        return finder(key);
+        finder(key);
+        return array;
     }
 
     /**
