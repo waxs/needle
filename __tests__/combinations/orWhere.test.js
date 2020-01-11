@@ -5,14 +5,14 @@
 import { data } from '@mock/advanced';
 
 /** ----------------------------------------
-     Needle
+    Needle
  ---------------------------------------- */
 
 import Needle from '@js/Needle';
 const needle = new Needle(data);
 
 /** ----------------------------------------
-     Test orWhere()
+    Test orWhere()
  ---------------------------------------- */
 
 describe('Using orWhere() for exception on where()', () => {
