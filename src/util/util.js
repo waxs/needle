@@ -59,8 +59,8 @@ const compareInArray = (item, key, value) => {
  ---------------------------------------- */
 
 const evaluate = (item, operator, value, date) => {
-    item = date ? unix(item) : item;
-    value = date ? unix(value) : value;
+    item = date ? new Date(item) : item;
+    value = date ? new Date(value) : value;
 
     const compare = {
         '>' : item > value,
