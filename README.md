@@ -67,6 +67,10 @@ manipulate an array of contents. Let's dive a little deeper into the options you
     * `before()` take items from before a given date
     * `after()` take items from after a given date
     * `period()` take items from in between two dates
+    * `month()` take items from a given month
+    * `year()` take items from a given year
+    * `last()` take last amount of items based named dates
+    * `next()` take next amount of items based named dates
     
 * **Matches**
     * `is()` retrieve items with a bool value that is true
