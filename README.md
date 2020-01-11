@@ -388,7 +388,26 @@ needle
     .max('age')
     .template(data => html(data));
 ```
+A second parameter is also available that will provide the index of the current item. 
+```javascript
+needle
+    .max('age')
+    .template((data, index) => {
+        console.log(data, index)
+    });
+```
 
+If you need access to the `this` value referring to Needle, a arrow notation can not be used. This is because arrow 
+function expressions are suited as methods, and not be used as constructors. However a workaround is available using 
+a traditional `function()`.
+```javascript
+needle
+    .template(function(data) {
+        console.log(this);
+        html(data);
+    });
+```
+ 
 ## Manipulating
 ### Numbers
 Let's say you wanted to know the who has posted the most comments, or display the highest age of a collection of 
