@@ -2,7 +2,7 @@
 Remember when jQuery was like a big thing and you used to chain methods just to work around some basic DOM 
 manipulation. Chaining is fun, but also a bit harsh on your memory. Despite all that, let's have some fun chaining 
 like back in the good 'ol days. Needle is a clean helper to find your needle in a haystack of data. Needle has some 
-simple helpers to quickly differentiate your data using chained methods being only `12.5KB` in size.
+simple helpers to quickly differentiate your data using chained methods being only `14.7KB` in size.
 
 ## Topics
 1. [Getting started](#getting-started)  
@@ -29,7 +29,7 @@ simple helpers to quickly differentiate your data using chained methods being on
 Needle has been build taking intuitive use in account. There are multiple helpers to help you sort, retrieve or 
 manipulate an array of contents. Let's dive a little deeper into the options you can use with Needle. 
 
-* **Retrieve Data**
+* **Retrieve Data** (9 methods)
     * `take()` will retrieve an amount of manipulated data
     * `select()` create new items based on given keys
     * `chunk()` create chunks of data contains `next()`, `prev()` and `start()` function.
@@ -40,19 +40,19 @@ manipulate an array of contents. Let's dive a little deeper into the options you
     * `last()` will return the last item from the data set
     * `count()` will count the amount of results and return a number
 
-* **Sorting**    
+* **Sorting** (2 methods)
     * `sort()` will sort the results `asc` or `desc`
     * `sortDate()` will sort the results on date `asc` or `desc`
     
-* **Debugging**    
+* **Debugging** (3 methods)
     * `log()` will log results to the console
     * `print()` will print results to the DOM
     * `random()` will retrieve a random amount of items 
     
-* **Template**
+* **Template** (1 method)
     * `template()` can be used to template results with custom markup
     
-* **Numbers**
+* **Numbers** (9 methods)
     * `smaller()` retrieve items smaller than a given parameter
     * `bigger()` retrieve items bigger than a given parameter
     * `between()` retrieve items in between to given parameters
@@ -63,7 +63,7 @@ manipulate an array of contents. Let's dive a little deeper into the options you
     * `negative()` retrieve all negative items from a given key within the data
     * `sum()` sum an amount of numbers from a given key in current data
     
-* **Dates**
+* **Dates** (7 methods)
     * `before()` take items from before a given date
     * `after()` take items from after a given date
     * `period()` take items from in between two dates
@@ -72,19 +72,19 @@ manipulate an array of contents. Let's dive a little deeper into the options you
     * `last()` take last amount of items based named dates
     * `next()` take next amount of items based named dates
     
-* **Matches**
+* **Matches** (5 methods)
     * `is()` retrieve items with a bool value that is true
     * `has()` retrieve items if a given key is present in the object
     * `hasDeep()` retrieve items if a given key is present in a nested object
     * `find()` find will retrieve objects with a key value pair match
     * `findDeep()` find will retrieve objects with a nested key value pair match
 
-* **Combinations**
+* **Combinations** (3 methods)
     * `where()` find matches based on operator matching key, value pair
     * `orWhere()` exception based data initiated before use of `where()` selector
     * `andWhere()` exception based data initiated after use of `where()` selector
 
-* **Basic CRUD**
+* **Basic CRUD** (8 methods)
     * `create()` create new object in the data set
     * `read()` retrieve single item from the current data set
     * `update()` update single item from data set
@@ -94,7 +94,7 @@ manipulate an array of contents. Let's dive a little deeper into the options you
     * `deleteValue()` delete single value from item in data set
     * `deleteAll()` delete all items from data set
     
-* **Store**
+* **Store** (2 methods)
     * `save()` save a data set to the store
     * `retrieve()` retrieve a single set from the store
     
