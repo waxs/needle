@@ -17,7 +17,7 @@ const store = [];
 
 class Needle {
 
-    constructor(data = [], trail, settings) {
+    constructor(data = [], trail) {
         model = model.length ? model : data;
         this._amount = data.length;
         this._calc = 0;
@@ -28,7 +28,7 @@ class Needle {
             original: model.length,
             length: this._data.length
         };
-        this._settings = settings;
+        this._settings = {};
         this._stamp = {};
         this._trail = trail || { exe: [], data: [], prev: [] };
     }
@@ -73,6 +73,10 @@ class Needle {
     /** ----------------------------------------
          Settings
      ---------------------------------------- */
+
+    set config(config) {
+        this._settings = config;
+    }
 
     get config() {
         return this._settings;
@@ -294,6 +298,33 @@ class Needle {
     }
 
     /**
+     * The chunk method will return chunks of data
+     * based on a given amount per chunk. Meaning,
+     * the data will be defined into separate sections
+     * based on the amount declared as a parameter.
+     *
+     * @param { number } number - selected amount of items
+     * @returns { object } - will return an object with chunk data
+     */
+
+    values(key) {
+        this._hasTrail();
+        const array = [];
+
+        const finder = (key, data = this._data, prev) => {
+            data.map(item => {
+                const obj = prev || item;
+                const deep = Object.keys(item).includes(key);
+                deep && array.push(obj[key]);
+                console.log(deep);
+                !deep && finder(key, deep.map(key => item[key]), obj);
+            });
+        }
+
+        return finder(key);
+    }
+
+    /**
      * The index method can retrieve a given
      * index from the data array.
      *
@@ -376,6 +407,23 @@ class Needle {
     sort(key, type = 'asc') {
         this._hasTrail();
         const sort = util.arrange(this._data, key, type);
+        return this._chain(sort);
+    }
+
+    /**
+     * The sortDate method will sort the items within
+     * the data array based on asc or desc order.
+     * This sort method should only be used if dates
+     * are provided with the selected value of a key.
+     *
+     * @param { number } key - selected key
+     * @param { string } type - either "asc" or "desc"
+     * @returns { Needle } object - new instance
+     */
+
+    sortDate(key, type = 'asc') {
+        this._hasTrail();
+        const sort = util.arrange(this._data, key, type, true);
         return this._chain(sort);
     }
 
