@@ -2,7 +2,7 @@
     Needle Config
  ---------------------------------------- */
 
-import config from '../needle.config';
+import config from '../methods/method.config';
 
 /** ----------------------------------------
      Extend
