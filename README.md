@@ -69,8 +69,8 @@ manipulate an array of contents. Let's dive a little deeper into the options you
     * `period()` take items from in between two dates
     * `month()` take items from a given month
     * `year()` take items from a given year
-    * `last()` take last amount of items based named dates
-    * `next()` take next amount of items based named dates
+    * `previous()` take last amount of items based named dates
+    * `upcoming()` take next amount of items based named dates
     
 * **Matches** (5 methods)
     * `is()` retrieve items with a bool value that is true
@@ -515,7 +515,7 @@ retrieve all items within a given month. For example `month('created', 'sep', 20
 month name, it will support an English abbreviation. 
 ```javascript
 const result = needle
-    .month('created', 'jan', 2020)
+    .month('date', 'jan', 2020)
     .take();
     
 console.log(result);
@@ -526,13 +526,13 @@ If you need results from a complete year, this can be done using the `year()` me
  data set starting with the first of January and end at 31st of December. 
 ```javascript
 const result = needle
-    .year('created', 2020)
+    .year('date', 2020)
     .take();
     
 console.log(result);
 ```
 
-#### Last & ext
+#### Previous & upcoming
 Last will always retrieve a set of data based on today. Meaning, instead of taking a static year, you could do for 
 instance, the last 2 days, or maybe do 1 week. Besides `last()` there is also a `next()` method, achieving the samen 
 result but instead of looking back it will look forward. 
@@ -546,7 +546,7 @@ happend in the last or will happen in the upcoming days. If you need to retrieve
 `month()` method. Here are a couple of examples. 
 ```javascript
 const result = needle
-    .last('created', 6, 'months')
+    .previous('created', 6, 'months')
     .take();
     
 console.log(result);
@@ -554,7 +554,7 @@ console.log(result);
 The `next()` method follows a similar syntax. 
 ```javascript
 const result = needle
-    .next('created', 2, 'weeks')
+    .upcoming('created', 2, 'weeks')
     .take();
     
 console.log(result);
