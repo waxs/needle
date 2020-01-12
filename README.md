@@ -90,9 +90,9 @@ manipulate an array of contents. Let's dive a little deeper into the options you
     * `update()` update single item from data set
     * `updateValue()` update single value from item in data set
     * `updateAll()` update all items from data set
-    * `delete()` delete index from data set
-    * `deleteValue()` delete single value from item in data set
-    * `deleteAll()` delete all items from data set
+    * `remove()` delete index from data set
+    * `removeValue()` delete single value from item in data set
+    * `removeAll()` delete all items from data set
     
 * **Store** (2 methods) 🚧 Work in progress
     * `save()` save a data set to the store
