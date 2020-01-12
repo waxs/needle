@@ -29,7 +29,7 @@ simple helpers to quickly differentiate your data using chained methods being on
 Needle has been build taking intuitive use in account. There are multiple helpers to help you sort, retrieve or 
 manipulate an array of contents. Let's dive a little deeper into the options you can use with Needle. 
 
-* **Retrieve Data** (9 methods)
+* **Retrieve Data** (12 methods)
     * `take()` will retrieve an amount of manipulated data
     * `select()` create new items based on given keys
     * `chunk()` create chunks of data contains `next()`, `prev()` and `start()` function.
@@ -508,6 +508,58 @@ const result = needle
     
 console.log(result);
 ```
+
+#### Month
+If you need to retrieve information about a certain month this can be done using the `month()` method. It will 
+retrieve all items within a given month. For example `month('created', 'sep', 2020)`. It uses a abbreviation of the 
+month name, it will support an English abbreviation. 
+```javascript
+const result = needle
+    .month('created', 'jan', 2020)
+    .take();
+    
+console.log(result);
+```
+
+#### Year
+If you need results from a complete year, this can be done using the `year()` method. It will take all items from the
+ data set starting with the first of January and end at 31st of December. 
+```javascript
+const result = needle
+    .year('created', 2020)
+    .take();
+    
+console.log(result);
+```
+
+#### Last & ext
+Last will always retrieve a set of data based on today. Meaning, instead of taking a static year, you could do for 
+instance, the last 2 days, or maybe do 1 week. Besides `last()` there is also a `next()` method, achieving the samen 
+result but instead of looking back it will look forward. 
+
+Both `last()` and `next()` support a simple markup for making queries. You can look for days, weeks, months, 
+quarters, always based on the current date. Meaning that doing `last('created', 1, 'months')` will not take the month
+ January if the current month would be February. It will look 30 days in the past from the current date. 
+ 
+Why? Well this method is their to be more dynamic, every time you visit the query the result may vary based on what 
+happend in the last or will happen in the upcoming days. If you need to retrieve a specific month of data use the 
+`month()` method. Here are a couple of examples. 
+```javascript
+const result = needle
+    .last('created', 6, 'months')
+    .take();
+    
+console.log(result);
+```
+The `next()` method follows a similar syntax. 
+```javascript
+const result = needle
+    .next('created', 2, 'weeks')
+    .take();
+    
+console.log(result);
+```
+In the above examples `weeks` and `months` could have been replaced with either `days`, `quarters` or years`as well. 
 
 ### Matches
 Using filters it's possible to manipulate the data and retrieve a new array of items based on the queries given. For 
