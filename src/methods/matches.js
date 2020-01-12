@@ -2,7 +2,7 @@
     Utilities
  ---------------------------------------- */
 
-import * as util from './../util/util';
+import * as util from '@util/util';
 
 /** ----------------------------------------
      Is

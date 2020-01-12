@@ -80,7 +80,9 @@ const config = {
     combinations: {
         where: true,
         orWhere: true,
-        andWhere: true
+        _orWhere: true,
+        andWhere: true,
+        _andWhere: true
     },
 
     /** ----------------------------------------
