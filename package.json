@@ -27,10 +27,12 @@
     "modulePaths": [
       "<rootDir>"
     ],
+    "testMatch": ["**/test/**/*.test.js"],
     "moduleNameMapper": {
       "^@build(.*)$": "<rootDir>/dist$1",
       "^@js(.*)$": "<rootDir>/src$1",
-      "^@mock(.*)$": "<rootDir>/mockup$1"
+      "^@mock(.*)$": "<rootDir>/mockup$1",
+      "^@util(.*)$": "<rootDir>/src/util$1"
     }
   }
 }
