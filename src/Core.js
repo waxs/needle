@@ -2,7 +2,7 @@
      Utilities
  ---------------------------------------- */
 
-import { extend } from './util/_extends';
+import { extend } from './needle/_extends';
 
 /** ----------------------------------------
      Helpers
@@ -41,28 +41,28 @@ class Core {}
     Needle Helpers
  ---------------------------------------- */
 
-extend(Core, helpers);
-extend(Core, trail);
+extend(Core, 'helpers', helpers);
+extend(Core, 'trail', trail);
 
 /** ----------------------------------------
     Needle Methods
  ---------------------------------------- */
 
-extend(Core, retrieve);
-extend(Core, sort);
-extend(Core, debugging);
-extend(Core, template);
-extend(Core, numbers);
-extend(Core, dates);
-extend(Core, matches);
-extend(Core, combinations);
+extend(Core, 'retrieve', retrieve);
+extend(Core, 'sort', sort);
+extend(Core, 'debugging', debugging);
+extend(Core, 'template', template);
+extend(Core, 'numbers', numbers);
+extend(Core, 'dates', dates);
+extend(Core, 'matches', matches);
+extend(Core, 'combinations', combinations);
 
 /** ----------------------------------------
     Needle Handlers
  ---------------------------------------- */
 
-extend(Core, store);
-extend(Core, crud);
+extend(Core, 'store', store);
+extend(Core, 'crud', crud);
 
 /** ----------------------------------------
      Exports
