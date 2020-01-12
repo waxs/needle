@@ -81,7 +81,32 @@ const config = {
         where: true,
         orWhere: true,
         andWhere: true
+    },
+
+    /** ----------------------------------------
+         Store
+     ---------------------------------------- */
+
+    store: {
+        save: false,
+        retrieve: false
+    },
+
+    /** ----------------------------------------
+         CRUD
+     ---------------------------------------- */
+
+    crud: {
+        create: false,
+        read: false,
+        update: false,
+        updateValue: false,
+        updateAll: false,
+        remove: false,
+        removeValue: false,
+        removeAll:false
     }
+
 
 };
 

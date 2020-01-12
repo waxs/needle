@@ -84,7 +84,7 @@ manipulate an array of contents. Let's dive a little deeper into the options you
     * `orWhere()` exception based data initiated before use of `where()` selector
     * `andWhere()` exception based data initiated after use of `where()` selector
 
-* **Basic CRUD** (8 methods)
+* **Basic CRUD** (8 methods) 🚧 Work in progress
     * `create()` create new object in the data set
     * `read()` retrieve single item from the current data set
     * `update()` update single item from data set
@@ -94,7 +94,7 @@ manipulate an array of contents. Let's dive a little deeper into the options you
     * `deleteValue()` delete single value from item in data set
     * `deleteAll()` delete all items from data set
     
-* **Store** (2 methods)
+* **Store** (2 methods) 🚧 Work in progress
     * `save()` save a data set to the store
     * `retrieve()` retrieve a single set from the store
     
