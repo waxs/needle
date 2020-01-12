@@ -25,6 +25,14 @@ simple helpers to quickly differentiate your data using chained methods being on
 5.1 [Stress Test](#stres-test)  
 6. [About](#about)  
 
+## Roadmap
+- [x] Deconstruct responsibilities
+- [ ] Refactor on constructor values
+- [ ] Refactor on README.md
+- [ ] Fix test issue
+- [ ] Finish CRUD methods
+- [ ] Finish store methods
+
 ## Getting started
 Needle has been build taking intuitive use in account. There are multiple helpers to help you sort, retrieve or 
 manipulate an array of contents. Let's dive a little deeper into the options you can use with Needle. 
@@ -84,7 +92,7 @@ manipulate an array of contents. Let's dive a little deeper into the options you
     * `orWhere()` exception based data initiated before use of `where()` selector
     * `andWhere()` exception based data initiated after use of `where()` selector
 
-* **Basic CRUD** (8 methods) 🚧 Work in progress
+* **CRUD** (8 methods) 🚧 Work in progress
     * `create()` create new object in the data set
     * `read()` retrieve single item from the current data set
     * `update()` update single item from data set
