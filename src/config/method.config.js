@@ -2,7 +2,7 @@
      Configuration
  ---------------------------------------- */
 
-const config = {
+const methods = {
 
     /** ----------------------------------------
          Sorting
@@ -109,11 +109,10 @@ const config = {
         removeAll:false
     }
 
-
 };
 
 /** ----------------------------------------
      Exports
  ---------------------------------------- */
 
-export default config;
+export default methods;

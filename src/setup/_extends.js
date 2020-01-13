@@ -2,16 +2,18 @@
     Needle Config
  ---------------------------------------- */
 
-import config from '../methods/method.config';
+import methods from '../config/method.config';
 
 /** ----------------------------------------
      Extend
  ---------------------------------------- */
 
-const extend = (model, name, fn) => {
+const extend = (model, fn) => {
+    const name = Object.keys(fn)[0];
+
     Object.keys(fn).forEach((method) => {
-        const unknow = typeof config[name] === 'undefined';
-        model.prototype[method] = (unknow || config[name][method]) && fn[method];
+        const unknow = typeof methods[name] === 'undefined';
+        model.prototype[method] = (unknow || methods[name][method]) && fn[method];
     });
 };
 

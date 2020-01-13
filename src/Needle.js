@@ -5,6 +5,12 @@
 import Core from './Core';
 
 /** ----------------------------------------
+     Utilities
+ ---------------------------------------- */
+
+import { construct } from './setup/_construct';
+
+/** ----------------------------------------
      Store
  ---------------------------------------- */
 
@@ -17,41 +23,18 @@ const store = [];
 
 class Needle extends Core {
 
-    constructor(data = [], trail) {
+    constructor(data = [], trail = null) {
         super();
-        model = model.length ? model : data;
-        this._amount = data.length || 0;
-        this._calc = 0;
-        this._chunks = [];
-        this._data = data;
-        this._info = {
-            chunks: { ...this._chunks },
-            original: model.length,
-            length: this._data.length
-        };
-        this._settings = {};
-        this._stamp = {};
-        this._trail = trail || { exe: [], data: [], prev: [] };
+        construct(this, data, trail);
     }
 
     /** ----------------------------------------
          Data
      ---------------------------------------- */
 
-    /**
-     * Retrieve data from instance with this
-     * getter, will return original data.
-     */
-
     get data() {
         return this._data;
     }
-
-    /**
-     * Set new data in constructor, using this
-     * setter as an alternative for passing
-     * array of object to Needle.
-     */
 
     set data(array) {
         this._data = array;
@@ -60,12 +43,6 @@ class Needle extends Core {
     /** ----------------------------------------
          Information
      ---------------------------------------- */
-
-    /**
-     * Retrieve information about the query
-     * results and changes. Set the result length
-     * if has end of query pipe.
-     */
 
     get info() {
         return this._info;
@@ -90,13 +67,6 @@ class Needle extends Core {
     /** ----------------------------------------
          Store
      ---------------------------------------- */
-
-    /**
-     * Using this get function the store can
-     * be retrieved for further manipulation.
-     *
-     * @returns { array } - store
-     */
 
     get store() {
         return store;
