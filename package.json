@@ -1,7 +1,7 @@
 {
-  "name": "needle",
-  "version": "1.0.0",
-  "description": "",
+  "name": "Needle",
+  "version": "0.5.0",
+  "description": "Find your needle in a haystack. Needle is a small and fast query builder for sorting, manipulating and retrieving data.",
   "main": "src/needle.js",
   "scripts": {
     "start": "webpack --env=dev --config webpack.config.js --progress --profile --colors --watch",
@@ -10,6 +10,10 @@
   },
   "author": "Sander Hidding",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/waxs/needle"
+  },
   "devDependencies": {
     "@babel/core": "^7.7.5",
     "@babel/preset-env": "^7.7.6",
