@@ -6,10 +6,22 @@ const fs = require('fs');
 const path = require('path');
 
 /** ----------------------------------------
+     Webpack
+ ---------------------------------------- */
+
+const webpack = require('webpack');
+
+/** ----------------------------------------
      Settings
  ---------------------------------------- */
 
 const BASE_DIR = __dirname + '/./../';
+
+/** ----------------------------------------
+     Banner
+ ---------------------------------------- */
+
+const banner = require('./../src/setup/_banner');
 
 /** ----------------------------------------
     Configuration
@@ -50,5 +62,10 @@ module.exports = {
             '@util': path.resolve(BASE_DIR, 'src/util/')
         },
         extensions: ['*', '.js']
-    }
+    },
+    plugins: [
+        new webpack.BannerPlugin({
+            banner: banner(process.env)
+        })
+    ]
 };
