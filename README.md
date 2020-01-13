@@ -27,7 +27,7 @@ simple helpers to quickly differentiate your data using chained methods being on
 
 ## Roadmap
 - [x] Deconstruct responsibilities
-- [ ] Refactor on constructor values
+- [x] Refactor on constructor values
 - [ ] Refactor on README.md
 - [ ] Fix test issue
 - [ ] Finish CRUD methods
