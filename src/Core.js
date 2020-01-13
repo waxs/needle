@@ -2,34 +2,34 @@
      Utilities
  ---------------------------------------- */
 
-import { extend } from './setup/_extends';
+import { extend } from '@js/setup/_extends';
 
 /** ----------------------------------------
      Helpers
  ---------------------------------------- */
 
-import helpers from './methods/helpers';
-import trail from './methods/trail';
+import helpers from '@js/methods/helpers';
+import trail from '@js/methods/trail';
 
 /** ----------------------------------------
     Methods
  ---------------------------------------- */
 
-import retrieve from './methods/retrieve';
-import sort from './methods/sorting';
-import debugging from './methods/debugging';
-import template from './methods/template';
-import numbers from './methods/numbers';
-import dates from './methods/dates';
-import matches from './methods/matches';
-import combinations from './methods/combinations';
+import retrieve from '@js/methods/retrieve';
+import sort from '@js/methods/sorting';
+import debugging from '@js/methods/debugging';
+import template from '@js/methods/template';
+import numbers from '@js/methods/numbers';
+import dates from '@js/methods/dates';
+import matches from '@js/methods/matches';
+import combinations from '@js/methods/combinations';
 
 /** ----------------------------------------
      Handlers
  ---------------------------------------- */
 
-import store from './methods/store';
-import crud from './methods/crud';
+import store from '@js/methods/store';
+import crud from '@js/methods/crud';
 
 /** ----------------------------------------
      Initiate Needle Core

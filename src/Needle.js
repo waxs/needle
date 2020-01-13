@@ -2,13 +2,13 @@
      Needle Core
  ---------------------------------------- */
 
-import Core from './Core';
+import Core from '@js/Core';
 
 /** ----------------------------------------
      Utilities
  ---------------------------------------- */
 
-import { construct } from './setup/_construct';
+import { construct } from '@js/setup/_construct';
 
 /** ----------------------------------------
      Store

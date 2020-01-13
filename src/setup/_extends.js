@@ -2,7 +2,7 @@
     Needle Config
  ---------------------------------------- */
 
-import methods from '../config/method.config';
+import methods from '@js/config/method.config';
 
 /** ----------------------------------------
      Extend
