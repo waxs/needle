@@ -2,7 +2,6 @@
      Utilities
  ---------------------------------------- */
 
-import { construct } from './setup/_construct';
 import { extend } from './setup/_extends';
 
 /** ----------------------------------------
