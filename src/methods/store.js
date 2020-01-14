@@ -2,7 +2,8 @@
     Utilities
  ---------------------------------------- */
 
-import * as util from '@util/util';
+import randomId from '@util/_randomId';
+import stamp from '@util/_stamp';
 
 /** ----------------------------------------
     Save
@@ -19,14 +20,14 @@ import * as util from '@util/util';
  */
 
 function save(name) {
-    name = name || util.unique();
+    name = name || unique();
     store.forEach(item => item.id++);
 
     store.push({
         name: name,
         id: 1,
         data: this._data,
-        time: util.stamp()
+        time: stamp()
     });
 
     store.reverse();
