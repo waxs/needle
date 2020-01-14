@@ -2,7 +2,7 @@
      Utilities
  ---------------------------------------- */
 
-import * as util from '@util/util';
+import arrange from '@util/_arrange';
 
 /** ----------------------------------------
     Sort
@@ -21,7 +21,7 @@ import * as util from '@util/util';
 
 function sort(key, type = 'asc') {
     this._hasTrail();
-    const sort = util.arrange(this._data, key, type);
+    const sort = arrange(this._data, key, type);
     return this._chain(sort);
 }
 
@@ -42,7 +42,7 @@ function sort(key, type = 'asc') {
 
 function sortDate (key, type = 'asc') {
     this._hasTrail();
-    const sort = util.arrange(this._data, key, type, true);
+    const sort = arrange(this._data, key, type, true);
     return this._chain(sort);
 }
 
