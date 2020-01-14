@@ -41,7 +41,6 @@ module.exports = {
     },
     entry: './src/needle.js',
     output: {
-        filename: 'needle.js',
         path: path.resolve(BASE_DIR + 'dist'),
         umdNamedDefine: true,
         libraryExport: 'default',
