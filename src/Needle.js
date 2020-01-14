@@ -9,6 +9,7 @@ import Core from '@js/Core';
  ---------------------------------------- */
 
 import { construct } from '@js/setup/_construct';
+import { contents } from '@js/setup/_contents';
 
 /** ----------------------------------------
      Store
@@ -26,6 +27,7 @@ class Needle extends Core {
     constructor(data = [], trail = null) {
         super();
         construct(this, data, trail);
+        contents(this, data);
     }
 
     /** ----------------------------------------
@@ -38,6 +40,14 @@ class Needle extends Core {
 
     set data(array) {
         this._data = array;
+    }
+
+    /** ----------------------------------------
+        Content
+     ---------------------------------------- */
+
+    get content() {
+        return this._content;
     }
 
     /** ----------------------------------------
@@ -73,5 +83,9 @@ class Needle extends Core {
     }
 
 }
+
+/** ----------------------------------------
+    Exports
+ ---------------------------------------- */
 
 export default Needle;
