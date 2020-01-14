@@ -2,7 +2,9 @@
     Utilities
  ---------------------------------------- */
 
-import * as util from '@util/util';
+import convertDate from '@util/_convertDate';
+import dateOptions from '@util/_dateOptions';
+import periodOptions from '@util/_periodOptions';
 
 /** ----------------------------------------
     Before
@@ -77,10 +79,10 @@ function period(key, values) {
  */
 
 function month(key, month, year) {
-    const months = util.dateOptions();
+    const months = dateOptions();
     const date = this._find('month', month, months)[0];
-    const start = util.convertDate(0, `${ date.month }/1/${ year }`);
-    const end = util.convertDate(0, `${ date.month }/${ date.days }/${ year }`);
+    const start = convertDate(0, `${ date.month }/1/${ year }`);
+    const end = convertDate(0, `${ date.month }/${ date.days }/${ year }`);
     return this.between(key, [start, end], true);
 }
 
@@ -116,8 +118,8 @@ function year(key, year) {
  */
 
 function _namedDates(selector) {
-    const duration = util.durationOption();
-    return this._find('name', selector, duration)[0];
+    const period = periodOptions();
+    return this._find('name', selector, period)[0];
 }
 
 /** ----------------------------------------
@@ -135,7 +137,7 @@ function _namedDates(selector) {
 
 function previous(key, amount, selector) {
     const match = this._namedDates(selector);
-    const convert = util.convertDate(match.amount * amount);
+    const convert = convertDate(match.amount * amount);
     return this.between(key, [convert, new Date()], true);
 }
 
@@ -154,7 +156,7 @@ function previous(key, amount, selector) {
 
 function upcoming(key, amount, selector) {
     const match = this._namedDates(selector);
-    const convert = util.convertDate(match.amount * amount, new Date(), 'future');
+    const convert = convertDate(match.amount * amount, new Date(), 'future');
     return this.between(key, [new Date(), convert], true);
 }
 
