@@ -8,7 +8,7 @@ import { data } from '@mock/advanced';
     Needle
  ---------------------------------------- */
 
-import Needle from '@js/Needle';
+import Needle from '@build/needle.min';
 const needle = new Needle(data);
 
 /** ----------------------------------------
