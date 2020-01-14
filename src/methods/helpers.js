@@ -2,7 +2,11 @@
     Utilities
  ---------------------------------------- */
 
-import * as util from '@util/util';
+import compareInArray from '@util/_compareInArray';
+import evaluate from '@util/_evaluate';
+import isArray from '@util/_isArray';
+import isSingleArray from '@util/_isSingleArray';
+import isType from '@util/_isType';
 
 /** ----------------------------------------
     Chain Helper
@@ -34,7 +38,7 @@ function _chain(data) {
  */
 
 function _deep(key, item) {
-    return Object.keys(item).filter(key => !util.isArray(item[key]) && typeof item[key] === 'object' && item);
+    return Object.keys(item).filter(key => !isArray(item[key]) && typeof item[key] === 'object' && item);
 }
 
 /** ----------------------------------------
@@ -54,14 +58,14 @@ function _deep(key, item) {
  */
 
 function _find(key, value, data = this._data) {
-    value = util.singleArray(value);
-    const valueType = util.isType(value);
+    value = isSingleArray(value);
+    const valueType = isType(value);
 
     const fnType = {
         'array': () => data.filter(item => item[key] && item[key].some(index => value.includes(index))),
         'boolean': () => data.filter(item => item[key]),
-        'string': () => data.filter(item => item[key] && util.compareInArray(item, key, value)),
-        'number': () => data.filter(item => item[key] && util.compareInArray(item, key, value))
+        'string': () => data.filter(item => item[key] && compareInArray(item, key, value)),
+        'number': () => data.filter(item => item[key] && compareInArray(item, key, value))
     };
 
     return fnType[valueType]();
@@ -118,7 +122,7 @@ function _objReduce(array, item) {
  */
 
 function _operator(key, type, value, date = false, data = this._data) {
-    return data.filter(item => util.evaluate(item[key], type, value, date));
+    return data.filter(item => evaluate(item[key], type, value, date));
 }
 
 /** ----------------------------------------
