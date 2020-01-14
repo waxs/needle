@@ -9,10 +9,6 @@ const fs = require('fs');
  ---------------------------------------- */
 
 class InjectExportableClass {
-    constructor(file) {
-        this._file = file;
-    }
-
     static execute(process) {
         const output = process.options.output;
 

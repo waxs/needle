@@ -73,6 +73,6 @@ module.exports = {
         new webpack.BannerPlugin({
             banner: banner(process.env)
         }),
-        new InjectExportableClass('./dist/needle.min.js')
+        new InjectExportableClass()
     ]
 };
