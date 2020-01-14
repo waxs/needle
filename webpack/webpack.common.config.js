@@ -12,6 +12,12 @@ const path = require('path');
 const webpack = require('webpack');
 
 /** ----------------------------------------
+     Plugins
+ ---------------------------------------- */
+
+const InjectExportableClass = require('./plugins/InjectExportableClass');
+
+/** ----------------------------------------
      Settings
  ---------------------------------------- */
 
@@ -66,6 +72,7 @@ module.exports = {
     plugins: [
         new webpack.BannerPlugin({
             banner: banner(process.env)
-        })
+        }),
+        new InjectExportableClass('./dist/needle.min.js')
     ]
 };
