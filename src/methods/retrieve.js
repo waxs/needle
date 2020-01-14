@@ -2,7 +2,7 @@
     Utilities
  ---------------------------------------- */
 
-import * as util from '@util/util';
+import isType from '@util/_isType';
 
 /** ----------------------------------------
     Take
@@ -22,7 +22,7 @@ import * as util from '@util/util';
 
 function take(amount = this._data.length, info) {
     this._hasTrail();
-    if(util.isType(amount) === 'string' && amount === 'all') amount = this._data.length;
+    if(isType(amount) === 'string' && amount === 'all') amount = this._data.length;
     const select = this._data.slice(0, amount);
     const all = !amount || amount >= this._data.length;
     const result = all && this._data || select;
