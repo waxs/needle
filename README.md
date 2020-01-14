@@ -28,10 +28,12 @@ simple helpers to quickly differentiate your data using chained methods being on
 ## Roadmap
 - [x] Deconstruct responsibilities
 - [x] Refactor on constructor values
-- [ ] Refactor on README.md
-- [ ] Fix test issue
+- [x] Fix test issue
+- [x] Make library exportable
 - [ ] Finish CRUD methods
 - [ ] Finish store methods
+- [ ] Set default parameters for keys
+- [ ] Refactor on README.md
 
 ## Getting started
 Needle has been build taking intuitive use in account. There are multiple helpers to help you sort, retrieve or 
@@ -339,7 +341,7 @@ If needed the same thing can be achieved running date values, there is an separa
 this sort called `sortDate()`. Behind the scenes values will be converted into a date. Value must be a valid date.
 ```javascript
 const result = needle
-    .sort('created')
+    .sortDate('created')
     .take();
 
 console.log(result);
