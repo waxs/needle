@@ -1,8 +1,8 @@
 /** ----------------------------------------
-     Utilities
+    Utilities
  ---------------------------------------- */
 
-import * as util from '@util/util';
+import evaluate from '@util/_evaluate';
 
 /** ----------------------------------------
     Smaller
@@ -65,7 +65,7 @@ function between(key, values, date = false) {
     this._hasTrail();
 
     const filter = this._data.filter(item => {
-        return util.evaluate(item[key], '>=', values[0], date) && util.evaluate(item[key], '<=', values[1], date);
+        return evaluate(item[key], '>=', values[0], date) && evaluate(item[key], '<=', values[1], date);
     });
 
     return this._chain(filter);
