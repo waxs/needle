@@ -2,7 +2,7 @@
      Utilities
  ---------------------------------------- */
 
-import { leapYear } from '@util/_leapYear';
+import leapYear from '@util/_leapYear';
 
 /** ----------------------------------------
     Configuration
