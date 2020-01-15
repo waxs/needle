@@ -1,8 +1,19 @@
 # Needle JS
-Remember when jQuery was like a big thing and you used to chain methods just to work around some basic DOM 
-manipulation. Chaining is fun, but also a bit harsh on your memory. Despite all that, let's have some fun chaining 
-like back in the good 'ol days. Needle is a clean helper to find your needle in a haystack of data. Needle has some 
-simple helpers to quickly differentiate your data using chained methods being only `14.7KB` in size.
+Imagine having to retrieve all items that are active, easy right? Use a `.filter()` and you're pretty much done. But 
+what if you needed to retrieve all names of the active records in september 2020 where age is equal to 30? That's 
+where Needle comes in.  
+
+Needle is a fast, small, clean and flexible package for finding your needle in a haystack of data. Needle has some 
+simple helpers to quickly differentiate your data using chained methods being only `16KB` in size. Take the example 
+below for instance, matching the previous described situation. Voilà, your done with jus 5 lines of code. 
+
+```javascript
+needle
+    .is('active')
+    .month('created', 'sep', 2020)
+    .where('age', '=', 30)
+    .values('name');
+```
 
 ## Topics
 1. [Getting started](#getting-started)  
@@ -30,7 +41,7 @@ simple helpers to quickly differentiate your data using chained methods being on
 - [x] Refactor on constructor values
 - [x] Fix test issue
 - [x] Make library exportable
-- [ ] Finish CRUD methods
+- [x] Finish CRUD methods
 - [ ] Finish store methods
 - [ ] Set default parameters for keys
 - [ ] Refactor on README.md
@@ -94,7 +105,7 @@ manipulate an array of contents. Let's dive a little deeper into the options you
     * `orWhere()` exception based data initiated before use of `where()` selector
     * `andWhere()` exception based data initiated after use of `where()` selector
 
-* **CRUD** (8 methods) 🚧 Work in progress
+* **CRUD** (8 methods)
     * `create()` create new object in the data set
     * `read()` retrieve single item from the current data set
     * `update()` update single item from data set
