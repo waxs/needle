@@ -1,11 +1,10 @@
 # Needle JS
-Imagine having to retrieve all items that are active, easy right? Use a `.filter()` and you're pretty much done. But 
-what if you needed to retrieve all names of the active records in september 2020 where age is equal to 30? That's 
-where Needle comes in.  
-
 Needle is a fast, small, clean and flexible package for finding your needle in a haystack of data. Needle has some 
-simple helpers to quickly differentiate your data using chained methods being only `16KB` in size. Take the example 
-below for instance, matching the previous described situation. Voilà, your done with jus 5 lines of code. 
+simple helpers to quickly differentiate your data using chained methods while being only `16KB` in size.
+
+Imagine having to retrieve all items that are active, pretty easy right? These days use an array `.filter()` and you're 
+pretty much done. Now consider retrieving all names of the active records in september 2020 where the age is equal to 30. 
+This is where Needle comes with just 5 lines of code. 
 
 ```javascript
 needle
@@ -35,16 +34,6 @@ needle
 5. [Testing](#testing)    
 5.1 [Stress Test](#stres-test)  
 6. [About](#about)  
-
-## Roadmap
-- [x] Deconstruct responsibilities
-- [x] Refactor on constructor values
-- [x] Fix test issue
-- [x] Make library exportable
-- [x] Finish CRUD methods
-- [ ] Finish store methods
-- [ ] Set default parameters for keys
-- [ ] Refactor on README.md
 
 ## Getting started
 Needle has been build taking intuitive use in account. There are multiple helpers to help you sort, retrieve or 
@@ -200,6 +189,12 @@ well the first parameter can be declared as `all`, meaning `needle.take('all', t
 ```javascript
 needle.take(3);
 ```
+| Example               | Result                                        |  
+| ---                   | ---                                           |
+| take()                | Will return all available items               |
+| take('all')           | Will return all available items               |
+| take(3)               | Will return 3 items, if available             |
+| take('all', true)     | Will return object with items and info        |
 
 #### Select
 If needed a manipulated selection can be retrieved from the array with the `select()` method. With the `select()` 
@@ -759,6 +754,16 @@ strings or array's containing multiple strings. It's always wise to limit your d
       second query will have less intense data to work with.
 * Most API's have options to limit data, don't take it to far, have a talk with your backend engineer, or use 
      native functions to specify your needs first ;)
+
+## Roadmap
+- [x] Deconstruct responsibilities
+- [x] Refactor on constructor values
+- [x] Fix test issue
+- [x] Make library exportable
+- [x] Finish CRUD methods
+- [ ] Finish store methods
+- [ ] Set default parameters for keys
+- [ ] Refactor on README.md
 
 ## About
 This repository is mainly intended as an experiment and to have some fun, a folder with examples is available within 
