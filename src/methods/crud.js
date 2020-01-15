@@ -11,6 +11,7 @@
  */
 
 function create(obj) {
+    this._hasTrail();
     this._data.push(obj);
     this._chain(this._data);
 }
@@ -131,9 +132,9 @@ function removeValue(index, key) {
  * the current data set.
  */
 
-function removeAll() {
+function removeAll(key) {
     this._hasTrail();
-    this._data = [];
+    this._data.forEach(item => delete item[key]);
     this._chain(this._data);
 }
 
