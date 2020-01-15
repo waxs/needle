@@ -99,14 +99,14 @@ const methods = {
      ---------------------------------------- */
 
     crud: {
-        create: false,
-        read: false,
-        update: false,
-        updateValue: false,
-        updateAll: false,
-        remove: false,
-        removeValue: false,
-        removeAll:false
+        create: true,
+        read: true,
+        update: true,
+        updateValue: true,
+        updateAll: true,
+        remove: true,
+        removeValue: true,
+        removeAll:true
     }
 
 };
