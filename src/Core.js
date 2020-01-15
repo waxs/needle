@@ -28,7 +28,7 @@ extend(Core, trail);
     Methods
  ---------------------------------------- */
 
-import retrieve from '@js/methods/retrieve';
+import retrieve from '@js/methods/retrieve/base';
 import sort from '@js/methods/sorting';
 import debugging from '@js/methods/debugging';
 import template from '@js/methods/template';
