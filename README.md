@@ -189,12 +189,13 @@ well the first parameter can be declared as `all`, meaning `needle.take('all', t
 ```javascript
 needle.take(3);
 ```
-| Example               | Result                                        |  
-| ---                   | ---                                           |
-| take()                | Will return all available items               |
-| take('all')           | Will return all available items               |
-| take(3)               | Will return 3 items, if available             |
-| take('all', true)     | Will return object with items and info        |
+| Example               | Result |  
+| :---                  | :--- |
+| take()                | Will return all available items |
+| take('all')           | Will return all available items |
+| take(3)               | Will return 3 items, if available, meaning if less items are available that amount will be 
+returned |
+| take('all', true)     | Will return object with items and info |
 
 #### Select
 If needed a manipulated selection can be retrieved from the array with the `select()` method. With the `select()` 
