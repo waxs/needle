@@ -1,0 +1,70 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Needle Demo 10: CRUD</title>
+    <link rel="stylesheet" href="./assets/style.css">
+</head>
+<body>
+
+<!-- RESULTS -->
+<h2>Results</h2>
+<p>With the CRUD methods you're able to create, update, delete or read records from Needle. In this case we <u>add</u>
+    (create) a new item and then <u>change</u> (update) all the active keys to true.</p>
+<div id="result"></div>
+
+<!-- ORIGINAL DATA -->
+<h2>Original</h2>
+<p>The original data that was loaded in the original state before manipulating.</p>
+<div id="original"></div>
+
+<!-- SCRIPTS -->
+<script src="./demo/template.js"></script>
+<script src=".././mockup/simple.js"></script>
+<script src=".././dist/needle.min.js"></script>
+
+<script>
+
+    /** ----------------------------------------
+         Needle
+     ---------------------------------------- */
+
+    const needle = new Needle(data);
+
+    /** ----------------------------------------
+         Original Data
+     ---------------------------------------- */
+
+    needle
+        .template(data => html(data, '#original'));
+
+    /** ----------------------------------------
+         Create
+     ---------------------------------------- */
+
+    needle
+        .create({
+            active: true,
+            name: 'Victor',
+            age: 37,
+            city: 'Budapest'
+        });
+
+    /** ----------------------------------------
+         Update
+     ---------------------------------------- */
+
+    needle
+        .updateAll('active', true);
+
+    /** ----------------------------------------
+        Query
+     ---------------------------------------- */
+
+    needle
+        .select('active', 'name', 'age', 'city')
+        .template(data => html(data, '#result'));
+
+</script>
+</body>
+</html>
