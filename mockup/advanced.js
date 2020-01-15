@@ -5,7 +5,7 @@
 export const data = [
     {
         active: true,
-        created: '12/2/2020',
+        created: '2/12/2020',
         name: 'Sander',
         age: 30,
         city: 'Amsterdam',
@@ -23,7 +23,7 @@ export const data = [
     },
     {
         active: false,
-        created: '10/1/2017',
+        created: '1/10/2017',
         name: 'Nicole',
         age: 32,
         city: 'Paris',
@@ -39,7 +39,7 @@ export const data = [
     },
     {
         active: true,
-        created: '7/10/2019',
+        created: '10/7/2019',
         name: 'John',
         age: 45,
         city: 'New York',
