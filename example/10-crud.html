@@ -63,6 +63,7 @@
 
     needle
         .select('active', 'name', 'age', 'city')
+        .sort('name')
         .template(data => html(data, '#result'));
 
 </script>
