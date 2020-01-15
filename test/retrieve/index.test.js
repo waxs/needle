@@ -21,7 +21,7 @@ describe('Using index() method for selecting single item', () => {
 
         const output = {
             active: false,
-            created: '10/1/2017',
+            created: '1/10/2017',
             name: 'Nicole',
             age: 32,
             city: 'Paris',

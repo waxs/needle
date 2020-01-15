@@ -22,7 +22,7 @@ describe('Using has() method for first layer key match', () => {
         const output = [
             {
                 active: false,
-                created: '10/1/2017',
+                created: '1/10/2017',
                 name: 'Nicole',
                 age: 32,
                 city: 'Paris',

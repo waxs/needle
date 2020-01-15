@@ -22,7 +22,7 @@ describe('Using find() method for first layer key match', () => {
         const output = [
             {
                 active: true,
-                created: '12/2/2020',
+                created: '2/12/2020',
                 name: 'Sander',
                 age: 30,
                 city: 'Amsterdam',
