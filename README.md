@@ -193,8 +193,7 @@ needle.take(3);
 | :---                  | :--- |
 | take()                | Will return all available items |
 | take('all')           | Will return all available items |
-| take(3)               | Will return 3 items, if available, meaning if less items are available that amount will be 
-returned |
+| take(3)               | Will return 3 items, if available, meaning if less items are available that amount will be returned |
 | take('all', true)     | Will return object with items and info |
 
 #### Select
