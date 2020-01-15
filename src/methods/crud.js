@@ -28,7 +28,7 @@ function create(obj) {
 
 function read(index) {
     this._hasTrail();
-    return this._data[index];
+    return this._chain([this._data[index]]);
 }
 
 /**
