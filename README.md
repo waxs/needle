@@ -14,26 +14,29 @@ needle
     .values('name');
 ```
 
-## Topics
-1. [Getting started](#getting-started)  
-1.1 [Examples](#examples)  
-1.2 [Initiate Needle JS](#initiate-needle-js)  
-2. [Data](#data)  
-2.1 [Retrieve](#retrieve)  
-2.2 [Sorting](#sorting)  
-2.3 [Visualising](#visualising)  
-2.4 [Template](#template) 
-3. [Manipulating](#manipulating)  
-3.1 [Numbers](#numbers)  
-3.2 [Dates](#dates)  
-3.3 [Matches](#matches)  
-3.4 [Combinations](#combinations)   
-4. [Handle](#handle)   
-4.1 [CRUD](#crud)   
-4.2 [Store](#store) 
-5. [Testing](#testing)    
-5.1 [Stress Test](#stres-test)  
-6. [About](#about)  
+## Initiate Needle JS
+To use Needle we initiate the class as follows, the class expects an array of objects. 
+stick with a clean setup for now.
+
+```javascript
+const data = [{...}];
+const needle = new Needle(data);
+```
+
+### Optional initiation
+Besides setting the data within the constructor it can also be set using a setter and be retrieved using the getter. 
+Data can be retrieved at any given moment after manipulating it using the a chain of methods. Getting the data will 
+always result in the original data set that was set on the initial load. 
+
+#### Set data 
+```javascript
+needle.data = data;
+```
+
+#### Retrieve data 
+```javascript
+console.log(needle.data);
+```
 
 ## Getting started
 Needle has been build taking intuitive use in account. There are multiple helpers to help you sort, retrieve or 
@@ -150,38 +153,14 @@ Sara is lacking a city, and the `has()` method returns only items that have a gi
 The example folder contains multiple simple queries and visualisations in tables to illustrate the use of Needle in 
 real time. 
 
-### Initiate Needle JS
-To use Needle we initiate the class as follows, the class expects an array of objects. 
-stick with a clean setup for now.
-
-```javascript
-const data = [{...}];
-const needle = new Needle(data);
-```
-
-### Optional initiation
-Besides setting the data within the constructor it can also be set using a setter and be retrieved using the getter. 
-Data can be retrieved at any given moment after manipulating it using the a chain of methods. Getting the data will 
-always result in the original data set that was set on the initial load. 
-
-#### Set data 
-```javascript
-needle.data = data;
-```
-
-#### Retrieve data 
-```javascript
-console.log(needle.data);
-```
-
 ## Testing
 Needle methods can be tested using Jest, running the `npm run test` command will execute a number of test to make 
 sure basic functionality is working as expected. Test scripts can be found in the `__test__` folder.  
 
-#### Stress Test   
+### Stress Test   
 We did a stress test on working with a large data set. We can never assume, at least not for now, that JS 
 will outperform the magic of SQL, and this is also not what we were aiming for. In this case Needle hold up pretty well 
-going through a massive `7.5MB` mockup file containing over `250.000 lines` of data with over `5500 unique items`. This is 
+going through a massive mockup file containing over `250.000 lines` of data with over `5500 unique items`. This is 
 however no guarantee that your dataset will hold up. Overall performance will vary, some keys might hold extensive 
 strings or array's containing multiple strings. It's always wise to limit your dataset as much as possible to achieve
  a better performance. If you like to experience performance yourself generate some JSON online and pass it to Needle. 
