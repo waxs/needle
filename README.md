@@ -62,7 +62,7 @@ manipulate an array of contents. Let's dive a little deeper into the options you
 * **Template** (1 method) [Read documentation ⟶](https://github.com/waxs/needle/tree/master/docs/template)
     * `template()` can be used to template results with custom markup
     
-* **Numbers** (9 methods)
+* **Numbers** (9 methods) [Read documentation ⟶](https://github.com/waxs/needle/tree/master/docs/numbers)
     * `smaller()` retrieve items smaller than a given parameter
     * `bigger()` retrieve items bigger than a given parameter
     * `between()` retrieve items in between to given parameters
@@ -73,7 +73,7 @@ manipulate an array of contents. Let's dive a little deeper into the options you
     * `negative()` retrieve all negative items from a given key within the data
     * `sum()` sum an amount of numbers from a given key in current data
     
-* **Dates** (7 methods)
+* **Dates** (7 methods) [Read documentation ⟶](https://github.com/waxs/needle/tree/master/docs/dates)
     * `before()` take items from before a given date
     * `after()` take items from after a given date
     * `period()` take items from in between two dates
@@ -82,14 +82,14 @@ manipulate an array of contents. Let's dive a little deeper into the options you
     * `previous()` take last amount of items based named dates
     * `upcoming()` take next amount of items based named dates
     
-* **Matches** (5 methods)
+* **Matches** (5 methods) [Read documentation ⟶](https://github.com/waxs/needle/tree/master/docs/matches)
     * `is()` retrieve items with a bool value that is true
     * `has()` retrieve items if a given key is present in the object
     * `hasDeep()` retrieve items if a given key is present in a nested object
     * `find()` find will retrieve objects with a key value pair match
     * `findDeep()` find will retrieve objects with a nested key value pair match
 
-* **Combinations** (3 methods)
+* **Combinations** (3 methods) [Read documentation ⟶](https://github.com/waxs/needle/tree/master/docs/combinations)
     * `where()` find matches based on operator matching key, value pair
     * `orWhere()` exception based data initiated before use of `where()` selector
     * `andWhere()` exception based data initiated after use of `where()` selector
@@ -172,243 +172,6 @@ needle.data = data;
 #### Retrieve data 
 ```javascript
 console.log(needle.data);
-```
-
-### Dates
-Besides numbers you might want to select all items `before()` or `after()` a certain time. This can be achieved using
- the date helpers that can be chained on Needle.
- 
-#### Before or after
-Using the before or after method a selection of items can be retrieved from either before or after a specific date. 
-Both a `key` and `value` need to be passed to retrieve all items that match the given query. 
-```javascript
-const result = needle
-    .before('created', '10/1/2020')
-    .take();
-    
-console.log(result);
-```
-
-#### Period
-It's also possible to retrieve all items within a range of dates, this can be done in a similar way using the 
-period method. It takes two parameters, a `key` and an `array` containing both ends of the range.
-```javascript
-const result = needle
-    .period('created', ['1/1/2020', '1/1/2021'])
-    .take();
-    
-console.log(result);
-```
-
-#### Month
-If you need to retrieve information about a certain month this can be done using the `month()` method. It will 
-retrieve all items within a given month. For example `month('created', 'sep', 2020)`. It uses a abbreviation of the 
-month name, it will support an English abbreviation. 
-```javascript
-const result = needle
-    .month('date', 'jan', 2020)
-    .take();
-    
-console.log(result);
-```
-
-#### Year
-If you need results from a complete year, this can be done using the `year()` method. It will take all items from the
- data set starting with the first of January and end at 31st of December. 
-```javascript
-const result = needle
-    .year('date', 2020)
-    .take();
-    
-console.log(result);
-```
-
-#### Previous & upcoming
-Last will always retrieve a set of data based on today. Meaning, instead of taking a static year, you could do for 
-instance, the last 2 days, or maybe do 1 week. Besides `last()` there is also a `next()` method, achieving the samen 
-result but instead of looking back it will look forward. 
-
-Both `last()` and `next()` support a simple markup for making queries. You can look for days, weeks, months, 
-quarters, always based on the current date. Meaning that doing `last('created', 1, 'months')` will not take the month
- January if the current month would be February. It will look 30 days in the past from the current date. 
- 
-Why? Well this method is their to be more dynamic, every time you visit the query the result may vary based on what 
-happend in the last or will happen in the upcoming days. If you need to retrieve a specific month of data use the 
-`month()` method. Here are a couple of examples. 
-```javascript
-const result = needle
-    .previous('created', 6, 'months')
-    .take();
-    
-console.log(result);
-```
-The `next()` method follows a similar syntax. 
-```javascript
-const result = needle
-    .upcoming('created', 2, 'weeks')
-    .take();
-    
-console.log(result);
-```
-In the above examples `weeks` and `months` could have been replaced with either `days`, `quarters` or years`as well. 
-
-### Matches
-Using filters it's possible to manipulate the data and retrieve a new array of items based on the queries given. For 
-instance retrieve all items that have a specific key or value. 
-
-#### Is
-To quickly check if a value is `true` use the `is()` method and provide it with a key that needs to be checked. 
-
-```javascript
-const result = needle
-    .is('active')
-    .take();
-    
-console.log(result);
-```
-
-#### Has
-To retrieve items with a specific key present within the object use the `has()` method. This will only retrieve 
-items that have the given key available within the object. Specify the key as a parameter in the method. 
-
-```javascript
-const result = needle
-    .has('city')
-    .take();
-    
-console.log(result);
-```
-
-#### Has Deep
-The `hasDeep()` method will look for nested keys inside an item and retrieve all items that match the given criteria.
- This recursive function will demand more performance if large items are provided. 
-```javascript
-const data = [
-    {
-        active: true,
-        created: '1/1/2020',
-        name: 'Sander',
-        age: 30,
-        city: 'Amsterdam',
-        contact: {
-            website: 'http://sanderhidding.nl',
-            github: 'waxs'
-        }
-    }
-]
-
-const needle = new Needle(data);
-
-needle
-    .hasDeep('github')
-    .log();
-```
-
-#### Find
-To find a match on a specific value use the `find()` method. Be aware that find only works on the first layer of keys
- and does not check recursively for nested keys hold within the object. 
-```javascript
-const result = needle
-    .find('city', 'Amsterdam')
-    .take();
-    
-console.log(result);
-```
-Find will also work with arrays, bools and numbers. Also an array of matches can be declared, to find multiple 
-records holding arrays of their own. If any match can be made the item will be retrieved.
-```javascript
-const data = [
-    {
-        active: true,
-        created: '12/2/2020',
-        name: 'Sander',
-        age: 30,
-        city: 'Amsterdam',
-        hobbies: [
-            'Music',
-            'Movies'
-        ]
-    }
-]
-
-const needle = new Needle(data);
-
-const result = needle
-    .find('hobbies', ['Sports', 'Movies'])
-    .take();
-    
-console.log(result);
-```
-
-#### Find Deep
-The `findDeep()` method is an advanced way of looking for key value pairs within an item. The regular `find()` method
- will only look for the first layer of keys, the `findDeep()` method will also look within nested objects inside the 
- item. This process is more demanding and will take more performance from the browser. 
-```javascript
-const data = [
-    {
-        active: true,
-        created: '1/1/2020',
-        name: 'Sander',
-        age: 30,
-        city: 'Amsterdam',
-        contact: {
-            website: 'http://sanderhidding.nl',
-            github: 'waxs'
-        }
-    }
-]
-
-const needle = new Needle(data);
-
-needle
-    .findDeep('github', 'waxs')
-    .log();
-```
-
-### Combinations
-Without doing to much work your able to create exceptions within a given query using basic operators. For instance 
-you want to select data with a value below `10` but also above `40`, skipping values in between 10 and 40. This can 
-be achieved using the `where` operator in combination with the `orWhere` and `andWhere()`. 
-
-#### Where
-To match a specific operation the where operator can be used. It accepts basic operations comparing values. If this 
-method is directly chained with another `where` operator exceptions can be made on the query. Also, the `where()` 
-operation will buffer a trail, meaning if combined with other `where` operators a list of operations will execute at 
-once making exceptions possible. 
-```javascript
-const result = needle
-    .where('age', '<', 20)
-        .orWhere('age', '>', 50)
-    .take();
-
-console.log(result);
-```
-
-#### orWhere
-With the `orWhere()` method an exception can be made on the initial `where` operator. It will use the data after the
- `where()` method was initiated. Making additional selections on the previous dataset possible. The example below 
- will show a record where the age is lower then 20 or the city is Amsterdam. Meaning both could be true.
-```javascript
-const result = needle
-    .where('age', '<', 20)
-        .orWhere('city', '=', 'Amsterdam')
-    .take();
-
-console.log(result);
-```
-
-#### andWhere
-With the `andWhere()` method an exception can be made on the initial `where` operator. It will use the data before the
- `where()` method was initiated. Making additional selections on the previous dataset possible. The example below 
- will show a record where the age is larger then 20 and the city is Rome. Meaning both should be true.
-```javascript
-const result = needle
-    .where('age', '>', 20)
-        .andWhere('city', '=', 'Rome')
-    .take();
-
-console.log(result);
 ```
 
 ## Testing
