@@ -1,6 +1,6 @@
 # Needle JS
 
-## Visualising
+## Debugging
 Before using any filters let's take a look at how to retrieve data from Needle for testing purposes. Data can either 
 be logged inside the console or be printed in the DOM, this will use a stringify without any markup. Both functions 
 can only be used at the end of a chain. 
