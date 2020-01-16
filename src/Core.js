@@ -31,7 +31,7 @@ extend(Core, trail);
 import retrieve from '@js/methods/retrieve/base';
 import sort from '@js/methods/sorting/base';
 import debugging from '@js/methods/debugging/base';
-import template from '@js/methods/template';
+import template from '@js/methods/template/base';
 import numbers from '@js/methods/numbers';
 import dates from '@js/methods/dates';
 import matches from '@js/methods/matches';

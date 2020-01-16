@@ -24,6 +24,4 @@ function template(callback, data = this._data) {
     Exports
  ---------------------------------------- */
 
-export default {
-    template
-};
+export default template;
