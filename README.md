@@ -50,11 +50,11 @@ manipulate an array of contents. Let's dive a little deeper into the options you
     * `last()` will return the last item from the data set
     * `count()` will count the amount of results and return a number
 
-* **Sorting** (2 methods)
+* **Sorting** (2 methods) [Read documentation ⟶](https://github.com/waxs/needle/tree/master/docs/sorting)
     * `sort()` will sort the results `asc` or `desc`
     * `sortDate()` will sort the results on date `asc` or `desc`
     
-* **Debugging** (3 methods)
+* **Debugging** (3 methods) [Read documentation ⟶](https://github.com/waxs/needle/tree/master/docs/debugging)
     * `log()` will log results to the console
     * `print()` will print results to the DOM
     * `random()` will retrieve a random amount of items 
@@ -172,35 +172,6 @@ needle.data = data;
 #### Retrieve data 
 ```javascript
 console.log(needle.data);
-```
-
-### Visualising
-Before using any filters let's take a look at how to retrieve data from Needle for testing purposes. Data can either 
-be logged inside the console or be printed in the DOM, this will use a stringify without any markup. Both functions 
-can only be used at the end of a chain. 
-
-#### Log
-Log will display the results in the console. An optional number can be given to limit the amount of results. 
-```javascript
-needle.log(3);
-```
-
-#### Print
-Print will stringify the (manipulated) data to the DOM. By default it will look for an element with an id of 
-`#result`, a specific class or id can also be specified as a parameter, as shown in the example below. If no argument
- is passed and `#result` is not present in the DOM, the results will be printed within the `body` tag, meaning, 
- `print()` will always execute and print results.
-```javascript
-needle.print('.results');
-```
-
-#### Random
-If you need a random items for testing use the random method to retrieve a random amount of items. By default the 
-random method will return 1 item if used as `random()`.
-```javascript
-needle
-    .random(3)
-    .log();
 ```
 
 ### Template
