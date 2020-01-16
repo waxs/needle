@@ -59,7 +59,7 @@ manipulate an array of contents. Let's dive a little deeper into the options you
     * `print()` will print results to the DOM
     * `random()` will retrieve a random amount of items 
     
-* **Template** (1 method)
+* **Template** (1 method) [Read documentation ⟶](https://github.com/waxs/needle/tree/master/docs/template)
     * `template()` can be used to template results with custom markup
     
 * **Numbers** (9 methods)
