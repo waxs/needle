@@ -16,26 +16,12 @@ needle
 
 ## Initiate Needle JS
 To use Needle we initiate the class as follows, the class expects an array of objects. 
-stick with a clean setup for now.
+Let's stick with a clean setup for now. You can also use a setter `needle.data = [{...}]` or a getter `needle.data` 
+to retrieve the data from Needle.
 
 ```javascript
 const data = [{...}];
 const needle = new Needle(data);
-```
-
-### Optional initiation
-Besides setting the data within the constructor it can also be set using a setter and be retrieved using the getter. 
-Data can be retrieved at any given moment after manipulating it using the a chain of methods. Getting the data will 
-always result in the original data set that was set on the initial load. 
-
-#### Set data 
-```javascript
-needle.data = data;
-```
-
-#### Retrieve data 
-```javascript
-console.log(needle.data);
 ```
 
 ## Getting started
@@ -178,10 +164,10 @@ strings or array's containing multiple strings. It's always wise to limit your d
 - [x] Fix test issue
 - [x] Make library exportable
 - [x] Finish CRUD methods
+- [x] Refactor on README.md
 - [ ] Decouple methods in folders
 - [ ] Finish store methods
 - [ ] Set default parameters for keys
-- [ ] Refactor on README.md
 
 ## About
 This repository is mainly intended as an experiment and to have some fun, a folder with examples is available within 
