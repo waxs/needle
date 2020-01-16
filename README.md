@@ -39,7 +39,7 @@ needle
 Needle has been build taking intuitive use in account. There are multiple helpers to help you sort, retrieve or 
 manipulate an array of contents. Let's dive a little deeper into the options you can use with Needle. 
 
-* **Retrieve Data** (12 methods) [read documentation](https://github.com/waxs/needle/tree/master/src/methods/retrieve)
+* **Retrieve Data** (12 methods) [Read documentation ⟶](https://github.com/waxs/needle/tree/master/docs/retrieve)
     * `take()` will retrieve an amount of manipulated data
     * `select()` create new items based on given keys
     * `chunk()` create chunks of data contains `next()`, `prev()` and `start()` function.
@@ -173,27 +173,6 @@ needle.data = data;
 ```javascript
 console.log(needle.data);
 ```
-
-### Sorting
-Besides setting `random()` results, a sorted array can also be retrieved using the `sort()` method. This will take 
-two arguments, a `key` and and the direction either ascending with the `asc` string (will be the default) or 
-descending using `desc`. It can be used on strings and numbers. 
-```javascript
-const result = needle
-    .sort('age')
-    .take();
-
-console.log(result);
-``` 
-If needed the same thing can be achieved running date values, there is an separate method available fro preforming 
-this sort called `sortDate()`. Behind the scenes values will be converted into a date. Value must be a valid date.
-```javascript
-const result = needle
-    .sortDate('created')
-    .take();
-
-console.log(result);
-``` 
 
 ### Visualising
 Before using any filters let's take a look at how to retrieve data from Needle for testing purposes. Data can either 

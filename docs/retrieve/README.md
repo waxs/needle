@@ -1,3 +1,5 @@
+# Needle JS
+
 ## Retrieve Data 
 There are multiple methods to retrieve the data from Needle as a new array that can be used as you please. Main 
 function to be used is the `take()` method, this will return the data and can only be used as the last method within 
