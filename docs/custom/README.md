@@ -18,7 +18,7 @@ const result = needle
 console.log(result);
 ```
 
-#### customFilter
+### Custom Filter
 If you don't need to manipulate the array of data, but make an additional filter this effect can be achieved using 
 the `customFilter()` method. Everything that will return true will be added the current dataset. With the `is()` 
 method your able to check if something is true, but what if you want to know if a value is false. Let's take a look 
