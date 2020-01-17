@@ -80,6 +80,7 @@ next or previous chunk. Here is an example.
     next: ƒ next()
 }
 ```
+#### Retrieve chunks
 In this case we assume we retrieved chunks with a `size` of 5. The `amount` of chunks is equal to 2 based on a 
 data set of 10. The `start` key returns the first chunk as a `template()` method and the `current` position of the chunk
  is 
@@ -139,7 +140,7 @@ The first method will return the first item from the array.
 needle.first();
 ```
 
-#### Last
+### Last
 The last method will return the last item from the array.
 ```javascript
 needle.last();
