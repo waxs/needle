@@ -28,7 +28,7 @@ const needle = new Needle(data);
 Needle has been build taking intuitive use in account. There are multiple helpers to help you sort, retrieve or 
 manipulate an array of contents. Let's dive a little deeper into the options you can use with Needle. 
 
-* **Retrieve Data** (12 methods) [Read documentation ⟶](https://github.com/waxs/needle/tree/master/docs/retrieve)
+* **Retrieve Data** (12 methods) [Read documentation ⟶](https://github.com/waxs/needle/tree/master/docs/retrieve/README.md)
     * `take()` will retrieve an amount of manipulated data
     * `select()` create new items based on given keys
     * `chunk()` create chunks of data contains `next()`, `prev()` and `start()` function.
@@ -39,19 +39,19 @@ manipulate an array of contents. Let's dive a little deeper into the options you
     * `last()` will return the last item from the data set
     * `count()` will count the amount of results and return a number
 
-* **Sorting** (2 methods) [Read documentation ⟶](https://github.com/waxs/needle/tree/master/docs/sorting)
+* **Sorting** (2 methods) [Read documentation ⟶](https://github.com/waxs/needle/tree/master/docs/sorting/README.md)
     * `sort()` will sort the results `asc` or `desc`
     * `sortDate()` will sort the results on date `asc` or `desc`
     
-* **Debugging** (3 methods) [Read documentation ⟶](https://github.com/waxs/needle/tree/master/docs/debugging)
+* **Debugging** (3 methods) [Read documentation ⟶](https://github.com/waxs/needle/tree/master/docs/debugging/README.md)
     * `log()` will log results to the console
     * `print()` will print results to the DOM
     * `random()` will retrieve a random amount of items 
     
-* **Template** (1 method) [Read documentation ⟶](https://github.com/waxs/needle/tree/master/docs/template)
+* **Template** (1 method) [Read documentation ⟶](https://github.com/waxs/needle/tree/master/docs/template/README.md)
     * `template()` can be used to template results with custom markup
     
-* **Numbers** (9 methods) [Read documentation ⟶](https://github.com/waxs/needle/tree/master/docs/numbers)
+* **Numbers** (9 methods) [Read documentation ⟶](https://github.com/waxs/needle/tree/master/docs/numbers/README.md)
     * `smaller()` retrieve items smaller than a given parameter
     * `bigger()` retrieve items bigger than a given parameter
     * `between()` retrieve items in between to given parameters
@@ -62,7 +62,7 @@ manipulate an array of contents. Let's dive a little deeper into the options you
     * `negative()` retrieve all negative items from a given key within the data
     * `sum()` sum an amount of numbers from a given key in current data
     
-* **Dates** (7 methods) [Read documentation ⟶](https://github.com/waxs/needle/tree/master/docs/dates)
+* **Dates** (7 methods) [Read documentation ⟶](https://github.com/waxs/needle/tree/master/docs/dates/README.md)
     * `before()` take items from before a given date
     * `after()` take items from after a given date
     * `period()` take items from in between two dates
@@ -71,14 +71,14 @@ manipulate an array of contents. Let's dive a little deeper into the options you
     * `previous()` take last amount of items based named dates
     * `upcoming()` take next amount of items based named dates
     
-* **Matches** (5 methods) [Read documentation ⟶](https://github.com/waxs/needle/tree/master/docs/matches)
+* **Matches** (5 methods) [Read documentation ⟶](https://github.com/waxs/needle/tree/master/docs/matches/README.md)
     * `is()` retrieve items with a bool value that is true
     * `has()` retrieve items if a given key is present in the object
     * `hasDeep()` retrieve items if a given key is present in a nested object
     * `find()` find will retrieve objects with a key value pair match
     * `findDeep()` find will retrieve objects with a nested key value pair match
 
-* **Combinations** (3 methods) [Read documentation ⟶](https://github.com/waxs/needle/tree/master/docs/combinations)
+* **Combinations** (3 methods) [Read documentation ⟶](https://github.com/waxs/needle/tree/master/docs/combinations/README.md)
     * `where()` find matches based on operator matching key, value pair
     * `orWhere()` exception based data initiated before use of `where()` selector
     * `andWhere()` exception based data initiated after use of `where()` selector
