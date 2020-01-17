@@ -12,6 +12,6 @@ import random from './_random';
 
 export default {
     log,
-    pring,
+    print,
     random
 };
