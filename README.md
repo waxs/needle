@@ -83,6 +83,10 @@ manipulate an array of contents. Let's dive a little deeper into the options you
     * `orWhere()` exception based data initiated before use of `where()` selector
     * `andWhere()` exception based data initiated after use of `where()` selector
 
+* **Custom** (2 methods) [Read documentation ⟶](https://github.com/waxs/needle/tree/master/docs/custom/README.md)
+    * `customEach()` make a custom manipulator
+    * `customFilter()` make a custom filter
+
 * **CRUD** (8 methods)
     * `create()` create new object in the data set
     * `read()` retrieve single item from the current data set
