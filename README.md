@@ -97,7 +97,7 @@ manipulate an array of contents. Let's dive a little deeper into the options you
     * `save()` save a data set to the store
     * `retrieve()` retrieve a single set from the store
     
-### Examples
+## Examples
 This repository holds multiple examples of using Needle JS with a simple `index.html` that will visualise results and
  data. The fastest way getting started with Needle is to play around with these examples, you will find that working 
  with the methods of Needle is fast and simple. Let's take a look at a simple example of the ease of use of Needle.
@@ -139,11 +139,11 @@ Sara is lacking a city, and the `has()` method returns only items that have a gi
 The example folder contains multiple simple queries and visualisations in tables to illustrate the use of Needle in 
 real time. 
 
-## Testing
+## Development
 Needle methods can be tested using Jest, running the `npm run test` command will execute a number of test to make 
 sure basic functionality is working as expected. Test scripts can be found in the `__test__` folder.  
 
-### Stress Test   
+### Testing   
 We did a stress test on working with a large data set. We can never assume, at least not for now, that JS 
 will outperform the magic of SQL, and this is also not what we were aiming for. In this case Needle hold up pretty well 
 going through a massive mockup file containing over `250.000 lines` of data with over `5500 unique items`. This is 
@@ -158,7 +158,7 @@ strings or array's containing multiple strings. It's always wise to limit your d
 * Most API's have options to limit data, don't take it to far, have a talk with your backend engineer, or use 
      native functions to specify your needs first ;)
 
-## Roadmap
+### Roadmap
 - [x] Deconstruct responsibilities
 - [x] Refactor on constructor values
 - [x] Fix test issue
