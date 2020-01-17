@@ -33,7 +33,7 @@ import sort from '@js/methods/sorting/base';
 import debugging from '@js/methods/debugging/base';
 import template from '@js/methods/template/base';
 import numbers from '@js/methods/numbers/base';
-import dates from '@js/methods/dates';
+import dates from '@js/methods/dates/base';
 import matches from '@js/methods/matches';
 import combinations from '@js/methods/combinations';
 
