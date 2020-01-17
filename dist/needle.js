@@ -100,7 +100,7 @@ var Needle =
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _js_setup_extends__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @js/setup/_extends */ \"./src/setup/_extends.js\");\n/* harmony import */ var _js_methods_helpers__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @js/methods/helpers */ \"./src/methods/helpers.js\");\n/* harmony import */ var _js_methods_trail__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @js/methods/trail */ \"./src/methods/trail.js\");\n/* harmony import */ var _js_methods_retrieve_base__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @js/methods/retrieve/base */ \"./src/methods/retrieve/base.js\");\n/* harmony import */ var _js_methods_sorting_base__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @js/methods/sorting/base */ \"./src/methods/sorting/base.js\");\n/* harmony import */ var _js_methods_debugging__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @js/methods/debugging */ \"./src/methods/debugging.js\");\n/* harmony import */ var _js_methods_template__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @js/methods/template */ \"./src/methods/template.js\");\n/* harmony import */ var _js_methods_numbers__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @js/methods/numbers */ \"./src/methods/numbers.js\");\n/* harmony import */ var _js_methods_dates__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @js/methods/dates */ \"./src/methods/dates.js\");\n/* harmony import */ var _js_methods_matches__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! @js/methods/matches */ \"./src/methods/matches.js\");\n/* harmony import */ var _js_methods_combinations__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! @js/methods/combinations */ \"./src/methods/combinations.js\");\n/* harmony import */ var _js_methods_store__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! @js/methods/store */ \"./src/methods/store.js\");\n/* harmony import */ var _js_methods_crud__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! @js/methods/crud */ \"./src/methods/crud.js\");\nfunction _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError(\"Cannot call a class as a function\"); } }\n\n/** ----------------------------------------\n    Initiate Needle Core\n ---------------------------------------- */\nvar Core = function Core() {\n  _classCallCheck(this, Core);\n};\n/** ----------------------------------------\n     Utilities\n ---------------------------------------- */\n\n\n\n/** ----------------------------------------\n     Helpers\n ---------------------------------------- */\n\n\n\n/** ----------------------------------------\n    Needle Helpers\n ---------------------------------------- */\n\nObject(_js_setup_extends__WEBPACK_IMPORTED_MODULE_0__[\"extend\"])(Core, _js_methods_helpers__WEBPACK_IMPORTED_MODULE_1__[\"default\"]);\nObject(_js_setup_extends__WEBPACK_IMPORTED_MODULE_0__[\"extend\"])(Core, _js_methods_trail__WEBPACK_IMPORTED_MODULE_2__[\"default\"]);\n/** ----------------------------------------\n    Methods\n ---------------------------------------- */\n\n\n\n\n\n\n\n\n\n/** ----------------------------------------\n    Needle Methods\n ---------------------------------------- */\n\nObject(_js_setup_extends__WEBPACK_IMPORTED_MODULE_0__[\"extend\"])(Core, _js_methods_retrieve_base__WEBPACK_IMPORTED_MODULE_3__[\"default\"]);\nObject(_js_setup_extends__WEBPACK_IMPORTED_MODULE_0__[\"extend\"])(Core, _js_methods_sorting_base__WEBPACK_IMPORTED_MODULE_4__[\"default\"]);\nObject(_js_setup_extends__WEBPACK_IMPORTED_MODULE_0__[\"extend\"])(Core, _js_methods_debugging__WEBPACK_IMPORTED_MODULE_5__[\"default\"]);\nObject(_js_setup_extends__WEBPACK_IMPORTED_MODULE_0__[\"extend\"])(Core, _js_methods_template__WEBPACK_IMPORTED_MODULE_6__[\"default\"]);\nObject(_js_setup_extends__WEBPACK_IMPORTED_MODULE_0__[\"extend\"])(Core, _js_methods_numbers__WEBPACK_IMPORTED_MODULE_7__[\"default\"]);\nObject(_js_setup_extends__WEBPACK_IMPORTED_MODULE_0__[\"extend\"])(Core, _js_methods_dates__WEBPACK_IMPORTED_MODULE_8__[\"default\"]);\nObject(_js_setup_extends__WEBPACK_IMPORTED_MODULE_0__[\"extend\"])(Core, _js_methods_matches__WEBPACK_IMPORTED_MODULE_9__[\"default\"]);\nObject(_js_setup_extends__WEBPACK_IMPORTED_MODULE_0__[\"extend\"])(Core, _js_methods_combinations__WEBPACK_IMPORTED_MODULE_10__[\"default\"]);\n/** ----------------------------------------\n     Handlers\n ---------------------------------------- */\n\n\n\n/** ----------------------------------------\n    Needle Handlers\n ---------------------------------------- */\n\nObject(_js_setup_extends__WEBPACK_IMPORTED_MODULE_0__[\"extend\"])(Core, _js_methods_store__WEBPACK_IMPORTED_MODULE_11__[\"default\"]);\nObject(_js_setup_extends__WEBPACK_IMPORTED_MODULE_0__[\"extend\"])(Core, _js_methods_crud__WEBPACK_IMPORTED_MODULE_12__[\"default\"]);\n/** ----------------------------------------\n     Exports\n ---------------------------------------- */\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (Core);\n\n//# sourceURL=webpack://Needle/./src/Core.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _js_setup_extends__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @js/setup/_extends */ \"./src/setup/_extends.js\");\n/* harmony import */ var _js_methods_helpers__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @js/methods/helpers */ \"./src/methods/helpers.js\");\n/* harmony import */ var _js_methods_trail__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @js/methods/trail */ \"./src/methods/trail.js\");\n/* harmony import */ var _js_methods_retrieve_base__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @js/methods/retrieve/base */ \"./src/methods/retrieve/base.js\");\n/* harmony import */ var _js_methods_sorting_base__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @js/methods/sorting/base */ \"./src/methods/sorting/base.js\");\n/* harmony import */ var _js_methods_debugging_base__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @js/methods/debugging/base */ \"./src/methods/debugging/base.js\");\n/* harmony import */ var _js_methods_template_base__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @js/methods/template/base */ \"./src/methods/template/base.js\");\n/* harmony import */ var _js_methods_numbers_base__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @js/methods/numbers/base */ \"./src/methods/numbers/base.js\");\n/* harmony import */ var _js_methods_dates_base__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @js/methods/dates/base */ \"./src/methods/dates/base.js\");\n/* harmony import */ var _js_methods_matches_base__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! @js/methods/matches/base */ \"./src/methods/matches/base.js\");\n/* harmony import */ var _js_methods_combinations_base__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! @js/methods/combinations/base */ \"./src/methods/combinations/base.js\");\n/* harmony import */ var _js_methods_custom_base__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! @js/methods/custom/base */ \"./src/methods/custom/base.js\");\n/* harmony import */ var _js_methods_store__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! @js/methods/store */ \"./src/methods/store.js\");\n/* harmony import */ var _js_methods_crud__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! @js/methods/crud */ \"./src/methods/crud.js\");\nfunction _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError(\"Cannot call a class as a function\"); } }\n\n/** ----------------------------------------\n    Initiate Needle Core\n ---------------------------------------- */\nvar Core = function Core() {\n  _classCallCheck(this, Core);\n};\n/** ----------------------------------------\n     Utilities\n ---------------------------------------- */\n\n\n\n/** ----------------------------------------\n     Helpers\n ---------------------------------------- */\n\n\n\n/** ----------------------------------------\n    Needle Helpers\n ---------------------------------------- */\n\nObject(_js_setup_extends__WEBPACK_IMPORTED_MODULE_0__[\"extend\"])(Core, _js_methods_helpers__WEBPACK_IMPORTED_MODULE_1__[\"default\"]);\nObject(_js_setup_extends__WEBPACK_IMPORTED_MODULE_0__[\"extend\"])(Core, _js_methods_trail__WEBPACK_IMPORTED_MODULE_2__[\"default\"]);\n/** ----------------------------------------\n    Methods\n ---------------------------------------- */\n\n\n\n\n\n\n\n\n\n\n/** ----------------------------------------\n    Needle Methods\n ---------------------------------------- */\n\nObject(_js_setup_extends__WEBPACK_IMPORTED_MODULE_0__[\"extend\"])(Core, _js_methods_retrieve_base__WEBPACK_IMPORTED_MODULE_3__[\"default\"]);\nObject(_js_setup_extends__WEBPACK_IMPORTED_MODULE_0__[\"extend\"])(Core, _js_methods_sorting_base__WEBPACK_IMPORTED_MODULE_4__[\"default\"]);\nObject(_js_setup_extends__WEBPACK_IMPORTED_MODULE_0__[\"extend\"])(Core, _js_methods_debugging_base__WEBPACK_IMPORTED_MODULE_5__[\"default\"]);\nObject(_js_setup_extends__WEBPACK_IMPORTED_MODULE_0__[\"extend\"])(Core, _js_methods_template_base__WEBPACK_IMPORTED_MODULE_6__[\"default\"]);\nObject(_js_setup_extends__WEBPACK_IMPORTED_MODULE_0__[\"extend\"])(Core, _js_methods_numbers_base__WEBPACK_IMPORTED_MODULE_7__[\"default\"]);\nObject(_js_setup_extends__WEBPACK_IMPORTED_MODULE_0__[\"extend\"])(Core, _js_methods_dates_base__WEBPACK_IMPORTED_MODULE_8__[\"default\"]);\nObject(_js_setup_extends__WEBPACK_IMPORTED_MODULE_0__[\"extend\"])(Core, _js_methods_matches_base__WEBPACK_IMPORTED_MODULE_9__[\"default\"]);\nObject(_js_setup_extends__WEBPACK_IMPORTED_MODULE_0__[\"extend\"])(Core, _js_methods_combinations_base__WEBPACK_IMPORTED_MODULE_10__[\"default\"]);\nObject(_js_setup_extends__WEBPACK_IMPORTED_MODULE_0__[\"extend\"])(Core, _js_methods_custom_base__WEBPACK_IMPORTED_MODULE_11__[\"default\"]);\n/** ----------------------------------------\n     Handlers\n ---------------------------------------- */\n\n\n\n/** ----------------------------------------\n    Needle Handlers\n ---------------------------------------- */\n\nObject(_js_setup_extends__WEBPACK_IMPORTED_MODULE_0__[\"extend\"])(Core, _js_methods_store__WEBPACK_IMPORTED_MODULE_12__[\"default\"]);\nObject(_js_setup_extends__WEBPACK_IMPORTED_MODULE_0__[\"extend\"])(Core, _js_methods_crud__WEBPACK_IMPORTED_MODULE_13__[\"default\"]);\n/** ----------------------------------------\n     Exports\n ---------------------------------------- */\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (Core);\n\n//# sourceURL=webpack://Needle/./src/Core.js?");
 
 /***/ }),
 
@@ -124,7 +124,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/** -------------------------
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/** ----------------------------------------\n     Configuration\n ---------------------------------------- */\nvar methods = {\n  /** ----------------------------------------\n       Sorting\n   ---------------------------------------- */\n  sort: {\n    sort: true,\n    sortDate: true\n  },\n\n  /** ----------------------------------------\n       Debugging\n   ---------------------------------------- */\n  debugging: {\n    log: true,\n    print: true,\n    random: true\n  },\n\n  /** ----------------------------------------\n       Template\n   ---------------------------------------- */\n  template: {\n    template: true\n  },\n\n  /** ----------------------------------------\n      Numbers\n   ---------------------------------------- */\n  numbers: {\n    bigger: true,\n    smaller: true,\n    between: true,\n    equal: true,\n    min: true,\n    max: true,\n    positive: true,\n    negative: true,\n    sum: true\n  },\n\n  /** ----------------------------------------\n       Dates\n   ---------------------------------------- */\n  dates: {\n    before: true,\n    after: true,\n    period: true,\n    month: true,\n    year: true,\n    previous: true,\n    upcoming: true\n  },\n\n  /** ----------------------------------------\n      Matches\n   ---------------------------------------- */\n  matches: {\n    is: true,\n    has: true,\n    hasDeep: true,\n    find: true,\n    findDeep: true\n  },\n\n  /** ----------------------------------------\n      Combinations\n   ---------------------------------------- */\n  combinations: {\n    where: true,\n    orWhere: true,\n    _orWhere: true,\n    andWhere: true,\n    _andWhere: true\n  },\n\n  /** ----------------------------------------\n       Store\n   ---------------------------------------- */\n  store: {\n    save: false,\n    retrieve: false\n  },\n\n  /** ----------------------------------------\n       CRUD\n   ---------------------------------------- */\n  crud: {\n    create: true,\n    read: true,\n    update: true,\n    updateValue: true,\n    updateAll: true,\n    remove: true,\n    removeValue: true,\n    removeAll: true\n  }\n};\n/** ----------------------------------------\n     Exports\n ---------------------------------------- */\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (methods);\n\n//# sourceURL=webpack://Needle/./src/config/method.config.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/** ----------------------------------------\n     Configuration\n ---------------------------------------- */\nvar methods = {\n  /** ----------------------------------------\n       Sorting\n   ---------------------------------------- */\n  sort: {\n    sort: true,\n    sortDate: true\n  },\n\n  /** ----------------------------------------\n       Debugging\n   ---------------------------------------- */\n  debugging: {\n    log: true,\n    print: true,\n    random: true\n  },\n\n  /** ----------------------------------------\n       Template\n   ---------------------------------------- */\n  template: {\n    template: true\n  },\n\n  /** ----------------------------------------\n      Numbers\n   ---------------------------------------- */\n  numbers: {\n    bigger: true,\n    smaller: true,\n    between: true,\n    equal: true,\n    min: true,\n    max: true,\n    positive: true,\n    negative: true,\n    sum: true\n  },\n\n  /** ----------------------------------------\n       Dates\n   ---------------------------------------- */\n  dates: {\n    before: true,\n    after: true,\n    period: true,\n    month: true,\n    year: true,\n    previous: true,\n    upcoming: true\n  },\n\n  /** ----------------------------------------\n      Matches\n   ---------------------------------------- */\n  matches: {\n    is: true,\n    has: true,\n    hasDeep: true,\n    find: true,\n    findDeep: true\n  },\n\n  /** ----------------------------------------\n      Combinations\n   ---------------------------------------- */\n  combinations: {\n    where: true,\n    orWhere: true,\n    _orWhere: true,\n    andWhere: true,\n    _andWhere: true\n  },\n\n  /** ----------------------------------------\n       Store\n   ---------------------------------------- */\n  store: {\n    save: false,\n    retrieve: false\n  },\n\n  /** ----------------------------------------\n       CRUD\n   ---------------------------------------- */\n  crud: {\n    create: true,\n    read: true,\n    update: true,\n    updateValue: true,\n    updateAll: true,\n    remove: true,\n    removeValue: true,\n    removeAll: true\n  },\n\n  /** ----------------------------------------\n       Custom\n   ---------------------------------------- */\n  custom: {\n    customEach: true,\n    customFilter: true\n  }\n};\n/** ----------------------------------------\n     Exports\n ---------------------------------------- */\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (methods);\n\n//# sourceURL=webpack://Needle/./src/config/method.config.js?");
 
 /***/ }),
 
@@ -152,15 +152,51 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _uti
 
 /***/ }),
 
-/***/ "./src/methods/combinations.js":
-/*!*************************************!*\
-  !*** ./src/methods/combinations.js ***!
-  \*************************************/
+/***/ "./src/methods/combinations/_andWhere.js":
+/*!***********************************************!*\
+  !*** ./src/methods/combinations/_andWhere.js ***!
+  \***********************************************/
+/*! exports provided: andWhere, _andWhere */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"andWhere\", function() { return andWhere; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"_andWhere\", function() { return _andWhere; });\n/** ----------------------------------------\n    And Where\n ---------------------------------------- */\n\n/**\n * The orWhere will create a new trail function\n * that will be executed once the trail comes\n * to an end.\n *\n * @param { string } key - selected key\n * @param { string } type - operator type\n * @param { string | number } value - matching value\n * @returns { Needle } object - new instance\n */\nfunction andWhere(key, type, value) {\n  this._addTrail(true, 'andWhere', key, type, value);\n\n  return this._chain(this._data);\n}\n/** ----------------------------------------\n    And Where Executable\n ---------------------------------------- */\n\n/**\n * The actual executable function that will\n * be resolved once the trail ends related\n * to the andWhere() method. The and will\n * resolve from original data set.\n *\n * @param { string } key - selected key\n * @param { string } type - operator type\n * @param { string | number } value - matching value\n * @returns { array } - results from operation\n */\n\n\nfunction _andWhere(key, type, value, data) {\n  return this._operator(key, type, value, false, data);\n}\n/** ----------------------------------------\n    Exports\n ---------------------------------------- */\n\n\n\n\n//# sourceURL=webpack://Needle/./src/methods/combinations/_andWhere.js?");
+
+/***/ }),
+
+/***/ "./src/methods/combinations/_orWhere.js":
+/*!**********************************************!*\
+  !*** ./src/methods/combinations/_orWhere.js ***!
+  \**********************************************/
+/*! exports provided: orWhere, _orWhere */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"orWhere\", function() { return orWhere; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"_orWhere\", function() { return _orWhere; });\n/** ----------------------------------------\n    Or Where\n ---------------------------------------- */\n\n/**\n * The orWhere will create a new trail function\n * that will be executed once the trail comes\n * to an end.\n *\n * @param { string } key - selected key\n * @param { string } type - operator type\n * @param { string | number } value - matching value\n * @returns { Needle } object - new instance\n */\nfunction orWhere(key, type, value) {\n  this._addTrail(true, 'orWhere', key, type, value);\n\n  return this._chain(this._data);\n}\n/** ----------------------------------------\n    Or Where Executable\n ---------------------------------------- */\n\n/**\n * The actual executable function that will\n * be resolved once the trail ends related\n * to the orWhere() method. The or will\n * resolve from previous data set.\n *\n * @param { string } key - selected key\n * @param { string } type - operator type\n * @param { string | number } value - matching value\n * @returns { array } - results from operation\n */\n\n\nfunction _orWhere(key, type, value, data) {\n  return this._operator(key, type, value, false, data);\n}\n/** ----------------------------------------\n    Exports\n ---------------------------------------- */\n\n\n\n\n//# sourceURL=webpack://Needle/./src/methods/combinations/_orWhere.js?");
+
+/***/ }),
+
+/***/ "./src/methods/combinations/_where.js":
+/*!********************************************!*\
+  !*** ./src/methods/combinations/_where.js ***!
+  \********************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/** ----------------------------------------\n    Where\n ---------------------------------------- */\n\n/**\n * The where operator can execute a series\n * of commands, combining multiple criteria\n * that need to be matched.\n *\n * @param { string } key - selected key\n * @param { string } type - operator type\n * @param { string | number } value - matching value\n * @returns { Needle } object - new instance\n */\nfunction where(key, type, value) {\n  this._hasTrail();\n\n  this._trail['data'] = this._data;\n\n  var filter = this._operator(key, type, value);\n\n  this._trail['prev'] = filter;\n  return this._chain(filter);\n}\n/** ----------------------------------------\n     Or Where\n ---------------------------------------- */\n\n/**\n * The orWhere will create a new trail function\n * that will be executed once the trail comes\n * to an end.\n *\n * @param { string } key - selected key\n * @param { string } type - operator type\n * @param { string | number } value - matching value\n * @returns { Needle } object - new instance\n */\n\n\nfunction orWhere(key, type, value) {\n  this._addTrail(true, 'orWhere', key, type, value);\n\n  return this._chain(this._data);\n}\n/** ----------------------------------------\n    Or Where Executable\n ---------------------------------------- */\n\n/**\n * The actual executable function that will\n * be resolved once the trail ends related\n * to the orWhere() method. The or will\n * resolve from previous data set.\n *\n * @param { string } key - selected key\n * @param { string } type - operator type\n * @param { string | number } value - matching value\n * @returns { array } - results from operation\n */\n\n\nfunction _orWhere(key, type, value, data) {\n  return this._operator(key, type, value, false, data);\n}\n/** ----------------------------------------\n    And Where\n ---------------------------------------- */\n\n/**\n * The orWhere will create a new trail function\n * that will be executed once the trail comes\n * to an end.\n *\n * @param { string } key - selected key\n * @param { string } type - operator type\n * @param { string | number } value - matching value\n * @returns { Needle } object - new instance\n */\n\n\nfunction andWhere(key, type, value) {\n  this._addTrail(true, 'andWhere', key, type, value);\n\n  return this._chain(this._data);\n}\n/** ----------------------------------------\n    And Where Executable\n ---------------------------------------- */\n\n/**\n * The actual executable function that will\n * be resolved once the trail ends related\n * to the andWhere() method. The and will\n * resolve from original data set.\n *\n * @param { string } key - selected key\n * @param { string } type - operator type\n * @param { string | number } value - matching value\n * @returns { array } - results from operation\n */\n\n\nfunction _andWhere(key, type, value, data) {\n  return this._operator(key, type, value, false, data);\n}\n/** ----------------------------------------\n     Exports\n ---------------------------------------- */\n\n\n/* harmony default export */ __webpack_exports__[\"default\"] = ({\n  where: where,\n  orWhere: orWhere,\n  _orWhere: _orWhere,\n  andWhere: andWhere,\n  _andWhere: _andWhere\n});\n\n//# sourceURL=webpack://Needle/./src/methods/combinations.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/** ----------------------------------------\n    Where\n ---------------------------------------- */\n\n/**\n * The where operator can execute a series\n * of commands, combining multiple criteria\n * that need to be matched.\n *\n * @param { string } key - selected key\n * @param { string } type - operator type\n * @param { string | number } value - matching value\n * @returns { Needle } object - new instance\n */\nfunction where(key, type, value) {\n  this._hasTrail();\n\n  this._trail['data'] = this._data;\n\n  var filter = this._operator(key, type, value);\n\n  this._trail['prev'] = filter;\n  return this._chain(filter);\n}\n/** ----------------------------------------\n    Exports\n ---------------------------------------- */\n\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (where);\n\n//# sourceURL=webpack://Needle/./src/methods/combinations/_where.js?");
+
+/***/ }),
+
+/***/ "./src/methods/combinations/base.js":
+/*!******************************************!*\
+  !*** ./src/methods/combinations/base.js ***!
+  \******************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _where__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./_where */ \"./src/methods/combinations/_where.js\");\n/* harmony import */ var _andWhere__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./_andWhere */ \"./src/methods/combinations/_andWhere.js\");\n/* harmony import */ var _orWhere__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./_orWhere */ \"./src/methods/combinations/_orWhere.js\");\n/** ----------------------------------------\n    Utilities\n ---------------------------------------- */\n\n\n\n/** ----------------------------------------\n    Exports\n ---------------------------------------- */\n\n/* harmony default export */ __webpack_exports__[\"default\"] = ({\n  where: _where__WEBPACK_IMPORTED_MODULE_0__[\"default\"],\n  andWhere: _andWhere__WEBPACK_IMPORTED_MODULE_1__[\"andWhere\"],\n  _andWhere: _andWhere__WEBPACK_IMPORTED_MODULE_1__[\"_andWhere\"],\n  orWhere: _orWhere__WEBPACK_IMPORTED_MODULE_2__[\"orWhere\"],\n  _orWhere: _orWhere__WEBPACK_IMPORTED_MODULE_2__[\"_orWhere\"]\n});\n\n//# sourceURL=webpack://Needle/./src/methods/combinations/base.js?");
 
 /***/ }),
 
@@ -176,27 +212,195 @@ eval("__webpack_require__.r(__webpack_exports__);\n/** -------------------------
 
 /***/ }),
 
-/***/ "./src/methods/dates.js":
-/*!******************************!*\
-  !*** ./src/methods/dates.js ***!
-  \******************************/
+/***/ "./src/methods/custom/_customEach.js":
+/*!*******************************************!*\
+  !*** ./src/methods/custom/_customEach.js ***!
+  \*******************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _util_convertDate__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @util/_convertDate */ \"./src/util/_convertDate.js\");\n/* harmony import */ var _util_dateOptions__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @util/_dateOptions */ \"./src/util/_dateOptions.js\");\n/* harmony import */ var _util_periodOptions__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @util/_periodOptions */ \"./src/util/_periodOptions.js\");\n/** ----------------------------------------\n    Utilities\n ---------------------------------------- */\n\n\n\n/** ----------------------------------------\n    Before\n ---------------------------------------- */\n\n/**\n * Basically the same as the smaller method\n * but will convert the value into a unix\n * timestamp and compare given value within\n * the data object.\n *\n * @param { string } key - selected key\n * @param { string } value - matching value\n * @returns { Needle } object - new instance\n */\n\nfunction before(key, value) {\n  return this.smaller(key, value, true);\n}\n/** ----------------------------------------\n     After\n ---------------------------------------- */\n\n/**\n * Basically the same as the bigger method\n * but will convert the value into a unix\n * timestamp and compare given value within\n * the data object.\n *\n * @param { string } key - selected key\n * @param { string } value - matching value\n * @returns { Needle } object - new instance\n */\n\n\nfunction after(key, value) {\n  return this.bigger(key, value, true);\n}\n/** ----------------------------------------\n     Period\n ---------------------------------------- */\n\n/**\n * Basically the same as the between method\n * but will convert the values into a unix\n * timestamp and compare given values within\n * a range of the data object.\n *\n * @param { string } key - selected key\n * @param { array } values - matching values max 2\n * @returns { Needle } object - new instance\n */\n\n\nfunction period(key, values) {\n  return this.between(key, values, true);\n}\n/** ----------------------------------------\n     Month\n ---------------------------------------- */\n\n/**\n * Shorthand for working with months, this\n * method accepts the name of the month and\n * year to select a period of dates.\n *\n * @param { string } key - selected key\n * @param { string } month - selected month\n * @param { number } year - selected year\n * @returns { Needle } object - new instance\n */\n\n\nfunction month(key, month, year) {\n  var months = Object(_util_dateOptions__WEBPACK_IMPORTED_MODULE_1__[\"default\"])();\n\n  var date = this._find('month', month, months)[0];\n\n  var start = Object(_util_convertDate__WEBPACK_IMPORTED_MODULE_0__[\"default\"])(0, \"\".concat(date.month, \"/1/\").concat(year));\n  var end = Object(_util_convertDate__WEBPACK_IMPORTED_MODULE_0__[\"default\"])(0, \"\".concat(date.month, \"/\").concat(date.days, \"/\").concat(year));\n  return this.between(key, [start, end], true);\n}\n/** ----------------------------------------\n     Year\n ---------------------------------------- */\n\n/**\n * Shorthand for working with years, this\n * method accepts the year where the selection\n * needs to take place.\n *\n * @param { string } key - selected key\n * @param { number } year - selected year\n * @returns { Needle } object - new instance\n */\n\n\nfunction year(key, year) {\n  return this.between(key, [\"1/1/\".concat(year), \"12/31/\".concat(year)], true);\n}\n/** ----------------------------------------\n     Named Dates\n ---------------------------------------- */\n\n/**\n * Shorthand for working with years, this\n * method accepts the year where the selection\n * needs to take place.\n *\n * @param { string } selector - selected type\n * @returns { object } - match for date options\n */\n\n\nfunction _namedDates(selector) {\n  var period = Object(_util_periodOptions__WEBPACK_IMPORTED_MODULE_2__[\"default\"])();\n  return this._find('name', selector, period)[0];\n}\n/** ----------------------------------------\n     Previous\n ---------------------------------------- */\n\n/**\n * Take last amount of \"years\", \"months\", \"days\" etc.\n * Needs a key (holding a date value) an amount\n * and the type of selector for instance \"months\".\n *\n * @param { string } selector - selected type\n * @returns { object } - match for date options\n */\n\n\nfunction previous(key, amount, selector) {\n  var match = this._namedDates(selector);\n\n  var convert = Object(_util_convertDate__WEBPACK_IMPORTED_MODULE_0__[\"default\"])(match.amount * amount);\n  return this.between(key, [convert, new Date()], true);\n}\n/** ----------------------------------------\n     Upcoming\n ---------------------------------------- */\n\n/**\n * Take next amount of \"years\", \"months\", \"days\" etc.\n * Needs a key (holding a date value) an amount\n * and the type of selector for instance \"months\".\n *\n * @param { string } selector - selected type\n * @returns { object } - match for date options\n */\n\n\nfunction upcoming(key, amount, selector) {\n  var match = this._namedDates(selector);\n\n  var convert = Object(_util_convertDate__WEBPACK_IMPORTED_MODULE_0__[\"default\"])(match.amount * amount, new Date(), 'future');\n  return this.between(key, [new Date(), convert], true);\n}\n/** ----------------------------------------\n     Exports\n ---------------------------------------- */\n\n\n/* harmony default export */ __webpack_exports__[\"default\"] = ({\n  before: before,\n  after: after,\n  period: period,\n  month: month,\n  year: year,\n  _namedDates: _namedDates,\n  previous: previous,\n  upcoming: upcoming\n});\n\n//# sourceURL=webpack://Needle/./src/methods/dates.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/** ----------------------------------------\n     Custom Each\n ---------------------------------------- */\n\n/**\n * The custom each method makes it easy to\n * hook into Needle with a custom function.\n *\n * @param { function } callback - executable\n * @param { array } data - array of data, default is constructed\n * @returns { Needle } object - new instance\n */\nfunction customEach(callback) {\n  var data = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : this._data;\n\n  this._hasTrail();\n\n  var custom = data.map(callback);\n  return this._chain(custom);\n}\n/** ----------------------------------------\n    Exports\n ---------------------------------------- */\n\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (customEach);\n\n//# sourceURL=webpack://Needle/./src/methods/custom/_customEach.js?");
 
 /***/ }),
 
-/***/ "./src/methods/debugging.js":
-/*!**********************************!*\
-  !*** ./src/methods/debugging.js ***!
-  \**********************************/
+/***/ "./src/methods/custom/_customFilter.js":
+/*!*********************************************!*\
+  !*** ./src/methods/custom/_customFilter.js ***!
+  \*********************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/** ----------------------------------------\n     Logging\n ---------------------------------------- */\n\n/**\n * The log method is used for testing and\n * debugging. It will log the latest state\n * of the data array to the console. It can\n * be limited to a given number of items.\n *\n * @param { number } number - amount of items\n * @yields { array } - will console log array of items\n */\nfunction log(number) {\n  this._hasTrail();\n\n  console.log(number && this.take(number) || this._data);\n}\n/** ----------------------------------------\n     Printing\n ---------------------------------------- */\n\n/**\n * The print method is used for testing and\n * debugging. It will print the items of the\n * data array into the DOM, making results\n * visible, it will look for a element with\n * the id \"#result\" by default, and element\n * can also be provided as an argument, if both\n * are unable to match, the function will execute\n * on the body.\n *\n * @param { string } el - CSS selector for DOM element\n * @yields { string } print string to DOM\n */\n\n\nfunction print(el) {\n  this._hasTrail();\n\n  var result = document.querySelector('#result' || false) || document.body;\n  result.textContent = [this._data].map(function (item) {\n    return JSON.stringify(item);\n  });\n}\n/**\n * With the random method a random amount\n * of items can be returned from the latest\n * data state. This makes it easy to quickly\n * test multiple sets of data.\n *\n * @param { number } number - amount of items\n * @returns { Needle } object - new instance\n */\n\n/** ----------------------------------------\n     Randomize\n ---------------------------------------- */\n\n\nfunction random() {\n  var number = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 1;\n\n  this._hasTrail();\n\n  var array = [];\n\n  while (array.length !== number || array.length === this._data.length) {\n    var _random = Math.floor(Math.random() * (1 + this._data.length - 1));\n\n    array.indexOf(this._data[_random]) === -1 && array.push(this._data[_random]);\n  }\n\n  return this._chain(array);\n}\n/** ----------------------------------------\n    Exports\n ---------------------------------------- */\n\n\n/* harmony default export */ __webpack_exports__[\"default\"] = ({\n  log: log,\n  print: print,\n  random: random\n});\n\n//# sourceURL=webpack://Needle/./src/methods/debugging.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/** ----------------------------------------\n    Custom Filter\n ---------------------------------------- */\n\n/**\n * The custom filter method makes it easy to\n * hook into Needle with a custom function.\n * Has to return true for items kept within\n * the data set.\n *\n * @param { function } callback - executable\n * @param { array } data - array of data, default is constructed\n * @returns { Needle } object - new instance\n */\nfunction customFilter(callback) {\n  var data = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : this._data;\n\n  this._hasTrail();\n\n  var custom = data.filter(callback);\n  return this._chain(custom);\n}\n/** ----------------------------------------\n    Exports\n ---------------------------------------- */\n\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (customFilter);\n\n//# sourceURL=webpack://Needle/./src/methods/custom/_customFilter.js?");
+
+/***/ }),
+
+/***/ "./src/methods/custom/base.js":
+/*!************************************!*\
+  !*** ./src/methods/custom/base.js ***!
+  \************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _customEach__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./_customEach */ \"./src/methods/custom/_customEach.js\");\n/* harmony import */ var _customFilter__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./_customFilter */ \"./src/methods/custom/_customFilter.js\");\n/** ----------------------------------------\n    Utilities\n ---------------------------------------- */\n\n\n/** ----------------------------------------\n    Exports\n ---------------------------------------- */\n\n/* harmony default export */ __webpack_exports__[\"default\"] = ({\n  customEach: _customEach__WEBPACK_IMPORTED_MODULE_0__[\"default\"],\n  customFilter: _customFilter__WEBPACK_IMPORTED_MODULE_1__[\"default\"]\n});\n\n//# sourceURL=webpack://Needle/./src/methods/custom/base.js?");
+
+/***/ }),
+
+/***/ "./src/methods/dates/_after.js":
+/*!*************************************!*\
+  !*** ./src/methods/dates/_after.js ***!
+  \*************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/** ----------------------------------------\n    After\n ---------------------------------------- */\n\n/**\n * Basically the same as the bigger method\n * but will convert the value into a unix\n * timestamp and compare given value within\n * the data object.\n *\n * @param { string } key - selected key\n * @param { string } value - matching value\n * @returns { Needle } object - new instance\n */\nfunction after(key, value) {\n  return this.bigger(key, value, true);\n}\n/** ----------------------------------------\n    Exports\n ---------------------------------------- */\n\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (after);\n\n//# sourceURL=webpack://Needle/./src/methods/dates/_after.js?");
+
+/***/ }),
+
+/***/ "./src/methods/dates/_before.js":
+/*!**************************************!*\
+  !*** ./src/methods/dates/_before.js ***!
+  \**************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/** ----------------------------------------\n    Before\n ---------------------------------------- */\n\n/**\n * Basically the same as the smaller method\n * but will convert the value into a unix\n * timestamp and compare given value within\n * the data object.\n *\n * @param { string } key - selected key\n * @param { string } value - matching value\n * @returns { Needle } object - new instance\n */\nfunction before(key, value) {\n  return this.smaller(key, value, true);\n}\n/** ----------------------------------------\n    Exports\n ---------------------------------------- */\n\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (before);\n\n//# sourceURL=webpack://Needle/./src/methods/dates/_before.js?");
+
+/***/ }),
+
+/***/ "./src/methods/dates/_month.js":
+/*!*************************************!*\
+  !*** ./src/methods/dates/_month.js ***!
+  \*************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _util_convertDate__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @util/_convertDate */ \"./src/util/_convertDate.js\");\n/* harmony import */ var _util_dateOptions__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @util/_dateOptions */ \"./src/util/_dateOptions.js\");\n/** ----------------------------------------\n    Utilities\n ---------------------------------------- */\n\n\n/** ----------------------------------------\n    Month\n ---------------------------------------- */\n\n/**\n * Shorthand for working with months, this\n * method accepts the name of the month and\n * year to select a period of dates.\n *\n * @param { string } key - selected key\n * @param { string } month - selected month\n * @param { number } year - selected year\n * @returns { Needle } object - new instance\n */\n\nfunction month(key, month, year) {\n  var months = Object(_util_dateOptions__WEBPACK_IMPORTED_MODULE_1__[\"default\"])();\n\n  var date = this._find('month', month, months)[0];\n\n  var start = Object(_util_convertDate__WEBPACK_IMPORTED_MODULE_0__[\"default\"])(0, \"\".concat(date.month, \"/1/\").concat(year));\n  var end = Object(_util_convertDate__WEBPACK_IMPORTED_MODULE_0__[\"default\"])(0, \"\".concat(date.month, \"/\").concat(date.days, \"/\").concat(year));\n  return this.between(key, [start, end], true);\n}\n/** ----------------------------------------\n    Exports\n ---------------------------------------- */\n\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (month);\n\n//# sourceURL=webpack://Needle/./src/methods/dates/_month.js?");
+
+/***/ }),
+
+/***/ "./src/methods/dates/_namedDates.js":
+/*!******************************************!*\
+  !*** ./src/methods/dates/_namedDates.js ***!
+  \******************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _util_periodOptions__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @util/_periodOptions */ \"./src/util/_periodOptions.js\");\n/** ----------------------------------------\n    Utilities\n ---------------------------------------- */\n\n/** ----------------------------------------\n    Named Dates\n ---------------------------------------- */\n\n/**\n * Shorthand for working with years, this\n * method accepts the year where the selection\n * needs to take place.\n *\n * @param { string } selector - selected type\n * @returns { object } - match for date options\n */\n\nfunction _namedDates(selector) {\n  var period = Object(_util_periodOptions__WEBPACK_IMPORTED_MODULE_0__[\"default\"])();\n  return this._find('name', selector, period)[0];\n}\n/** ----------------------------------------\n    Exports\n ---------------------------------------- */\n\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (_namedDates);\n\n//# sourceURL=webpack://Needle/./src/methods/dates/_namedDates.js?");
+
+/***/ }),
+
+/***/ "./src/methods/dates/_period.js":
+/*!**************************************!*\
+  !*** ./src/methods/dates/_period.js ***!
+  \**************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/** ----------------------------------------\n    Period\n ---------------------------------------- */\n\n/**\n * Basically the same as the between method\n * but will convert the values into a unix\n * timestamp and compare given values within\n * a range of the data object.\n *\n * @param { string } key - selected key\n * @param { array } values - matching values max 2\n * @returns { Needle } object - new instance\n */\nfunction period(key, values) {\n  return this.between(key, values, true);\n}\n/** ----------------------------------------\n    Exports\n ---------------------------------------- */\n\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (period);\n\n//# sourceURL=webpack://Needle/./src/methods/dates/_period.js?");
+
+/***/ }),
+
+/***/ "./src/methods/dates/_previous.js":
+/*!****************************************!*\
+  !*** ./src/methods/dates/_previous.js ***!
+  \****************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _util_convertDate__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @util/_convertDate */ \"./src/util/_convertDate.js\");\n/** ----------------------------------------\n    Utilities\n ---------------------------------------- */\n\n/** ----------------------------------------\n    Previous\n ---------------------------------------- */\n\n/**\n * Take last amount of \"years\", \"months\", \"days\" etc.\n * Needs a key (holding a date value) an amount\n * and the type of selector for instance \"months\".\n *\n * @param { string } selector - selected type\n * @returns { object } - match for date options\n */\n\nfunction previous(key, amount, selector) {\n  var match = this._namedDates(selector);\n\n  var convert = Object(_util_convertDate__WEBPACK_IMPORTED_MODULE_0__[\"default\"])(match.amount * amount);\n  return this.between(key, [convert, new Date()], true);\n}\n/** ----------------------------------------\n    Exports\n ---------------------------------------- */\n\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (previous);\n\n//# sourceURL=webpack://Needle/./src/methods/dates/_previous.js?");
+
+/***/ }),
+
+/***/ "./src/methods/dates/_upcoming.js":
+/*!****************************************!*\
+  !*** ./src/methods/dates/_upcoming.js ***!
+  \****************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _util_convertDate__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @util/_convertDate */ \"./src/util/_convertDate.js\");\n/** ----------------------------------------\n    Utilities\n ---------------------------------------- */\n\n/** ----------------------------------------\n    Upcoming\n ---------------------------------------- */\n\n/**\n * Take next amount of \"years\", \"months\", \"days\" etc.\n * Needs a key (holding a date value) an amount\n * and the type of selector for instance \"months\".\n *\n * @param { string } selector - selected type\n * @returns { object } - match for date options\n */\n\nfunction upcoming(key, amount, selector) {\n  var match = this._namedDates(selector);\n\n  var convert = Object(_util_convertDate__WEBPACK_IMPORTED_MODULE_0__[\"default\"])(match.amount * amount, new Date(), 'future');\n  return this.between(key, [new Date(), convert], true);\n}\n/** ----------------------------------------\n    Exports\n ---------------------------------------- */\n\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (upcoming);\n\n//# sourceURL=webpack://Needle/./src/methods/dates/_upcoming.js?");
+
+/***/ }),
+
+/***/ "./src/methods/dates/_year.js":
+/*!************************************!*\
+  !*** ./src/methods/dates/_year.js ***!
+  \************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/** ----------------------------------------\n    Year\n ---------------------------------------- */\n\n/**\n * Shorthand for working with years, this\n * method accepts the year where the selection\n * needs to take place.\n *\n * @param { string } key - selected key\n * @param { number } year - selected year\n * @returns { Needle } object - new instance\n */\nfunction year(key, year) {\n  return this.between(key, [\"1/1/\".concat(year), \"12/31/\".concat(year)], true);\n}\n/** ----------------------------------------\n    Exports\n ---------------------------------------- */\n\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (year);\n\n//# sourceURL=webpack://Needle/./src/methods/dates/_year.js?");
+
+/***/ }),
+
+/***/ "./src/methods/dates/base.js":
+/*!***********************************!*\
+  !*** ./src/methods/dates/base.js ***!
+  \***********************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _after__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./_after */ \"./src/methods/dates/_after.js\");\n/* harmony import */ var _before__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./_before */ \"./src/methods/dates/_before.js\");\n/* harmony import */ var _month__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./_month */ \"./src/methods/dates/_month.js\");\n/* harmony import */ var _namedDates__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./_namedDates */ \"./src/methods/dates/_namedDates.js\");\n/* harmony import */ var _period__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./_period */ \"./src/methods/dates/_period.js\");\n/* harmony import */ var _previous__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./_previous */ \"./src/methods/dates/_previous.js\");\n/* harmony import */ var _upcoming__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./_upcoming */ \"./src/methods/dates/_upcoming.js\");\n/* harmony import */ var _year__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./_year */ \"./src/methods/dates/_year.js\");\n/** ----------------------------------------\n    Utilities\n ---------------------------------------- */\n\n\n\n\n\n\n\n\n/** ----------------------------------------\n    Exports\n ---------------------------------------- */\n\n/* harmony default export */ __webpack_exports__[\"default\"] = ({\n  after: _after__WEBPACK_IMPORTED_MODULE_0__[\"default\"],\n  before: _before__WEBPACK_IMPORTED_MODULE_1__[\"default\"],\n  month: _month__WEBPACK_IMPORTED_MODULE_2__[\"default\"],\n  _namedDates: _namedDates__WEBPACK_IMPORTED_MODULE_3__[\"default\"],\n  period: _period__WEBPACK_IMPORTED_MODULE_4__[\"default\"],\n  previous: _previous__WEBPACK_IMPORTED_MODULE_5__[\"default\"],\n  upcoming: _upcoming__WEBPACK_IMPORTED_MODULE_6__[\"default\"],\n  year: _year__WEBPACK_IMPORTED_MODULE_7__[\"default\"]\n});\n\n//# sourceURL=webpack://Needle/./src/methods/dates/base.js?");
+
+/***/ }),
+
+/***/ "./src/methods/debugging/_log.js":
+/*!***************************************!*\
+  !*** ./src/methods/debugging/_log.js ***!
+  \***************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/** ----------------------------------------\n Logging\n ---------------------------------------- */\n\n/**\n * The log method is used for testing and\n * debugging. It will log the latest state\n * of the data array to the console. It can\n * be limited to a given number of items.\n *\n * @param { number } number - amount of items\n * @yields { array } - will console log array of items\n */\nfunction log(number) {\n  this._hasTrail();\n\n  console.log(number && this.take(number) || this._data);\n}\n/** ----------------------------------------\n     Exports\n ---------------------------------------- */\n\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (log);\n\n//# sourceURL=webpack://Needle/./src/methods/debugging/_log.js?");
+
+/***/ }),
+
+/***/ "./src/methods/debugging/_print.js":
+/*!*****************************************!*\
+  !*** ./src/methods/debugging/_print.js ***!
+  \*****************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/** ----------------------------------------\n    Printing\n ---------------------------------------- */\n\n/**\n * The print method is used for testing and\n * debugging. It will print the items of the\n * data array into the DOM, making results\n * visible, it will look for a element with\n * the id \"#result\" by default, and element\n * can also be provided as an argument, if both\n * are unable to match, the function will execute\n * on the body.\n *\n * @param { string } el - CSS selector for DOM element\n * @yields { string } print string to DOM\n */\nfunction print(el) {\n  this._hasTrail();\n\n  var result = document.querySelector('#result' || false) || document.body;\n  result.textContent = [this._data].map(function (item) {\n    return JSON.stringify(item);\n  });\n}\n/** ----------------------------------------\n    Exports\n ---------------------------------------- */\n\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (print);\n\n//# sourceURL=webpack://Needle/./src/methods/debugging/_print.js?");
+
+/***/ }),
+
+/***/ "./src/methods/debugging/_random.js":
+/*!******************************************!*\
+  !*** ./src/methods/debugging/_random.js ***!
+  \******************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/** ----------------------------------------\n     Random\n ---------------------------------------- */\n\n/**\n * With the random method a random amount\n * of items can be returned from the latest\n * data state. This makes it easy to quickly\n * test multiple sets of data.\n *\n * @param { number } number - amount of items\n * @returns { Needle } object - new instance\n */\nfunction random() {\n  var number = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 1;\n\n  this._hasTrail();\n\n  var array = [];\n\n  while (array.length !== number || array.length === this._data.length) {\n    var _random = Math.floor(Math.random() * (1 + this._data.length - 1));\n\n    array.indexOf(this._data[_random]) === -1 && array.push(this._data[_random]);\n  }\n\n  return this._chain(array);\n}\n/** ----------------------------------------\n     Exports\n ---------------------------------------- */\n\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (random);\n\n//# sourceURL=webpack://Needle/./src/methods/debugging/_random.js?");
+
+/***/ }),
+
+/***/ "./src/methods/debugging/base.js":
+/*!***************************************!*\
+  !*** ./src/methods/debugging/base.js ***!
+  \***************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _log__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./_log */ \"./src/methods/debugging/_log.js\");\n/* harmony import */ var _print__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./_print */ \"./src/methods/debugging/_print.js\");\n/* harmony import */ var _random__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./_random */ \"./src/methods/debugging/_random.js\");\n/** ----------------------------------------\n    Utilities\n ---------------------------------------- */\n\n\n\n/** ----------------------------------------\n    Exports\n ---------------------------------------- */\n\n/* harmony default export */ __webpack_exports__[\"default\"] = ({\n  log: _log__WEBPACK_IMPORTED_MODULE_0__[\"default\"],\n  print: _print__WEBPACK_IMPORTED_MODULE_1__[\"default\"],\n  random: _random__WEBPACK_IMPORTED_MODULE_2__[\"default\"]\n});\n\n//# sourceURL=webpack://Needle/./src/methods/debugging/base.js?");
 
 /***/ }),
 
@@ -212,27 +416,195 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _uti
 
 /***/ }),
 
-/***/ "./src/methods/matches.js":
-/*!********************************!*\
-  !*** ./src/methods/matches.js ***!
-  \********************************/
+/***/ "./src/methods/matches/_find.js":
+/*!**************************************!*\
+  !*** ./src/methods/matches/_find.js ***!
+  \**************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/** ----------------------------------------\n     Is\n ---------------------------------------- */\n\n/**\n * Check for a boolean value of a specific\n * key as passed as an argument. Will only\n * look for first layer of keys.\n *\n * @param { string } key - selected key\n * @returns { Needle } object - new instance\n */\nfunction is(key) {\n  this._hasTrail();\n\n  var filter = this._data.filter(function (item) {\n    return item[key];\n  });\n\n  return this._chain(filter);\n}\n/** ----------------------------------------\n     Has\n ---------------------------------------- */\n\n/**\n * The has method will look if a given key\n * is present within the object, will only\n * look for the first layer of keys.\n *\n * @param { string } key - selected key\n * @returns { Needle } object - new instance\n */\n\n\nfunction has(key) {\n  this._hasTrail();\n\n  var filter = this._data.filter(function (item) {\n    return item.hasOwnProperty(key);\n  });\n\n  return this._chain(filter);\n}\n/** ----------------------------------------\n     Has Deep\n ---------------------------------------- */\n\n/**\n * The hasDeep method will look if a given key\n * is present within the object and loop through\n * available nested objects within the given item.\n *\n * @param { string } key - selected key\n * @returns { Needle } object - new instance\n */\n\n\nfunction hasDeep(key) {\n  var _this = this;\n\n  this._hasTrail();\n\n  var array = [];\n\n  var finder = function finder(key) {\n    var data = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : _this._data;\n    var prev = arguments.length > 2 ? arguments[2] : undefined;\n    data.forEach(function (item) {\n      var obj = prev || item;\n\n      var deep = _this._deep(key, item);\n\n      item.hasOwnProperty(key) && array.push(obj);\n      deep.length && finder(key, deep.map(function (key) {\n        return item[key];\n      }), obj);\n    });\n  };\n\n  finder(key);\n  return this._chain(array);\n}\n/** ----------------------------------------\n     Find\n ---------------------------------------- */\n\n/**\n * The find method will return a specific\n * key value pair within the object, the\n * find method only look for the first\n * layer of keys present in the item.\n *\n * @param { string } key - selected key\n * @param { string | bool | array | number } value - matching value\n * @returns { Needle } object - new instance\n */\n\n\nfunction find(key, value) {\n  this._hasTrail();\n\n  var filter = this._find(key, value);\n\n  return this._chain(filter);\n}\n/** ----------------------------------------\n     Find Deep\n ---------------------------------------- */\n\n/**\n * The findDeep method will return a specific\n * key value pair within the object, the\n * findDeep method will also look for any\n * nested object inside the item.\n *\n * @param { string } key - selected key\n * @param { string | bool | array | number } value - matching value\n * @returns { Needle } object - new instance\n */\n\n\nfunction findDeep(key, value) {\n  var _this2 = this;\n\n  this._hasTrail();\n\n  var array = [];\n\n  var finder = function finder(key, value) {\n    var data = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : _this2._data;\n    var prev = arguments.length > 3 ? arguments[3] : undefined;\n    data.forEach(function (item) {\n      var obj = prev || item;\n\n      var deep = _this2._deep(key, item);\n\n      if (obj === item) _this2._find(key, value, [item]).length > 0 && !array.includes(obj) && array.push(obj);\n      (deep.length === 0 || Object.keys(item).includes(key)) && _this2._find(key, value, [item]).length > 0 && !array.includes(obj) && array.push(obj);\n      deep.length && finder(key, value, deep.map(function (key) {\n        return item[key];\n      }), obj);\n    });\n  };\n\n  finder(key, value);\n  return this._chain(array);\n}\n/** ----------------------------------------\n     Exports\n ---------------------------------------- */\n\n\n/* harmony default export */ __webpack_exports__[\"default\"] = ({\n  is: is,\n  has: has,\n  hasDeep: hasDeep,\n  find: find,\n  findDeep: findDeep\n});\n\n//# sourceURL=webpack://Needle/./src/methods/matches.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/** ----------------------------------------\n    Find\n ---------------------------------------- */\n\n/**\n * The find method will return a specific\n * key value pair within the object, the\n * find method only look for the first\n * layer of keys present in the item.\n *\n * @param { string } key - selected key\n * @param { string | bool | array | number } value - matching value\n * @returns { Needle } object - new instance\n */\nfunction find(key, value) {\n  this._hasTrail();\n\n  var filter = this._find(key, value);\n\n  return this._chain(filter);\n}\n/** ----------------------------------------\n    Exports\n ---------------------------------------- */\n\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (find);\n\n//# sourceURL=webpack://Needle/./src/methods/matches/_find.js?");
 
 /***/ }),
 
-/***/ "./src/methods/numbers.js":
-/*!********************************!*\
-  !*** ./src/methods/numbers.js ***!
-  \********************************/
+/***/ "./src/methods/matches/_findDeep.js":
+/*!******************************************!*\
+  !*** ./src/methods/matches/_findDeep.js ***!
+  \******************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _util_evaluate__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @util/_evaluate */ \"./src/util/_evaluate.js\");\nfunction _toConsumableArray(arr) { return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _nonIterableSpread(); }\n\nfunction _nonIterableSpread() { throw new TypeError(\"Invalid attempt to spread non-iterable instance\"); }\n\nfunction _iterableToArray(iter) { if (Symbol.iterator in Object(iter) || Object.prototype.toString.call(iter) === \"[object Arguments]\") return Array.from(iter); }\n\nfunction _arrayWithoutHoles(arr) { if (Array.isArray(arr)) { for (var i = 0, arr2 = new Array(arr.length); i < arr.length; i++) { arr2[i] = arr[i]; } return arr2; } }\n\n/** ----------------------------------------\n    Utilities\n ---------------------------------------- */\n\n/** ----------------------------------------\n    Smaller\n ---------------------------------------- */\n\n/**\n * The smaller method will compare each item\n * to a given value and return the items\n * that match the given criteria.\n *\n * @param { string } key - selected key\n * @param { string | number } value - matching value\n * @param { bool } date - will parse values to date\n * @returns { Needle } object - new instance\n */\n\nfunction smaller(key, value) {\n  var date = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : false;\n\n  this._hasTrail();\n\n  var filter = this._operator(key, '<=', value, date);\n\n  return this._chain(filter);\n}\n/** ----------------------------------------\n     Bigger\n ---------------------------------------- */\n\n/**\n * The bigger method will compare each item\n * to a given value and return the items\n * that match the given criteria.\n *\n * @param { string } key - selected key\n * @param { string | number } value - matching value\n * @param { bool } date - will parse values to date\n * @returns { Needle } object - new instance\n */\n\n\nfunction bigger(key, value) {\n  var date = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : false;\n\n  this._hasTrail();\n\n  var filter = this._operator(key, '>=', value, date);\n\n  return this._chain(filter);\n}\n/** ----------------------------------------\n     Between\n ---------------------------------------- */\n\n/**\n * The between method returns an array of\n * items that are in between two given\n * values.\n *\n * @param { string } key - selected key\n * @param { array } values - matching values max 2\n * @param { bool } date - will parse values to date\n * @returns { Needle } object - new instance\n */\n\n\nfunction between(key, values) {\n  var date = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : false;\n\n  this._hasTrail();\n\n  var filter = this._data.filter(function (item) {\n    return Object(_util_evaluate__WEBPACK_IMPORTED_MODULE_0__[\"default\"])(item[key], '>=', values[0], date) && Object(_util_evaluate__WEBPACK_IMPORTED_MODULE_0__[\"default\"])(item[key], '<=', values[1], date);\n  });\n\n  return this._chain(filter);\n}\n/** ----------------------------------------\n     Equal\n ---------------------------------------- */\n\n/**\n * The equal method will look for a matching\n * item within the data array. This method\n * uses the operator helper method.\n *\n * @param { string } key - selected key\n * @param { number } value - matching value\n * @returns { Needle } object - new instance\n */\n\n\nfunction equal(key, value) {\n  this._hasTrail();\n\n  var filter = this._operator(key, '=', value);\n\n  return this._chain(filter);\n}\n/** ----------------------------------------\n     Minimum\n ---------------------------------------- */\n\n/**\n * The min method will map the data array\n * and retrieve minimum of a given key.\n *\n * @param { string } key - selected key\n * @returns { Needle } object - new instance\n */\n\n\nfunction min(key) {\n  this._hasTrail();\n\n  var min = Math.min.apply(Math, _toConsumableArray(this._data.map(function (item) {\n    return item[key];\n  })));\n  return this.find(key, min);\n}\n/** ----------------------------------------\n     Maximum\n ---------------------------------------- */\n\n/**\n * The max method will map the data array\n * and retrieve maximum of a given key.\n *\n * @param { string } key - selected key\n * @returns { Needle } object - new instance\n */\n\n\nfunction max(key) {\n  this._hasTrail();\n\n  var max = Math.max.apply(Math, _toConsumableArray(this._data.map(function (item) {\n    return item[key];\n  })));\n  return this.find(key, max);\n}\n/** ----------------------------------------\n     Positive\n ---------------------------------------- */\n\n/**\n * Return all positive values from an array\n *\n * @param { string } key - selected key\n * @returns { Needle } object - new instance\n */\n\n\nfunction positive(key) {\n  this._hasTrail();\n\n  var filter = this._operator(key, '>=', 0);\n\n  return this._chain(filter);\n}\n/** ----------------------------------------\n     Netagtive\n ---------------------------------------- */\n\n/**\n * Return all negative values from an array\n *\n * @param { string } key - selected key\n * @returns { Needle } object - new instance\n */\n\n\nfunction negative(key) {\n  this._hasTrail();\n\n  var filter = this._operator(key, '<', 0);\n\n  return this._chain(filter);\n}\n/** ----------------------------------------\n     Sum\n ---------------------------------------- */\n\n/**\n * The sum method will retrieve the sum of\n * a given key, meaning sum every value of\n * the given key present within the data array.\n *\n * @param { string } key - selected key\n * @returns { number } amount of sum of given key\n */\n\n\nfunction sum(key) {\n  this._hasTrail();\n\n  this._calc = this._data.reduce(function (total, item) {\n    return total + item[key];\n  }, 0);\n  return this._calc;\n}\n/** ----------------------------------------\n    Exports\n ---------------------------------------- */\n\n\n/* harmony default export */ __webpack_exports__[\"default\"] = ({\n  bigger: bigger,\n  smaller: smaller,\n  between: between,\n  equal: equal,\n  min: min,\n  max: max,\n  positive: positive,\n  negative: negative,\n  sum: sum\n});\n\n//# sourceURL=webpack://Needle/./src/methods/numbers.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/** ----------------------------------------\n    Find Deep\n ---------------------------------------- */\n\n/**\n * The findDeep method will return a specific\n * key value pair within the object, the\n * findDeep method will also look for any\n * nested object inside the item.\n *\n * @param { string } key - selected key\n * @param { string | bool | array | number } value - matching value\n * @returns { Needle } object - new instance\n */\nfunction findDeep(key, value) {\n  var _this = this;\n\n  this._hasTrail();\n\n  var array = [];\n\n  var finder = function finder(key, value) {\n    var data = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : _this._data;\n    var prev = arguments.length > 3 ? arguments[3] : undefined;\n    data.forEach(function (item) {\n      var obj = prev || item;\n\n      var deep = _this._deep(key, item);\n\n      if (obj === item) _this._find(key, value, [item]).length > 0 && !array.includes(obj) && array.push(obj);\n      (deep.length === 0 || Object.keys(item).includes(key)) && _this._find(key, value, [item]).length > 0 && !array.includes(obj) && array.push(obj);\n      deep.length && finder(key, value, deep.map(function (key) {\n        return item[key];\n      }), obj);\n    });\n  };\n\n  finder(key, value);\n  return this._chain(array);\n}\n/** ----------------------------------------\n    Exports\n ---------------------------------------- */\n\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (findDeep);\n\n//# sourceURL=webpack://Needle/./src/methods/matches/_findDeep.js?");
+
+/***/ }),
+
+/***/ "./src/methods/matches/_has.js":
+/*!*************************************!*\
+  !*** ./src/methods/matches/_has.js ***!
+  \*************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/** ----------------------------------------\n    Has\n ---------------------------------------- */\n\n/**\n * The has method will look if a given key\n * is present within the object, will only\n * look for the first layer of keys.\n *\n * @param { string } key - selected key\n * @returns { Needle } object - new instance\n */\nfunction has(key) {\n  this._hasTrail();\n\n  var filter = this._data.filter(function (item) {\n    return item.hasOwnProperty(key);\n  });\n\n  return this._chain(filter);\n}\n/** ----------------------------------------\n    Exports\n ---------------------------------------- */\n\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (has);\n\n//# sourceURL=webpack://Needle/./src/methods/matches/_has.js?");
+
+/***/ }),
+
+/***/ "./src/methods/matches/_hasDeep.js":
+/*!*****************************************!*\
+  !*** ./src/methods/matches/_hasDeep.js ***!
+  \*****************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/** ----------------------------------------\n    Has Deep\n ---------------------------------------- */\n\n/**\n * The hasDeep method will look if a given key\n * is present within the object and loop through\n * available nested objects within the given item.\n *\n * @param { string } key - selected key\n * @returns { Needle } object - new instance\n */\nfunction hasDeep(key) {\n  var _this = this;\n\n  this._hasTrail();\n\n  var array = [];\n\n  var finder = function finder(key) {\n    var data = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : _this._data;\n    var prev = arguments.length > 2 ? arguments[2] : undefined;\n    data.forEach(function (item) {\n      var obj = prev || item;\n\n      var deep = _this._deep(key, item);\n\n      item.hasOwnProperty(key) && array.push(obj);\n      deep.length && finder(key, deep.map(function (key) {\n        return item[key];\n      }), obj);\n    });\n  };\n\n  finder(key);\n  return this._chain(array);\n}\n/** ----------------------------------------\n    Exports\n ---------------------------------------- */\n\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (hasDeep);\n\n//# sourceURL=webpack://Needle/./src/methods/matches/_hasDeep.js?");
+
+/***/ }),
+
+/***/ "./src/methods/matches/_is.js":
+/*!************************************!*\
+  !*** ./src/methods/matches/_is.js ***!
+  \************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/** ----------------------------------------\n    Is\n ---------------------------------------- */\n\n/**\n * Check for a boolean value of a specific\n * key as passed as an argument. Will only\n * look for first layer of keys.\n *\n * @param { string } key - selected key\n * @returns { Needle } object - new instance\n */\nfunction is(key) {\n  this._hasTrail();\n\n  var filter = this._data.filter(function (item) {\n    return item[key];\n  });\n\n  return this._chain(filter);\n}\n/** ----------------------------------------\n    Exports\n ---------------------------------------- */\n\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (is);\n\n//# sourceURL=webpack://Needle/./src/methods/matches/_is.js?");
+
+/***/ }),
+
+/***/ "./src/methods/matches/base.js":
+/*!*************************************!*\
+  !*** ./src/methods/matches/base.js ***!
+  \*************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _find__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./_find */ \"./src/methods/matches/_find.js\");\n/* harmony import */ var _findDeep__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./_findDeep */ \"./src/methods/matches/_findDeep.js\");\n/* harmony import */ var _has__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./_has */ \"./src/methods/matches/_has.js\");\n/* harmony import */ var _hasDeep__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./_hasDeep */ \"./src/methods/matches/_hasDeep.js\");\n/* harmony import */ var _is__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./_is */ \"./src/methods/matches/_is.js\");\n/** ----------------------------------------\n    Utilities\n ---------------------------------------- */\n\n\n\n\n\n/** ----------------------------------------\n    Exports\n ---------------------------------------- */\n\n/* harmony default export */ __webpack_exports__[\"default\"] = ({\n  find: _find__WEBPACK_IMPORTED_MODULE_0__[\"default\"],\n  findDeep: _findDeep__WEBPACK_IMPORTED_MODULE_1__[\"default\"],\n  has: _has__WEBPACK_IMPORTED_MODULE_2__[\"default\"],\n  hasDeep: _hasDeep__WEBPACK_IMPORTED_MODULE_3__[\"default\"],\n  is: _is__WEBPACK_IMPORTED_MODULE_4__[\"default\"]\n});\n\n//# sourceURL=webpack://Needle/./src/methods/matches/base.js?");
+
+/***/ }),
+
+/***/ "./src/methods/numbers/_between.js":
+/*!*****************************************!*\
+  !*** ./src/methods/numbers/_between.js ***!
+  \*****************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _util_evaluate__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @util/_evaluate */ \"./src/util/_evaluate.js\");\n/** ----------------------------------------\n    Utilities\n ---------------------------------------- */\n\n/** ----------------------------------------\n    Between\n ---------------------------------------- */\n\n/**\n * The between method returns an array of\n * items that are in between two given\n * values.\n *\n * @param { string } key - selected key\n * @param { array } values - matching values max 2\n * @param { bool } date - will parse values to date\n * @returns { Needle } object - new instance\n */\n\nfunction between(key, values) {\n  var date = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : false;\n\n  this._hasTrail();\n\n  var filter = this._data.filter(function (item) {\n    return Object(_util_evaluate__WEBPACK_IMPORTED_MODULE_0__[\"default\"])(item[key], '>=', values[0], date) && Object(_util_evaluate__WEBPACK_IMPORTED_MODULE_0__[\"default\"])(item[key], '<=', values[1], date);\n  });\n\n  return this._chain(filter);\n}\n/** ----------------------------------------\n    Exports\n ---------------------------------------- */\n\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (between);\n\n//# sourceURL=webpack://Needle/./src/methods/numbers/_between.js?");
+
+/***/ }),
+
+/***/ "./src/methods/numbers/_bigger.js":
+/*!****************************************!*\
+  !*** ./src/methods/numbers/_bigger.js ***!
+  \****************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/** ----------------------------------------\n    Bigger\n ---------------------------------------- */\n\n/**\n * The bigger method will compare each item\n * to a given value and return the items\n * that match the given criteria.\n *\n * @param { string } key - selected key\n * @param { string | number } value - matching value\n * @param { bool } date - will parse values to date\n * @returns { Needle } object - new instance\n */\nfunction bigger(key, value) {\n  var date = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : false;\n\n  this._hasTrail();\n\n  var filter = this._operator(key, '>=', value, date);\n\n  return this._chain(filter);\n}\n/** ----------------------------------------\n    Exports\n ---------------------------------------- */\n\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (bigger);\n\n//# sourceURL=webpack://Needle/./src/methods/numbers/_bigger.js?");
+
+/***/ }),
+
+/***/ "./src/methods/numbers/_equal.js":
+/*!***************************************!*\
+  !*** ./src/methods/numbers/_equal.js ***!
+  \***************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/** ----------------------------------------\n    Equal\n ---------------------------------------- */\n\n/**\n * The equal method will look for a matching\n * item within the data array. This method\n * uses the operator helper method.\n *\n * @param { string } key - selected key\n * @param { number } value - matching value\n * @returns { Needle } object - new instance\n */\nfunction equal(key, value) {\n  this._hasTrail();\n\n  var filter = this._operator(key, '=', value);\n\n  return this._chain(filter);\n}\n/** ----------------------------------------\n    Exports\n ---------------------------------------- */\n\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (equal);\n\n//# sourceURL=webpack://Needle/./src/methods/numbers/_equal.js?");
+
+/***/ }),
+
+/***/ "./src/methods/numbers/_max.js":
+/*!*************************************!*\
+  !*** ./src/methods/numbers/_max.js ***!
+  \*************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\nfunction _toConsumableArray(arr) { return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _nonIterableSpread(); }\n\nfunction _nonIterableSpread() { throw new TypeError(\"Invalid attempt to spread non-iterable instance\"); }\n\nfunction _iterableToArray(iter) { if (Symbol.iterator in Object(iter) || Object.prototype.toString.call(iter) === \"[object Arguments]\") return Array.from(iter); }\n\nfunction _arrayWithoutHoles(arr) { if (Array.isArray(arr)) { for (var i = 0, arr2 = new Array(arr.length); i < arr.length; i++) { arr2[i] = arr[i]; } return arr2; } }\n\n/** ----------------------------------------\n     Maximum\n ---------------------------------------- */\n\n/**\n * The max method will map the data array\n * and retrieve maximum of a given key.\n *\n * @param { string } key - selected key\n * @returns { Needle } object - new instance\n */\nfunction max(key) {\n  this._hasTrail();\n\n  var max = Math.max.apply(Math, _toConsumableArray(this._data.map(function (item) {\n    return item[key];\n  })));\n  return this.find(key, max);\n}\n/** ----------------------------------------\n     Exports\n ---------------------------------------- */\n\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (max);\n\n//# sourceURL=webpack://Needle/./src/methods/numbers/_max.js?");
+
+/***/ }),
+
+/***/ "./src/methods/numbers/_min.js":
+/*!*************************************!*\
+  !*** ./src/methods/numbers/_min.js ***!
+  \*************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\nfunction _toConsumableArray(arr) { return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _nonIterableSpread(); }\n\nfunction _nonIterableSpread() { throw new TypeError(\"Invalid attempt to spread non-iterable instance\"); }\n\nfunction _iterableToArray(iter) { if (Symbol.iterator in Object(iter) || Object.prototype.toString.call(iter) === \"[object Arguments]\") return Array.from(iter); }\n\nfunction _arrayWithoutHoles(arr) { if (Array.isArray(arr)) { for (var i = 0, arr2 = new Array(arr.length); i < arr.length; i++) { arr2[i] = arr[i]; } return arr2; } }\n\n/** ----------------------------------------\n     Minimum\n ---------------------------------------- */\n\n/**\n * The min method will map the data array\n * and retrieve minimum of a given key.\n *\n * @param { string } key - selected key\n * @returns { Needle } object - new instance\n */\nfunction min(key) {\n  this._hasTrail();\n\n  var min = Math.min.apply(Math, _toConsumableArray(this._data.map(function (item) {\n    return item[key];\n  })));\n  return this.find(key, min);\n}\n/** ----------------------------------------\n     Exports\n ---------------------------------------- */\n\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (min);\n\n//# sourceURL=webpack://Needle/./src/methods/numbers/_min.js?");
+
+/***/ }),
+
+/***/ "./src/methods/numbers/_negative.js":
+/*!******************************************!*\
+  !*** ./src/methods/numbers/_negative.js ***!
+  \******************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/** ----------------------------------------\n    Netagtive\n ---------------------------------------- */\n\n/**\n * Return all negative values from an array\n *\n * @param { string } key - selected key\n * @returns { Needle } object - new instance\n */\nfunction negative(key) {\n  this._hasTrail();\n\n  var filter = this._operator(key, '<', 0);\n\n  return this._chain(filter);\n}\n/** ----------------------------------------\n    Exports\n ---------------------------------------- */\n\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (negative);\n\n//# sourceURL=webpack://Needle/./src/methods/numbers/_negative.js?");
+
+/***/ }),
+
+/***/ "./src/methods/numbers/_positive.js":
+/*!******************************************!*\
+  !*** ./src/methods/numbers/_positive.js ***!
+  \******************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/** ----------------------------------------\n     Positive\n ---------------------------------------- */\n\n/**\n * Return all positive values from an array\n *\n * @param { string } key - selected key\n * @returns { Needle } object - new instance\n */\nfunction positive(key) {\n  this._hasTrail();\n\n  var filter = this._operator(key, '>=', 0);\n\n  return this._chain(filter);\n}\n/** ----------------------------------------\n    Exports\n ---------------------------------------- */\n\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (positive);\n\n//# sourceURL=webpack://Needle/./src/methods/numbers/_positive.js?");
+
+/***/ }),
+
+/***/ "./src/methods/numbers/_smaller.js":
+/*!*****************************************!*\
+  !*** ./src/methods/numbers/_smaller.js ***!
+  \*****************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/** ----------------------------------------\n    Smaller\n ---------------------------------------- */\n\n/**\n * The smaller method will compare each item\n * to a given value and return the items\n * that match the given criteria.\n *\n * @param { string } key - selected key\n * @param { string | number } value - matching value\n * @param { bool } date - will parse values to date\n * @returns { Needle } object - new instance\n */\nfunction smaller(key, value) {\n  var date = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : false;\n\n  this._hasTrail();\n\n  var filter = this._operator(key, '<=', value, date);\n\n  return this._chain(filter);\n}\n/** ----------------------------------------\n     Exports\n ---------------------------------------- */\n\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (smaller);\n\n//# sourceURL=webpack://Needle/./src/methods/numbers/_smaller.js?");
+
+/***/ }),
+
+/***/ "./src/methods/numbers/_sum.js":
+/*!*************************************!*\
+  !*** ./src/methods/numbers/_sum.js ***!
+  \*************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/** ----------------------------------------\n     Sum\n ---------------------------------------- */\n\n/**\n * The sum method will retrieve the sum of\n * a given key, meaning sum every value of\n * the given key present within the data array.\n *\n * @param { string } key - selected key\n * @returns { number } amount of sum of given key\n */\nfunction sum(key) {\n  this._hasTrail();\n\n  this._calc = this._data.reduce(function (total, item) {\n    return total + item[key];\n  }, 0);\n  return this._calc;\n}\n/** ----------------------------------------\n    Exports\n ---------------------------------------- */\n\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (sum);\n\n//# sourceURL=webpack://Needle/./src/methods/numbers/_sum.js?");
+
+/***/ }),
+
+/***/ "./src/methods/numbers/base.js":
+/*!*************************************!*\
+  !*** ./src/methods/numbers/base.js ***!
+  \*************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _smaller__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./_smaller */ \"./src/methods/numbers/_smaller.js\");\n/* harmony import */ var _bigger__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./_bigger */ \"./src/methods/numbers/_bigger.js\");\n/* harmony import */ var _between__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./_between */ \"./src/methods/numbers/_between.js\");\n/* harmony import */ var _equal__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./_equal */ \"./src/methods/numbers/_equal.js\");\n/* harmony import */ var _min__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./_min */ \"./src/methods/numbers/_min.js\");\n/* harmony import */ var _max__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./_max */ \"./src/methods/numbers/_max.js\");\n/* harmony import */ var _positive__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./_positive */ \"./src/methods/numbers/_positive.js\");\n/* harmony import */ var _negative__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./_negative */ \"./src/methods/numbers/_negative.js\");\n/* harmony import */ var _sum__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./_sum */ \"./src/methods/numbers/_sum.js\");\n/** ----------------------------------------\n    Utilities\n ---------------------------------------- */\n\n\n\n\n\n\n\n\n\n/** ----------------------------------------\n    Exports\n ---------------------------------------- */\n\n/* harmony default export */ __webpack_exports__[\"default\"] = ({\n  smaller: _smaller__WEBPACK_IMPORTED_MODULE_0__[\"default\"],\n  bigger: _bigger__WEBPACK_IMPORTED_MODULE_1__[\"default\"],\n  between: _between__WEBPACK_IMPORTED_MODULE_2__[\"default\"],\n  equal: _equal__WEBPACK_IMPORTED_MODULE_3__[\"default\"],\n  min: _min__WEBPACK_IMPORTED_MODULE_4__[\"default\"],\n  max: _max__WEBPACK_IMPORTED_MODULE_5__[\"default\"],\n  positive: _positive__WEBPACK_IMPORTED_MODULE_6__[\"default\"],\n  negative: _negative__WEBPACK_IMPORTED_MODULE_7__[\"default\"],\n  sum: _sum__WEBPACK_IMPORTED_MODULE_8__[\"default\"]\n});\n\n//# sourceURL=webpack://Needle/./src/methods/numbers/base.js?");
 
 /***/ }),
 
@@ -404,15 +776,27 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _uti
 
 /***/ }),
 
-/***/ "./src/methods/template.js":
-/*!*********************************!*\
-  !*** ./src/methods/template.js ***!
-  \*********************************/
+/***/ "./src/methods/template/_template.js":
+/*!*******************************************!*\
+  !*** ./src/methods/template/_template.js ***!
+  \*******************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/** ----------------------------------------\n    Template\n ---------------------------------------- */\n\n/**\n * With the template method a callback will be\n * executed for every item present within the\n * data array. The data of each item will be\n * passed into the callback. The template method\n * will also return a object containing information\n * about the results.\n *\n * @param { function } callback - executable\n * @returns { object } - containing info about the query\n */\nfunction template(callback) {\n  var data = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : this._data;\n  if (this._hasTrail()) return this._data.forEach(callback, this);\n  data.forEach(callback, {\n    needle: this,\n    info: this.info\n  });\n  return this.info;\n}\n/** ----------------------------------------\n    Exports\n ---------------------------------------- */\n\n\n/* harmony default export */ __webpack_exports__[\"default\"] = ({\n  template: template\n});\n\n//# sourceURL=webpack://Needle/./src/methods/template.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/** ----------------------------------------\n    Template\n ---------------------------------------- */\n\n/**\n * With the template method a callback will be\n * executed for every item present within the\n * data array. The data of each item will be\n * passed into the callback. The template method\n * will also return a object containing information\n * about the results.\n *\n * @param { function } callback - executable\n * @returns { object } - containing info about the query\n */\nfunction template(callback) {\n  var data = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : this._data;\n  if (this._hasTrail()) return this._data.forEach(callback, this);\n  data.forEach(callback, {\n    needle: this,\n    info: this.info\n  });\n  return this.info;\n}\n/** ----------------------------------------\n    Exports\n ---------------------------------------- */\n\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (template);\n\n//# sourceURL=webpack://Needle/./src/methods/template/_template.js?");
+
+/***/ }),
+
+/***/ "./src/methods/template/base.js":
+/*!**************************************!*\
+  !*** ./src/methods/template/base.js ***!
+  \**************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _template__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./_template */ \"./src/methods/template/_template.js\");\n/** ----------------------------------------\n    Utilities\n ---------------------------------------- */\n\n/** ----------------------------------------\n    Exports\n ---------------------------------------- */\n\n/* harmony default export */ __webpack_exports__[\"default\"] = ({\n  template: _template__WEBPACK_IMPORTED_MODULE_0__[\"default\"]\n});\n\n//# sourceURL=webpack://Needle/./src/methods/template/base.js?");
 
 /***/ }),
 
