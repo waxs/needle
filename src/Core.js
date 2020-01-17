@@ -36,6 +36,7 @@ import numbers from '@js/methods/numbers/base';
 import dates from '@js/methods/dates/base';
 import matches from '@js/methods/matches/base';
 import combinations from '@js/methods/combinations/base';
+import custom from '@js/methods/custom/base';
 
 /** ----------------------------------------
     Needle Methods
@@ -49,6 +50,7 @@ extend(Core, numbers);
 extend(Core, dates);
 extend(Core, matches);
 extend(Core, combinations);
+extend(Core, custom);
 
 /** ----------------------------------------
      Handlers

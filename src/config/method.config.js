@@ -107,6 +107,15 @@ const methods = {
         remove: true,
         removeValue: true,
         removeAll:true
+    },
+
+    /** ----------------------------------------
+         Custom
+     ---------------------------------------- */
+
+    custom: {
+        customEach: true,
+        customFilter: true
     }
 
 };
