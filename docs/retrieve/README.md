@@ -5,7 +5,7 @@ There are multiple methods to retrieve the data from Needle as a new array that 
 function to be used is the `take()` method, this will return the data and can only be used as the last method within 
 the chain. 
 
-#### Take
+### Take
 The take method receives an argument to specify the amount of items, this will "take" the first amount of items 
 present from the manipulated array. By default the take function will return all the items if no parameter is 
 specified. If you need additional info, a second parameter can be declared being a bool value. This will return an 
@@ -21,7 +21,7 @@ needle.take(3);
 | take(3)               | Will return 3 items, if available, meaning if less items are available that amount will be returned |
 | take('all', true)     | Will return object with items and info |
 
-#### Select
+### Select
 If needed a manipulated selection can be retrieved from the array with the `select()` method. With the `select()` 
 method a new object will be returned that contains the given selection of keys. Meaning the original item has been 
 reduced to the given keys. Let's look at a example. 
@@ -59,7 +59,7 @@ This query will result in the following item to be returned.
 In the above example we also see how to reach nested values inside an object. The select method will also reduce the 
 original path to the value, meaning `contact.website` is reduced to a first layer key `website`.
 
-#### Chunk
+### Chunk
 The `chunk()` method will divide the data into separate chunks of data based on a given amount and return
  an array containing these chunks as separate arrays. Besides the chunks the method will also return some information
   about the amount of chunks and size.
@@ -112,7 +112,7 @@ next.addEventListener('click', () => {
 });
 ```
 
-#### Values
+### Values
 The `values()` method can be used to retrieve a single set of values based on a given key. An array with the 
 remaining values will be returned, meaning this method will not return a new instance. The method will look for 
 nested keys inside an item and provide the matching value.
@@ -120,20 +120,20 @@ nested keys inside an item and provide the matching value.
 needle.values('age');
 ```
 
-#### Index
+### Index
 To get an exact index use the `index()` method. This will take the third item from the array. It will return a single
  object from the array.
 ```javascript
 needle.index(3);
 ```
 
-#### Get
+### Get
 Get will retrieve the entire object with attached methods. 
 ```javascript
 needle.get();
 ```
 
-#### First
+### First
 The first method will return the first item from the array.
 ```javascript
 needle.first();
@@ -145,7 +145,7 @@ The last method will return the last item from the array.
 needle.last();
 ```
 
-#### Count
+### Count
 Count will retrieve the number of items within the current manipulated array.
 ```javascript
 const needle = new Needle(data);

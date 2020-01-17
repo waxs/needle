@@ -4,7 +4,7 @@
 Besides numbers you might want to select all items `before()` or `after()` a certain time. This can be achieved using
  the date helpers that can be chained on Needle.
  
-#### Before or after
+### Before or after
 Using the before or after method a selection of items can be retrieved from either before or after a specific date. 
 Both a `key` and `value` need to be passed to retrieve all items that match the given query. 
 ```javascript
@@ -15,7 +15,7 @@ const result = needle
 console.log(result);
 ```
 
-#### Period
+### Period
 It's also possible to retrieve all items within a range of dates, this can be done in a similar way using the 
 period method. It takes two parameters, a `key` and an `array` containing both ends of the range.
 ```javascript
@@ -26,7 +26,7 @@ const result = needle
 console.log(result);
 ```
 
-#### Month
+### Month
 If you need to retrieve information about a certain month this can be done using the `month()` method. It will 
 retrieve all items within a given month. For example `month('created', 'sep', 2020)`. It uses a abbreviation of the 
 month name, it will support an English abbreviation. 
@@ -38,7 +38,7 @@ const result = needle
 console.log(result);
 ```
 
-#### Year
+### Year
 If you need results from a complete year, this can be done using the `year()` method. It will take all items from the
  data set starting with the first of January and end at 31st of December. 
 ```javascript
@@ -49,7 +49,7 @@ const result = needle
 console.log(result);
 ```
 
-#### Previous & upcoming
+### Previous & upcoming
 Last will always retrieve a set of data based on today. Meaning, instead of taking a static year, you could do for 
 instance, the last 2 days, or maybe do 1 week. Besides `previous()` there is also a `upcoming()` method, achieving the 
 samen 

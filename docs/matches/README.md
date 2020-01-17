@@ -4,7 +4,7 @@
 Using filters it's possible to manipulate the data and retrieve a new array of items based on the queries given. For 
 instance retrieve all items that have a specific key or value. 
 
-#### Is
+### Is
 To quickly check if a value is `true` use the `is()` method and provide it with a key that needs to be checked. 
 
 ```javascript
@@ -15,7 +15,7 @@ const result = needle
 console.log(result);
 ```
 
-#### Has
+### Has
 To retrieve items with a specific key present within the object use the `has()` method. This will only retrieve 
 items that have the given key available within the object. Specify the key as a parameter in the method. 
 
@@ -27,7 +27,7 @@ const result = needle
 console.log(result);
 ```
 
-#### Has Deep
+### Has Deep
 The `hasDeep()` method will look for nested keys inside an item and retrieve all items that match the given criteria.
  This recursive function will demand more performance if large items are provided. 
 ```javascript
@@ -52,7 +52,7 @@ needle
     .log();
 ```
 
-#### Find
+### Find
 To find a match on a specific value use the `find()` method. Be aware that find only works on the first layer of keys
  and does not check recursively for nested keys hold within the object. 
 ```javascript
@@ -88,7 +88,7 @@ const result = needle
 console.log(result);
 ```
 
-#### Find Deep
+### Find Deep
 The `findDeep()` method is an advanced way of looking for key value pairs within an item. The regular `find()` method
  will only look for the first layer of keys, the `findDeep()` method will also look within nested objects inside the 
  item. This process is more demanding and will take more performance from the browser. 

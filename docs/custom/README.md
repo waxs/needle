@@ -5,7 +5,7 @@ If Needle doesn't provide you with enough tools and tricks to manipulate or filt
 custom. These methods can be hooked within in the chain making it easy to hook some custom logic within you Needle 
 flow. 
 
-#### Custom Each
+### Custom Each
 If you need to iterate over the entire dataset you can use the `customEach()` method using a callback on the method 
 that will iterate over every item in the array, meaning you will retrieve the current set of data while making for 
 instance changes or adding additional keys. In the example below every item will now hold a new key with the value of
