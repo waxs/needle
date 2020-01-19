@@ -57,7 +57,7 @@ extend(Core, custom);
  ---------------------------------------- */
 
 import store from '@js/methods/store';
-import crud from '@js/methods/crud';
+import crud from '@js/methods/crud/base';
 
 /** ----------------------------------------
     Needle Handlers
