@@ -97,7 +97,7 @@ manipulate an array of contents. Let's dive a little deeper into the options you
     * `removeValue()` delete single value from item in data set
     * `removeAll()` delete all items from data set
     
-* **Store** (2 methods) 🚧 Work in progress
+* **Store** (2 methods) [Read documentation ⟶](https://github.com/waxs/needle/tree/master/docs/store/README.md)
     * `save()` save a data set to the store
     * `retrieve()` retrieve a single set from the store
     
