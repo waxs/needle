@@ -19,9 +19,9 @@ import stamp from '@util/_stamp';
  * @returns { string } - will return identifier name of store
  */
 
-function save(name) {
-    name = name || unique();
-    store.forEach(item => item.id++);
+function save(store, name) {
+    name = name || randomId();
+    store.length > 0 && store.forEach(item => item.id++);
 
     store.push({
         name: name,
@@ -35,27 +35,7 @@ function save(name) {
 }
 
 /** ----------------------------------------
-     Retrieve
- ---------------------------------------- */
-
-/**
- * The retrieve method will return a
- * saved data set from the store by a given
- * name or identifier.
- *
- * @param { string } name - name of data set
- * @returns { object } - will return item from store
- */
-
-function retrieve(name) {
-    return this._find('name', name, store);
-};
-
-/** ----------------------------------------
     Exports
  ---------------------------------------- */
 
-export default {
-    save,
-    retrieve
-};
+export default save;

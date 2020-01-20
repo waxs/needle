@@ -56,7 +56,7 @@ extend(Core, custom);
      Handlers
  ---------------------------------------- */
 
-import store from '@js/methods/store';
+import store from '@js/methods/store/base';
 import crud from '@js/methods/crud/base';
 
 /** ----------------------------------------

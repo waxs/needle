@@ -12,11 +12,10 @@ import { construct } from '@js/setup/_construct';
 import { contents } from '@js/setup/_contents';
 
 /** ----------------------------------------
-     Store
+     Model
  ---------------------------------------- */
 
 let model = [];
-const store = [];
 
 /** ----------------------------------------
      Needle
@@ -72,14 +71,6 @@ class Needle extends Core {
 
     get config() {
         return this._settings;
-    }
-
-    /** ----------------------------------------
-         Store
-     ---------------------------------------- */
-
-    get store() {
-        return store;
     }
 
 }
