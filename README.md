@@ -87,7 +87,7 @@ manipulate an array of contents. Let's dive a little deeper into the options you
     * `customEach()` make a custom manipulator
     * `customFilter()` make a custom filter
 
-* **CRUD** (8 methods)
+* **CRUD** (8 methods) [Read documentation ⟶](https://github.com/waxs/needle/tree/master/docs/crud/README.md)
     * `create()` create new object in the data set
     * `read()` retrieve single item from the current data set
     * `update()` update single item from data set
