@@ -2,6 +2,7 @@
     Utilities
  ---------------------------------------- */
 
+import average from './_average';
 import smaller from './_smaller';
 import bigger from './_bigger';
 import between from './_between';
@@ -17,6 +18,7 @@ import sum from './_sum';
  ---------------------------------------- */
 
 export default {
+    average,
     smaller,
     bigger,
     between,
