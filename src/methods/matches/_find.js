@@ -15,7 +15,7 @@
 
 function find(key, value) {
     this._hasTrail();
-    const filter = this._find(key, value);
+    const filter = !value ? this._data : this._find(key, value);
     return this._chain(filter);
 }
 
