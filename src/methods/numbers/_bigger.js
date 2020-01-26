@@ -15,7 +15,7 @@
 
 function bigger(key, value, date = false) {
     this._hasTrail();
-    const filter = this._operator(key, '>=', value, date);
+    const filter = !value ? this._data : this._operator(key, '>=', value, date);
     return this._chain(filter);
 }
 
