@@ -169,8 +169,8 @@ strings or array's containing multiple strings. It's always wise to limit your d
 - [x] Make library exportable
 - [x] Finish CRUD methods
 - [x] Refactor on README.md
-- [ ] Decouple methods in folders
-- [ ] Finish store methods
+- [x] Decouple methods in folders
+- [x] Finish store methods
 - [ ] Set default parameters for keys
 
 ## About
