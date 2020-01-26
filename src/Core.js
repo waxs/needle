@@ -14,7 +14,7 @@ import { extend } from '@js/setup/_extends';
      Helpers
  ---------------------------------------- */
 
-import helpers from '@js/methods/helpers';
+import helpers from '@js/methods/helpers/base';
 import trail from '@js/methods/trail';
 
 /** ----------------------------------------
