@@ -27,7 +27,7 @@ function take(amount = this._data.length, info) {
     const all = !amount || amount >= this._data.length;
     const result = all && this._data || select;
     this.info = result.length;
-    return info && { results: result, info: this.info } || result;
+    return info && { results: result, info: this.info } || result || [];
 }
 
 /** ----------------------------------------
