@@ -14,8 +14,8 @@ import { extend } from '@js/setup/_extends';
      Helpers
  ---------------------------------------- */
 
-import helpers from '@js/methods/helpers/base';
-import trail from '@js/methods/trail/base';
+import helpers from '@method/helpers/base';
+import trail from '@method/trail/base';
 
 /** ----------------------------------------
     Needle Helpers
@@ -28,14 +28,14 @@ extend(Core, trail);
     Methods
  ---------------------------------------- */
 
-import retrieve from '@js/methods/retrieve/base';
-import sort from '@js/methods/sorting/base';
-import debugging from '@js/methods/debugging/base';
-import template from '@js/methods/template/base';
-import numbers from '@js/methods/numbers/base';
-import dates from '@js/methods/dates/base';
-import matches from '@js/methods/matches/base';
-import combinations from '@js/methods/combinations/base';
+import retrieve from '@method/retrieve/base';
+import sort from '@method/sorting/base';
+import debugging from '@method/debugging/base';
+import template from '@method/template/base';
+import numbers from '@method/numbers/base';
+import dates from '@method/dates/base';
+import matches from '@method/matches/base';
+import combinations from '@method/combinations/base';
 import custom from '@js/methods/custom/base';
 
 /** ----------------------------------------
@@ -56,8 +56,8 @@ extend(Core, custom);
      Handlers
  ---------------------------------------- */
 
-import store from '@js/methods/store/base';
-import crud from '@js/methods/crud/base';
+import store from '@method/store/base';
+import crud from '@method/crud/base';
 
 /** ----------------------------------------
     Needle Handlers
