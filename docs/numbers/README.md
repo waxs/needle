@@ -59,6 +59,16 @@ const result = needle
 console.log(result);
 ```
 
+### Average
+Besides retrieving the minimum or maximum value from a given key, the average method will return the (closest) to an 
+average from a given key. Meaning if an "average" number isn't present in the dataset the closest value will be 
+returned, potentially multiple items from the dataset. 
+```javascript
+const result = needle
+    .average('age')
+    .take();
+```
+
 ### Sum
 To quickly sum a total amount of values use the `sum()` method and give it a key to select a value from the 
 manipulated array. The function will return the total value of all (leftover) items within the array. The example as shown below, based on the data object as present in the first example will result in 101. 

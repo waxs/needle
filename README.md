@@ -51,13 +51,14 @@ manipulate an array of contents. Let's dive a little deeper into the options you
 * **Template** (1 method) [Read documentation ⟶](https://github.com/waxs/needle/tree/master/docs/template/README.md)
     * `template()` can be used to template results with custom markup
     
-* **Numbers** (9 methods) [Read documentation ⟶](https://github.com/waxs/needle/tree/master/docs/numbers/README.md)
+* **Numbers** (10 methods) [Read documentation ⟶](https://github.com/waxs/needle/tree/master/docs/numbers/README.md)
     * `smaller()` retrieve items smaller than a given parameter
     * `bigger()` retrieve items bigger than a given parameter
     * `between()` retrieve items in between to given parameters
     * `equal()` retrieve an equal to item from the data
     * `min()` retrieve the minimum value from a given key within the data
     * `max()` retrieve the maximum value from a given key within the data
+    * `average()` retrieve the (closest) average value from a given key within the data
     * `positive()` retrieve all positive items from a given key within the data
     * `negative()` retrieve all negative items from a given key within the data
     * `sum()` sum an amount of numbers from a given key in current data
