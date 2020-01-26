@@ -12,6 +12,7 @@ needle
         document.body.appendChild(item);
     });
 ```
+#### How to do a clean native template?
 A cleaner way of handling templates is to store the logic in a separate function for instance.
 ```javascript
 const html = data => {
@@ -34,7 +35,7 @@ needle
         console.log(data, index)
     });
 ```
-
+#### Using this in your template
 If you need access to the `this` value referring to Needle, a arrow notation can not be used. This is because arrow 
 function expressions are suited as methods, and not be used as constructors. However a workaround is available using 
 a traditional `function()`.
