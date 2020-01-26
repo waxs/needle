@@ -15,7 +15,7 @@ import { extend } from '@js/setup/_extends';
  ---------------------------------------- */
 
 import helpers from '@js/methods/helpers/base';
-import trail from '@js/methods/trail';
+import trail from '@js/methods/trail/base';
 
 /** ----------------------------------------
     Needle Helpers
