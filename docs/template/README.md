@@ -27,6 +27,7 @@ needle
     .max('age')
     .template(data => html(data));
 ```
+#### Handle index for results
 A second parameter is also available that will provide the index of the current item. 
 ```javascript
 needle
