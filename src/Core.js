@@ -36,7 +36,7 @@ import numbers from '@method/numbers/base';
 import dates from '@method/dates/base';
 import matches from '@method/matches/base';
 import combinations from '@method/combinations/base';
-import custom from '@js/methods/custom/base';
+import custom from '@method/custom/base';
 
 /** ----------------------------------------
     Needle Methods
