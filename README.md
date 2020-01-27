@@ -1,10 +1,12 @@
 # Needle JS
 Needle is a fast, small, clean and flexible package for finding your needle in a haystack of data. Needle has some 
-simple helpers to quickly differentiate your data using chained methods while being only `16KB` in size.
+simple helpers to quickly differentiate your data using chained methods while being only `17KB` in size.
 
 Imagine having to retrieve all items that are active, pretty easy right? These days use an array `.filter()` and you're 
 pretty much done. Now consider retrieving all names of the active records in september 2020 where the age is equal to 30. 
 This is where Needle comes with just 5 lines of code. 
+
+🚧 Package is under development as an alpha version. 
 
 ```javascript
 needle
@@ -146,7 +148,7 @@ real time.
 
 ## Development
 Needle methods can be tested using Jest, running the `npm run test` command will execute a number of test to make 
-sure basic functionality is working as expected. Test scripts can be found in the `__test__` folder.  
+sure basic functionality is working as expected. Test scripts can be found in the `test` folder.  
 
 ### Testing   
 We did a stress test on working with a large data set. We can never assume, at least not for now, that JS 
