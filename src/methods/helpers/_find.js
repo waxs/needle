@@ -29,12 +29,13 @@ function _find(key, value, data = this._data) {
 
     const arrayValue = item => value.includes(item[key]);
     const arrayData = item => item[key].some(index => value.includes(index));
+    const singleValue = item => item[key] && compareInArray(item, key, value);
 
     const fnType = {
         'array': () => data.filter(item => isArray(item[key]) ? arrayData(item) : arrayValue(item)),
         'boolean': () => data.filter(item => item[key]),
-        'string': () => data.filter(item => item[key] && compareInArray(item, key, value)),
-        'number': () => data.filter(item => item[key] && compareInArray(item, key, value))
+        'string': () => data.filter(singleValue),
+        'number': () => data.filter(singleValue)
     };
 
     return fnType[valueType]();
