@@ -114,6 +114,20 @@ th {
     text-align: left;
 }
 
+th.asc:after,
+th.desc:after {
+    margin-left: 0.5rem;
+    font-size: 0.75em;
+}
+
+th.asc:after {
+    content: '▼'
+}
+
+th.desc:after {
+    content: '▲'
+}
+
 /** ----------------------------------------
      Table Content
  ---------------------------------------- */
