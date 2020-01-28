@@ -7,6 +7,7 @@ import findDeep from './_findDeep';
 import has from './_has';
 import hasDeep from './_hasDeep';
 import is from './_is';
+import not from './_not';
 
 /** ----------------------------------------
     Exports
@@ -17,5 +18,6 @@ export default {
     findDeep,
     has,
     hasDeep,
-    is
+    is,
+    not
 };
