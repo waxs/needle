@@ -87,6 +87,43 @@ const result = needle
     
 console.log(result);
 ```
+Find method will now also support matching an array of values with a string or single number. For instance, if name 
+is either Sander or Nicole. 
+```javascript
+const result = needle
+    .find('name', ['Sander', 'Nicole'])
+    .take();
+    
+console.log(result);
+```
+To give a little more insight in the power of the `find()` method here are a few examples based on a simple dataset. 
+```javascript
+const data = [
+    {
+        name: 'Sander',
+        age: 30,
+        city: 'Amsterdam',
+        hobbies: ['Music', 'Movies']
+    },
+    {
+        name: 'Nicole',
+        age: 32,
+        city: 'Paris',
+        hobbies: ['Dancing', 'Music']
+    }
+];
+```
+
+| Example                               | Result |  
+| :---                                  | :--- |
+| find('name', 'Sander')                | Will return the first item from the data set (match name Sander)
+| find('name', ['Sander', 'Nicole')     | Will return both items from the data set (match name Sander or Nicole)
+| find('age', [25, 30, 35])             | Will return the first item from the data set (match age 30)
+| find('hobbies', 'Music')              | Will return both items from the data set (match hobbies Music)
+| find('hobbies', ['Dancing']           | Will return the last item from the data set (match hobbies Dancing)
+| find('hobbies', ['Dancing', 'Movies'] | Will return both items from the data set (match hobbies Dancing or Movies)
+
+All these variations are covered in Needle. 
 
 ### Find Deep
 The `findDeep()` method is an advanced way of looking for key value pairs within an item. The regular `find()` method
