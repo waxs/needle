@@ -1,5 +1,5 @@
 /*!
- * Needle (0.7.4) by Sander Hidding
+ * Needle (0.7.5) by Sander Hidding
  * Find your needle in a haystack. Needle is a small and fast query builder for sorting, manipulating and retrieving data.
  * This source code is licensed under the MIT license found in the GitHub repository (git+https://github.com/waxs/needle.git)
  */
@@ -644,6 +644,18 @@ eval("__webpack_require__.r(__webpack_exports__);\n/** -------------------------
 
 /***/ }),
 
+/***/ "./src/methods/matches/_not.js":
+/*!*************************************!*\
+  !*** ./src/methods/matches/_not.js ***!
+  \*************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/** ----------------------------------------\n    Not\n ---------------------------------------- */\n\n/**\n * Check for a false boolean value of a specific\n * key as passed as an argument. Will only\n * look for first layer of keys.\n *\n * @param { string } key - selected key\n * @returns { Needle } object - new instance\n */\nfunction not(key) {\n  this._hasTrail();\n\n  var filter = this._data.filter(function (item) {\n    return !item[key];\n  });\n\n  return this._chain(filter);\n}\n/** ----------------------------------------\n    Exports\n ---------------------------------------- */\n\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (not);\n\n//# sourceURL=webpack://Needle/./src/methods/matches/_not.js?");
+
+/***/ }),
+
 /***/ "./src/methods/matches/base.js":
 /*!*************************************!*\
   !*** ./src/methods/matches/base.js ***!
@@ -652,7 +664,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/** -------------------------
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _find__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./_find */ \"./src/methods/matches/_find.js\");\n/* harmony import */ var _findDeep__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./_findDeep */ \"./src/methods/matches/_findDeep.js\");\n/* harmony import */ var _has__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./_has */ \"./src/methods/matches/_has.js\");\n/* harmony import */ var _hasDeep__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./_hasDeep */ \"./src/methods/matches/_hasDeep.js\");\n/* harmony import */ var _is__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./_is */ \"./src/methods/matches/_is.js\");\n/** ----------------------------------------\n    Utilities\n ---------------------------------------- */\n\n\n\n\n\n/** ----------------------------------------\n    Exports\n ---------------------------------------- */\n\n/* harmony default export */ __webpack_exports__[\"default\"] = ({\n  find: _find__WEBPACK_IMPORTED_MODULE_0__[\"default\"],\n  findDeep: _findDeep__WEBPACK_IMPORTED_MODULE_1__[\"default\"],\n  has: _has__WEBPACK_IMPORTED_MODULE_2__[\"default\"],\n  hasDeep: _hasDeep__WEBPACK_IMPORTED_MODULE_3__[\"default\"],\n  is: _is__WEBPACK_IMPORTED_MODULE_4__[\"default\"]\n});\n\n//# sourceURL=webpack://Needle/./src/methods/matches/base.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _find__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./_find */ \"./src/methods/matches/_find.js\");\n/* harmony import */ var _findDeep__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./_findDeep */ \"./src/methods/matches/_findDeep.js\");\n/* harmony import */ var _has__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./_has */ \"./src/methods/matches/_has.js\");\n/* harmony import */ var _hasDeep__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./_hasDeep */ \"./src/methods/matches/_hasDeep.js\");\n/* harmony import */ var _is__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./_is */ \"./src/methods/matches/_is.js\");\n/* harmony import */ var _not__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./_not */ \"./src/methods/matches/_not.js\");\n/** ----------------------------------------\n    Utilities\n ---------------------------------------- */\n\n\n\n\n\n\n/** ----------------------------------------\n    Exports\n ---------------------------------------- */\n\n/* harmony default export */ __webpack_exports__[\"default\"] = ({\n  find: _find__WEBPACK_IMPORTED_MODULE_0__[\"default\"],\n  findDeep: _findDeep__WEBPACK_IMPORTED_MODULE_1__[\"default\"],\n  has: _has__WEBPACK_IMPORTED_MODULE_2__[\"default\"],\n  hasDeep: _hasDeep__WEBPACK_IMPORTED_MODULE_3__[\"default\"],\n  is: _is__WEBPACK_IMPORTED_MODULE_4__[\"default\"],\n  not: _not__WEBPACK_IMPORTED_MODULE_5__[\"default\"]\n});\n\n//# sourceURL=webpack://Needle/./src/methods/matches/base.js?");
 
 /***/ }),
 
