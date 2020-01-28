@@ -114,16 +114,18 @@ const data = [
 ];
 ```
 
-| Example                               | Result |  
-| :---                                  | :--- |
-| find('name', 'Sander')                | Will return the first item from the data set (match name Sander)
-| find('name', ['Sander', 'Nicole'])    | Will return both items from the data set (match name Sander or Nicole)
-| find('age', [25, 30, 35])             | Will return the first item from the data set (match age 30)
-| find('hobbies', 'Music')              | Will return both items from the data set (match hobbies Music)
-| find('hobbies', ['Dancing']           | Will return the last item from the data set (match hobbies Dancing)
-| find('hobbies', ['Dancing', 'Movies'] | Will return both items from the data set (match hobbies Dancing or Movies)
+| Example                                   | Result |  
+| :---                                      | :--- |
+| find('name', 'Sander')                    | Will return the first item from the data set (match name Sander)
+| find('name', ['Sander', 'Nicole'])        | Will return both items from the data set (match name Sander or Nicole)
+| find('age', [25, 30, 35])                 | Will return the first item from the data set (match age 30)
+| find('hobbies', 'Music')                  | Will return both items from the data set (match hobbies Music)
+| find('hobbies', ['Dancing'])              | Will return the last item from the data set (match hobbies Dancing)
+| find('hobbies', ['Dancing', 'Movies'])    | Will return both items from the data set (match hobbies Dancing or Movies)
 
-All these variations are covered in Needle. 
+All these variations are covered in Needle, meaning, if you need to make multiple matches these can be retrieved 
+using arrays. Also, looking inside arrays can be done either by using an array value or a single bool, string or 
+number. 
 
 ### Find Deep
 The `findDeep()` method is an advanced way of looking for key value pairs within an item. The regular `find()` method
