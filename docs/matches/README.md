@@ -4,7 +4,7 @@
 Using filters it's possible to manipulate the data and retrieve a new array of items based on the queries given. For 
 instance retrieve all items that have a specific key or value. 
 
-### Is
+### Is and not
 To quickly check if a value is `true` use the `is()` method and provide it with a key that needs to be checked. 
 
 ```javascript
@@ -14,6 +14,7 @@ const result = needle
     
 console.log(result);
 ```
+The `not()` method will do the opposite of the `is()` method, looking for a false value for a given key.
 
 ### Has
 To retrieve items with a specific key present within the object use the `has()` method. This will only retrieve 

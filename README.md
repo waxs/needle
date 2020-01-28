@@ -74,8 +74,9 @@ manipulate an array of contents. Let's dive a little deeper into the options you
     * `previous()` take last amount of items based named dates
     * `upcoming()` take next amount of items based named dates
     
-* **Matches** (5 methods) [Read documentation ⟶](https://github.com/waxs/needle/tree/master/docs/matches/README.md)
+* **Matches** (6 methods) [Read documentation ⟶](https://github.com/waxs/needle/tree/master/docs/matches/README.md)
     * `is()` retrieve items with a bool value that is true
+    * `not()` retrieve items with a bool value that is false
     * `has()` retrieve items if a given key is present in the object
     * `hasDeep()` retrieve items if a given key is present in a nested object
     * `find()` find will retrieve objects with a key value pair match
