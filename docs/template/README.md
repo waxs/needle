@@ -47,3 +47,40 @@ needle
         html(data);
     });
 ```
+
+#### Set amount of results
+If you need to display the amount of results given by Needle the `results()` method can template it for you. IT can 
+only be used in combination with the template function for now, but the results can also be accessed through the use 
+of a getter `needle.info`.
+```javascript
+const needle = new Needle(data);
+
+const showResults = info => {
+    const amount = document.body.querySelector('#amount');
+    amount.innerText = info.length + '/' + info.set;
+}
+
+needle
+    .bigger('age', 30)
+    .template(data => html(data))
+    .results(showResults);
+```
+
+#### Set no results 
+Needle has a template helper that can be used linked with the `template()` method called `empty()`, it will only 
+execute if no results have been found. It can be used as a callback like so. 
+```javascript
+const needle = new Needle(data);
+
+const noResults = () => {
+    const results = document.body.querySelector('#result');
+    results.innerText = 'No results found';
+}
+
+needle
+    .bigger('age', 100)
+    .template(data => html(data))
+    .empty(noResults);
+``` 
+Let's say the example above doesn't hold any results, the `template()` won't execute and the `empty()` method will 
+take over. Meaning the `noResults` function as shown above will be executed. 

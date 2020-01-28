@@ -50,8 +50,8 @@ manipulate an array of contents. Let's dive a little deeper into the options you
     * `print()` will print results to the DOM
     * `random()` will retrieve a random amount of items 
     
-* **Template** (1 method) [Read documentation ⟶](https://github.com/waxs/needle/tree/master/docs/template/README.md)
-    * `template()` can be used to template results with custom markup
+* **Template** (3 methods) [Read documentation ⟶](https://github.com/waxs/needle/tree/master/docs/template/README.md)
+    * `template()` can be used to template results with custom markup contains `empty()` and `results()` function. 
     
 * **Numbers** (10 methods) [Read documentation ⟶](https://github.com/waxs/needle/tree/master/docs/numbers/README.md)
     * `smaller()` retrieve items smaller than a given parameter
