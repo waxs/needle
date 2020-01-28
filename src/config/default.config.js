@@ -1,8 +1,20 @@
 /** ----------------------------------------
+    Model
+ ---------------------------------------- */
+
+let model = [];
+
+/** ----------------------------------------
      Create Constructor
  ---------------------------------------- */
 
 const setDefaults = (data, trail) => {
+
+    /** ----------------------------------------
+        Set Model
+     ---------------------------------------- */
+
+    model = model.length > 0 ? model : data;
 
     /** ----------------------------------------
         Configuration
@@ -62,6 +74,7 @@ const setDefaults = (data, trail) => {
         {
             name: 'info',
             value: {
+                set: model.length,
                 length: data.length
             }
         },

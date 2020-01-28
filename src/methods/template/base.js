@@ -2,6 +2,8 @@
     Utilities
  ---------------------------------------- */
 
+import _empty from './_empty';
+import _results from './_results';
 import template from './_template';
 
 /** ----------------------------------------
@@ -9,5 +11,7 @@ import template from './_template';
  ---------------------------------------- */
 
 export default {
+    _empty,
+    _results,
     template
 };
