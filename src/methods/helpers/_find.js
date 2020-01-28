@@ -4,6 +4,7 @@
 
 import compareInArray from '@util/_compareInArray';
 import isSingleArray from '@util/_isSingleArray';
+import isArray from '@util/_isArray';
 import isType from '@util/_isType';
 
 /** ----------------------------------------
@@ -26,8 +27,11 @@ function _find(key, value, data = this._data) {
     value = isSingleArray(value);
     const valueType = isType(value);
 
+    const arrayValue = item => value.includes(item[key]);
+    const arrayData = item => item[key].some(index => value.includes(index));
+
     const fnType = {
-        'array': () => data.filter(item => item[key] && item[key].some(index => value.includes(index))),
+        'array': () => data.filter(item => isArray(item[key]) ? arrayData(item) : arrayValue(item)),
         'boolean': () => data.filter(item => item[key]),
         'string': () => data.filter(item => item[key] && compareInArray(item, key, value)),
         'number': () => data.filter(item => item[key] && compareInArray(item, key, value))
