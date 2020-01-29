@@ -1,4 +1,10 @@
 /** ----------------------------------------
+    Utilities
+ ---------------------------------------- */
+
+import unique from '@util/_unique';
+
+/** ----------------------------------------
     Has Trail
  ---------------------------------------- */
 
@@ -12,7 +18,7 @@
 
 function _hasTrail() {
     if(!this._trail.exe.length) return;
-    this._data = [].concat.apply([], this._exeTrail());
+    this._data = unique([].concat.apply([], this._exeTrail()));
     return this._chain(this._data);
 }
 

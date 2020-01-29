@@ -1,4 +1,12 @@
 /** ----------------------------------------
+    Utilities
+ ---------------------------------------- */
+
+import doubles from '@util/_doubles';
+import flatten from '@util/_flatten';
+import unique from '@util/_unique';
+
+/** ----------------------------------------
     Execute Trail
  ---------------------------------------- */
 
@@ -18,15 +26,29 @@ function _exeTrail() {
         if(fn.type === 'or') setData = this._trail.data;
         if(fn.type === 'and') setData = this._trail.prev;
         executed.push(fn.type);
-        return fn.exe(...fn.args, setData);
+
+        return {
+            type: fn.type,
+            result: fn.exe(...fn.args, setData)
+        };
     });
 
-    if(!executed.includes('and')) {
-        result.push(this._trail.prev);
-    }
+    const and = result
+        .filter(value => value.type === 'and')
+        .map(value => value.result);
+
+    const flattenAnd = flatten(and);
+    const andResult = and.length > 1 ? doubles(flattenAnd) : flattenAnd;
+
+    const or = result
+        .filter(value => value.type === 'or')
+        .map(value => value.result);
+
+    const flattenOr = flatten(or);
+    const orResult = unique(flattenOr);
 
     this._resetTrail();
-    return result;
+    return [andResult, orResult];
 }
 
 /** ----------------------------------------
