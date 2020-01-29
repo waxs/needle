@@ -14,7 +14,7 @@
  */
 
 function orWhere(key, type, value) {
-    this._addTrail(true, 'orWhere', key, type, value);
+    (value && value.length !== 0) && this._addTrail(true, 'orWhere', key, type, value);
     return this._chain(this._data);
 }
 

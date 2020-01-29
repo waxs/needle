@@ -16,7 +16,7 @@
 function where(key, type, value) {
     this._hasTrail();
     this._trail['data'] = this._data;
-    const filter = this._operator(key, type, value);
+    const filter = (value && value.length !== 0) && this._operator(key, type, value) || this._data;
     this._trail['prev'] = filter;
     return this._chain(filter);
 }

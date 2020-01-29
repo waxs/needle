@@ -14,7 +14,7 @@
  */
 
 function andWhere(key, type, value) {
-    this._addTrail(true, 'andWhere', key, type, value);
+    (value && value.length !== 0) && this._addTrail(true, 'andWhere', key, type, value);
     return this._chain(this._data);
 }
 
