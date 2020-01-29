@@ -1,5 +1,5 @@
 /*!
- * Needle (0.7.5) by Sander Hidding
+ * Needle (0.7.6) by Sander Hidding
  * Find your needle in a haystack. Needle is a small and fast query builder for sorting, manipulating and retrieving data.
  * This source code is licensed under the MIT license found in the GitHub repository (git+https://github.com/waxs/needle.git)
  */
@@ -232,7 +232,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/** -------------------------
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/** ----------------------------------------\n    Remove\n ---------------------------------------- */\n\n/**\n * Delete a single item from the current\n * data set. Will take the index number\n * of the item to be removed.\n *\n * @params { number } index - index of item\n */\nfunction remove(index) {\n  this._hasTrail();\n\n  delete this._data[index];\n\n  this._chain(this._data);\n}\n/** ----------------------------------------\n    Exports\n ---------------------------------------- */\n\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (remove);\n\n//# sourceURL=webpack://Needle/./src/methods/crud/_remove.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/** ----------------------------------------\n    Remove\n ---------------------------------------- */\n\n/**\n * Delete a single item from the current\n * data set. Will take the index number\n * of the item to be removed.\n *\n * @params { number } index - index of item\n */\nfunction remove(index) {\n  this._hasTrail();\n\n  this._data.splice(index, 1);\n\n  this._chain(this._data);\n}\n/** ----------------------------------------\n    Exports\n ---------------------------------------- */\n\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (remove);\n\n//# sourceURL=webpack://Needle/./src/methods/crud/_remove.js?");
 
 /***/ }),
 
@@ -1060,7 +1060,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/** -------------------------
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\nfunction _toConsumableArray(arr) { return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _nonIterableSpread(); }\n\nfunction _nonIterableSpread() { throw new TypeError(\"Invalid attempt to spread non-iterable instance\"); }\n\nfunction _iterableToArray(iter) { if (Symbol.iterator in Object(iter) || Object.prototype.toString.call(iter) === \"[object Arguments]\") return Array.from(iter); }\n\nfunction _arrayWithoutHoles(arr) { if (Array.isArray(arr)) { for (var i = 0, arr2 = new Array(arr.length); i < arr.length; i++) { arr2[i] = arr[i]; } return arr2; } }\n\n/** ----------------------------------------\n    Execute Trail\n ---------------------------------------- */\n\n/**\n * If chain is available the executing will\n * process all stacked queries and resolve the\n * results in a new array. This array will be\n * flattened by the hasTrail() method if\n * criteria are matched.\n */\nfunction _exeTrail() {\n  var _this = this;\n\n  var executed = [];\n  var setData = [];\n\n  var result = this._trail.exe.map(function (fn) {\n    if (fn.type === 'or') setData = _this._trail.data;\n    if (fn.type === 'and') setData = _this._trail.prev;\n    executed.push(fn.type);\n    return fn.exe.apply(fn, _toConsumableArray(fn.args).concat([setData]));\n  });\n\n  if (!executed.includes('and')) {\n    result.push(this._trail.prev);\n  }\n\n  this._resetTrail();\n\n  return result;\n}\n/** ----------------------------------------\n    Exports\n ---------------------------------------- */\n\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (_exeTrail);\n\n//# sourceURL=webpack://Needle/./src/methods/trail/_exeTrail.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _util_doubles__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @util/_doubles */ \"./src/util/_doubles.js\");\n/* harmony import */ var _util_flatten__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @util/_flatten */ \"./src/util/_flatten.js\");\n/* harmony import */ var _util_unique__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @util/_unique */ \"./src/util/_unique.js\");\nfunction _toConsumableArray(arr) { return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _nonIterableSpread(); }\n\nfunction _nonIterableSpread() { throw new TypeError(\"Invalid attempt to spread non-iterable instance\"); }\n\nfunction _iterableToArray(iter) { if (Symbol.iterator in Object(iter) || Object.prototype.toString.call(iter) === \"[object Arguments]\") return Array.from(iter); }\n\nfunction _arrayWithoutHoles(arr) { if (Array.isArray(arr)) { for (var i = 0, arr2 = new Array(arr.length); i < arr.length; i++) { arr2[i] = arr[i]; } return arr2; } }\n\n/** ----------------------------------------\n    Utilities\n ---------------------------------------- */\n\n\n\n/** ----------------------------------------\n    Execute Trail\n ---------------------------------------- */\n\n/**\n * If chain is available the executing will\n * process all stacked queries and resolve the\n * results in a new array. This array will be\n * flattened by the hasTrail() method if\n * criteria are matched.\n */\n\nfunction _exeTrail() {\n  var _this = this;\n\n  var executed = [];\n  var setData = [];\n\n  var result = this._trail.exe.map(function (fn) {\n    if (fn.type === 'or') setData = _this._trail.data;\n    if (fn.type === 'and') setData = _this._trail.prev;\n    executed.push(fn.type);\n    return {\n      type: fn.type,\n      result: fn.exe.apply(fn, _toConsumableArray(fn.args).concat([setData]))\n    };\n  });\n\n  var and = result.filter(function (value) {\n    return value.type === 'and';\n  }).map(function (value) {\n    return value.result;\n  });\n  var flattenAnd = Object(_util_flatten__WEBPACK_IMPORTED_MODULE_1__[\"default\"])(and);\n  var andResult = and.length > 1 ? Object(_util_doubles__WEBPACK_IMPORTED_MODULE_0__[\"default\"])(flattenAnd) : flattenAnd;\n  var or = result.filter(function (value) {\n    return value.type === 'or';\n  }).map(function (value) {\n    return value.result;\n  });\n  var flattenOr = Object(_util_flatten__WEBPACK_IMPORTED_MODULE_1__[\"default\"])(or);\n  var orResult = Object(_util_unique__WEBPACK_IMPORTED_MODULE_2__[\"default\"])(flattenOr);\n\n  this._resetTrail();\n\n  return [andResult, orResult];\n}\n/** ----------------------------------------\n    Exports\n ---------------------------------------- */\n\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (_exeTrail);\n\n//# sourceURL=webpack://Needle/./src/methods/trail/_exeTrail.js?");
 
 /***/ }),
 
@@ -1072,7 +1072,7 @@ eval("__webpack_require__.r(__webpack_exports__);\nfunction _toConsumableArray(a
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/** ----------------------------------------\n    Has Trail\n ---------------------------------------- */\n\n/**\n * Will check if a trail can be closed and\n * execute the trail. It will concat any\n * results produced by the trail and push\n * these to the data array creating a extended\n * data set based on given query chain.\n */\nfunction _hasTrail() {\n  if (!this._trail.exe.length) return;\n  this._data = [].concat.apply([], this._exeTrail());\n  return this._chain(this._data);\n}\n/** ----------------------------------------\n    Exports\n ---------------------------------------- */\n\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (_hasTrail);\n\n//# sourceURL=webpack://Needle/./src/methods/trail/_hasTrail.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _util_unique__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @util/_unique */ \"./src/util/_unique.js\");\n/** ----------------------------------------\n    Utilities\n ---------------------------------------- */\n\n/** ----------------------------------------\n    Has Trail\n ---------------------------------------- */\n\n/**\n * Will check if a trail can be closed and\n * execute the trail. It will concat any\n * results produced by the trail and push\n * these to the data array creating a extended\n * data set based on given query chain.\n */\n\nfunction _hasTrail() {\n  if (!this._trail.exe.length) return;\n  this._data = Object(_util_unique__WEBPACK_IMPORTED_MODULE_0__[\"default\"])([].concat.apply([], this._exeTrail()));\n  return this._chain(this._data);\n}\n/** ----------------------------------------\n    Exports\n ---------------------------------------- */\n\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (_hasTrail);\n\n//# sourceURL=webpack://Needle/./src/methods/trail/_hasTrail.js?");
 
 /***/ }),
 
@@ -1196,6 +1196,18 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _js_
 
 /***/ }),
 
+/***/ "./src/util/_doubles.js":
+/*!******************************!*\
+  !*** ./src/util/_doubles.js ***!
+  \******************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/** ----------------------------------------\n    Doubles\n ---------------------------------------- */\nvar doubles = function doubles(array) {\n  var data = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : null;\n  var result;\n  var defaultStore = {\n    array: [],\n    save: []\n  };\n\n  var findDuplicates = function findDuplicates(array) {\n    var data = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : null;\n    var store = data || defaultStore;\n    array.forEach(function (item, index) {\n      store.array.includes(item) && store.save.push(item);\n      store.array.push(item);\n\n      if (index === array.length - 1 && store.save.length > 0) {\n        findDuplicates(store.save, {\n          array: [],\n          save: []\n        });\n      }\n\n      if (store.save.length === 0 && store.array.length) {\n        result = store.array;\n      }\n    });\n  };\n\n  findDuplicates(array);\n  return result;\n};\n/** ----------------------------------------\n    Exports\n ---------------------------------------- */\n\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (doubles);\n\n//# sourceURL=webpack://Needle/./src/util/_doubles.js?");
+
+/***/ }),
+
 /***/ "./src/util/_evaluate.js":
 /*!*******************************!*\
   !*** ./src/util/_evaluate.js ***!
@@ -1205,6 +1217,18 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _js_
 
 "use strict";
 eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _util_isArray__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @util/_isArray */ \"./src/util/_isArray.js\");\n/** ----------------------------------------\n    Utilities\n ---------------------------------------- */\n\n/** ----------------------------------------\n    Evaluate\n ---------------------------------------- */\n\nvar evaluate = function evaluate(item, operator, value, date) {\n  item = date ? new Date(item) : item;\n  value = date ? new Date(value) : value;\n\n  var compare = function compare(value) {\n    return {\n      '>': item > value,\n      '<': item < value,\n      '>=': item >= value,\n      '<=': item <= value,\n      '=': item === value\n    };\n  };\n\n  var compareArray = function compareArray(array) {\n    return array.some(function (item) {\n      return compare(item)[operator];\n    });\n  };\n\n  return Object(_util_isArray__WEBPACK_IMPORTED_MODULE_0__[\"default\"])(value) ? compareArray(value) : compare(value)[operator];\n};\n/** ----------------------------------------\n    Exports\n ---------------------------------------- */\n\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (evaluate);\n\n//# sourceURL=webpack://Needle/./src/util/_evaluate.js?");
+
+/***/ }),
+
+/***/ "./src/util/_flatten.js":
+/*!******************************!*\
+  !*** ./src/util/_flatten.js ***!
+  \******************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/** ----------------------------------------\n    Flatten\n ---------------------------------------- */\nvar flatten = function flatten(array) {\n  return [].concat.apply([], array);\n};\n/** ----------------------------------------\n    Exports\n ---------------------------------------- */\n\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (flatten);\n\n//# sourceURL=webpack://Needle/./src/util/_flatten.js?");
 
 /***/ }),
 
@@ -1301,6 +1325,18 @@ eval("__webpack_require__.r(__webpack_exports__);\n/** -------------------------
 
 "use strict";
 eval("__webpack_require__.r(__webpack_exports__);\n/** ----------------------------------------\n     Stamp\n ---------------------------------------- */\nvar stamp = function stamp() {\n  return Math.floor(Date.now() / 1000);\n};\n/** ----------------------------------------\n     Exports\n ---------------------------------------- */\n\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (stamp);\n\n//# sourceURL=webpack://Needle/./src/util/_stamp.js?");
+
+/***/ }),
+
+/***/ "./src/util/_unique.js":
+/*!*****************************!*\
+  !*** ./src/util/_unique.js ***!
+  \*****************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\nfunction _toConsumableArray(arr) { return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _nonIterableSpread(); }\n\nfunction _nonIterableSpread() { throw new TypeError(\"Invalid attempt to spread non-iterable instance\"); }\n\nfunction _iterableToArray(iter) { if (Symbol.iterator in Object(iter) || Object.prototype.toString.call(iter) === \"[object Arguments]\") return Array.from(iter); }\n\nfunction _arrayWithoutHoles(arr) { if (Array.isArray(arr)) { for (var i = 0, arr2 = new Array(arr.length); i < arr.length; i++) { arr2[i] = arr[i]; } return arr2; } }\n\n/** ----------------------------------------\n    Unique\n ---------------------------------------- */\nvar unique = function unique(array) {\n  return _toConsumableArray(new Set(array));\n};\n/** ----------------------------------------\n    Exports\n ---------------------------------------- */\n\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (unique);\n\n//# sourceURL=webpack://Needle/./src/util/_unique.js?");
 
 /***/ })
 
