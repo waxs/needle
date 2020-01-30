@@ -3,6 +3,7 @@
  ---------------------------------------- */
 
 import isArray from '@util/_isArray';
+import isSingleArray from '@util/_isSingleArray';
 
 /** ----------------------------------------
     Evaluate
@@ -13,17 +14,30 @@ const evaluate = (item, operator, value, date) => {
     value = date ? new Date(value) : value;
 
     const compare = value => {
-        return {
-            '>' : item > value,
-            '<' : item < value,
-            '>=' : item >= value,
-            '<=' : item <= value,
-            '=' : item === value
-        };
+        item = isSingleArray(item);
+
+        if(isArray(item)) {
+            const multiple = item.map(index => worker(index, value));
+            return multiple.some(item => item);
+        }
+
+        return worker(item, value);
     };
 
-    const compareArray = array => array.some(item => compare(item)[operator]);
-    return isArray(value) ? compareArray(value) : compare(value)[operator];
+    const worker = (item, check = value) => {
+        const obj = {
+            '>' : item > check,
+            '<' : item < check,
+            '>=' : item >= check,
+            '<=' : item <= check,
+            '=' : item === check
+        };
+
+        return obj[operator];
+    };
+
+    const compareArray = array => array.some(item => compare(item));
+    return isArray(value) ? compareArray(value) : compare(value);
 };
 
 /** ----------------------------------------
