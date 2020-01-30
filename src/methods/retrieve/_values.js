@@ -1,4 +1,12 @@
 /** ----------------------------------------
+     Utilities
+ ---------------------------------------- */
+
+import flatten from '@util/_flatten';
+import isArray from '@util/_isArray';
+import unique from '@util/_unique';
+
+/** ----------------------------------------
     Values
  ---------------------------------------- */
 
@@ -8,7 +16,7 @@
  * will not chain at is an end of the road utility.
  *
  * @param { string } key - selected key to be retrieved
- * @returns { object } - will return an object with chunk data
+ * @returns { object } - will return an array with values
  */
 
 function values(key) {
@@ -25,7 +33,7 @@ function values(key) {
     };
 
     finder(key);
-    return array;
+    return unique(flatten(array));
 }
 
 /** ----------------------------------------
