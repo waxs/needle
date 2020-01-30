@@ -1,6 +1,6 @@
 {
   "name": "Needle",
-  "version": "0.7.6",
+  "version": "0.7.7",
   "description": "Find your needle in a haystack. Needle is a small and fast query builder for sorting, manipulating and retrieving data.",
   "main": "src/needle.js",
   "scripts": {
