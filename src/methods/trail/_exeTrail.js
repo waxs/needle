@@ -38,14 +38,16 @@ function _exeTrail() {
         .map(value => value.result);
 
     const flattenAnd = flatten(and);
-    const andResult = and.length > 1 ? doubles(flattenAnd) : flattenAnd;
+    let andResult = and.length > 1 ? doubles(flattenAnd) : flattenAnd;
 
     const or = result
         .filter(value => value.type === 'or')
         .map(value => value.result);
 
     const flattenOr = flatten(or);
-    const orResult = unique(flattenOr);
+    let orResult = unique(flattenOr);
+
+    if(!executed.includes('and')) andResult = this._trail.prev;
 
     this._resetTrail();
     return [andResult, orResult];
