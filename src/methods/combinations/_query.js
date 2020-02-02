@@ -7,8 +7,18 @@ import flatten from '@util/_flatten';
 import unique from '@util/_unique';
 
 /** ----------------------------------------
-     Query
+    Query
  ---------------------------------------- */
+
+/**
+ * The query method will be responsible for
+ * running an array of inclusive or exclusive
+ * queries set by the andQuery or orQuery method.
+ *
+ * @param { array } array - callbacks
+ * @param { string } type - flatten option
+ * @returns { Needle } object - new instance
+ */
 
 function _query(array, type) {
     this._hasTrail();
