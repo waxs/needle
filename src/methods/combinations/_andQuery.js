@@ -3,7 +3,7 @@
  ---------------------------------------- */
 
 function andQuery(callback) {
-    return this._query(callback(this), 'doubles')
+    return this._query(callback(this), 'doubles');
 }
 
 /** ----------------------------------------

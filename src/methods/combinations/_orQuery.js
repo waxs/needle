@@ -3,7 +3,7 @@
  ---------------------------------------- */
 
 function orQuery(callback) {
-    return this._query(callback(this), 'unique')
+    return this._query(callback(this), 'unique');
 }
 
 /** ----------------------------------------
