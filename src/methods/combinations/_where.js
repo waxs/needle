@@ -14,6 +14,7 @@
  */
 
 function where(key, type, value) {
+    !value && (value = type) && (type = '=');
     this._hasTrail();
     this._trail['data'] = this._data;
     const filter = (value && value.length !== 0) && this._operator(key, type, value) || this._data;
