@@ -44,3 +44,40 @@ const result = needle
 
 console.log(result);
 ```
+
+### orQuery
+The `orQuery` can run multiple (custom) queries at the same time, and it will flatten, merge and return the matches. 
+The method takes a callback that has a query parameter containing Needle methods. Returning an array of queries will 
+resolve every hit on one of the queries specified. 
+
+In the example below first the `bigger()` method will return a selection of the dataset containing items with an age 
+above 40. Within the `orQuery()` it will select where name is equal to Peter or the age is smaller then 50. 
+```javascript
+const result = needle
+    .bigger('age', 40)
+    .orQuery(query => [
+        query.find('name', 'Peter'),
+        query.smaller('age', 50)
+    ])
+    .take();
+
+console.log(result);
+```
+
+### andQuery
+With the `andQuery()` all given queries need to return true for a particular item. Meaning, the queries will exclude 
+any item that doesn't match the given array of selectors. 
+
+In the example below first the `bigger()` method will return a selection of the dataset containing items with an age 
+above 40. Then if name is equal to Peter "and" the age is smaller then 50 results will be returned. 
+```javascript
+const result = needle
+    .bigger('age', 40)
+    .andQuery(query => [
+        query.find('name', 'Peter'),
+        query.smaller('age', 50)
+    ])
+    .take();
+
+console.log(result);
+```
