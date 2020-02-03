@@ -1,5 +1,6 @@
 # Needle JS
 ![Testing](https://github.com/waxs/needle/workflows/Testing/badge.svg?branch=master)
+
 Needle is a fast, small, clean and flexible package for finding your needle in a haystack of data. Needle has some 
 simple helpers to quickly differentiate your data using chained methods while being only `17KB` in size.
 
