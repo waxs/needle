@@ -7,6 +7,7 @@ pretty much done. Now consider retrieving all names of the active records in sep
 This is where Needle comes with just 5 lines of code. 
 
 🚧 Package is under development as an alpha version. 
+![Testing](https://github.com/waxs/needle/workflows/Testing/badge.svg?branch=master)
 
 ```javascript
 needle

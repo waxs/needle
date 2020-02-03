@@ -73,7 +73,7 @@ above 40. Then if name is equal to Peter "and" the age is smaller then 50 result
 ```javascript
 const result = needle
     .bigger('age', 40)
-    .andQuery(query => [
+    .orQuery(query => [
         query.find('name', 'Peter'),
         query.smaller('age', 50)
     ])
