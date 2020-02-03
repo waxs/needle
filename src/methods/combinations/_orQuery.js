@@ -12,7 +12,8 @@
  */
 
 function orQuery(callback) {
-    return this._query(callback(this), 'unique');
+    const filter = this._query(callback(this), 'unique');
+    return this._chain(filter.merge);
 }
 
 /** ----------------------------------------

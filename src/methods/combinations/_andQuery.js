@@ -12,7 +12,9 @@
  */
 
 function andQuery(callback) {
-    return this._query(callback(this), 'doubles');
+    const filter = this._query(callback(this), 'doubles');
+    const check = filter.merge.count === filter.amount;
+    return this._chain(check ? filter.merge.result : []);
 }
 
 /** ----------------------------------------
