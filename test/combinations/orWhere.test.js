@@ -21,20 +21,20 @@ describe('Using orWhere() for exception on where()', () => {
 
         const output = [
             {
-                name: 'John',
-                age: 45,
-                city: 'New York'
-            },
-            {
                 name: 'Sander',
                 age: 30,
                 city: 'Amsterdam'
+            },
+            {
+                name: 'John',
+                age: 45,
+                city: 'New York'
             }
         ];
 
         const query = needle
             .where('name', '=', 'Sander')
-                .orWhere('name', '=', 'John')
+            .orWhere('name', '=', 'John')
             .select('name', 'age', 'city')
             .take();
 
