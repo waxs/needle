@@ -1,4 +1,5 @@
 # Needle JS
+![Testing](https://github.com/waxs/needle/workflows/Testing/badge.svg?branch=master)
 Needle is a fast, small, clean and flexible package for finding your needle in a haystack of data. Needle has some 
 simple helpers to quickly differentiate your data using chained methods while being only `17KB` in size.
 
@@ -7,7 +8,6 @@ pretty much done. Now consider retrieving all names of the active records in sep
 This is where Needle comes with just 5 lines of code. 
 
 🚧 Package is under development as an alpha version. 
-![Testing](https://github.com/waxs/needle/workflows/Testing/badge.svg?branch=master)
 
 ```javascript
 needle
