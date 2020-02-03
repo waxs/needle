@@ -30,13 +30,15 @@ const evaluate = (item, operator, value, date) => {
             '<' : item < check,
             '>=' : item >= check,
             '<=' : item <= check,
-            '=' : item === check
+            '=' : item === check,
+            '!=' : item !== check
         };
 
         return obj[operator];
     };
 
-    const compareArray = array => array.some(item => compare(item));
+    const type = operator === '=' ? 'some' : 'every';
+    const compareArray = array => array[type](item => compare(item));
     return isArray(value) ? compareArray(value) : compare(value);
 };
 
