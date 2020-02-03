@@ -39,7 +39,7 @@ module.exports = {
         port: 3000,
         watchContentBase: true
     },
-    entry: './src/needle.js',
+    entry: BASE_DIR + 'src/Needle.js',
     output: {
         path: path.resolve(BASE_DIR + 'dist'),
         umdNamedDefine: true,
