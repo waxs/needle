@@ -10,6 +10,18 @@ import unique from '@util/_unique';
     Query
  ---------------------------------------- */
 
+function query(callback) {
+    this._hasTrail();
+    this._trail['data'] = this._data;
+    const result = callback(this).take();
+    this._trail['prev'] = result;
+    return this._chain(unique(result));
+}
+
+/** ----------------------------------------
+    Query
+ ---------------------------------------- */
+
 /**
  * The query method will be responsible for
  * running an array of inclusive or exclusive
@@ -25,7 +37,7 @@ import unique from '@util/_unique';
 function _query(array, type) {
     this._hasTrail();
     const types = { unique, doubles };
-    const results = array.map(fn => fn.take());
+    const results = array.map(fn => fn.data);
     const merge = types[type](flatten(results));
 
     return {
@@ -38,4 +50,7 @@ function _query(array, type) {
     Exports
  ---------------------------------------- */
 
-export default _query;
+export {
+    query,
+    _query
+};

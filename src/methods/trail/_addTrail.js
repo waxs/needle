@@ -13,8 +13,8 @@
  */
 
 function _addTrail(trail, fn, ...args) {
-    const or = ['orWhere'];
-    const and = ['andWhere'];
+    const or = ['or', 'orWhere'];
+    const and = ['and', 'andWhere'];
 
     trail && this._trail['exe'].push({
         type: (and.includes(fn) && 'and') || (or.includes(fn) && 'or'),

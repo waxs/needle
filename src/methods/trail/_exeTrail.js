@@ -22,7 +22,7 @@ function _exeTrail() {
     let executed = [];
     let setData = [];
 
-    const result = this._trail.exe.map(fn => {
+    const results = this._trail.exe.map(fn => {
         if(fn.type === 'or') setData = this._trail.data;
         if(fn.type === 'and') setData = this._trail.prev;
         executed.push(fn.type);
@@ -33,14 +33,14 @@ function _exeTrail() {
         };
     });
 
-    const and = result
+    const and = results
         .filter(value => value.type === 'and')
         .map(value => value.result);
 
     const flattenAnd = flatten(and);
     let andResult = and.length > 1 ? doubles(flattenAnd) : flattenAnd;
 
-    const or = result
+    const or = results
         .filter(value => value.type === 'or')
         .map(value => value.result);
 
