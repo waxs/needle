@@ -10,10 +10,25 @@ import unique from '@util/_unique';
     Query
  ---------------------------------------- */
 
+/**
+ * The query method can be used to chain
+ * and and or queries or make a custom iteration
+ * with a little bit of help from Needle. The
+ * function receives a callback and expects an
+ * array to be returned. The function will store
+ * a pre-filtered data set and set a new data set
+ * that is available during the execution of the
+ * or() and and() method.
+ *
+ * @param { function } callback - executable function
+ * @returns { Needle } object - new instance
+ */
+
+
 function query(callback) {
     this._hasTrail();
     this._trail['data'] = this._data;
-    const result = callback(this).take();
+    const result = callback(this, this._data);
     this._trail['prev'] = result;
     return this._chain(unique(result));
 }
