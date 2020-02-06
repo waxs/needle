@@ -75,6 +75,29 @@ const result = needle
 If result are present within multiple times, the `query()` method will flatten the dataset to unique items. 
 Meaning an item can only be present once in the array. 
 
+#### Working with nested selectors
+It's possible to make nested `query()` selectors for very some really advanced filtering. Please remember that should
+ not be used as a default, this requires multiple iterations over data sets and is thus very expensive on the 
+ performance of your application. 
+ 
+```javascript
+const result = needle
+    .query(query => {
+        const result = query
+            .query(query => {
+                return query.find('name', 'Trevor').take()
+            })
+            .or(query => {
+                return query.find('name', 'Sander').take()
+            });
+        
+        return result.data;
+    })
+    .take();
+
+console.log(result)
+``` 
+
 ### or
 To make inclusive selections based on the `query()` method the `or()` method can be used, it uses a similar syntax as
  it's big brother, the `query()` method. Both an instance of Needle and an array of data are available as parameters. 
