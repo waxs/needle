@@ -19,8 +19,8 @@ import convertDate from '@util/_convertDate';
 
 function upcoming(key, amount, selector) {
     const match = this._namedDates(selector);
-    const convert = convertDate(match.amount * amount, new Date(), 'future');
-    return this.between(key, [new Date(), convert], true);
+    const convertedDate = convertDate(match.amount * amount, new Date(), 'future');
+    return this.between(key, [new Date(), convertedDate], true);
 }
 
 /** ----------------------------------------

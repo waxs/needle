@@ -18,9 +18,9 @@ import convertDate from '@util/_convertDate';
  */
 
 function previous(key, amount, selector) {
-    const match = this._namedDates(selector);
-    const convert = convertDate(match.amount * amount);
-    return this.between(key, [convert, new Date()], true);
+    const getPeriod = this._namedDates(selector);
+    const convertedDate = convertDate(getPeriod.amount * amount);
+    return this.between(key, [convertedDate, new Date()], true);
 }
 
 /** ----------------------------------------

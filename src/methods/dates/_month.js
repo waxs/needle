@@ -21,11 +21,11 @@ import dateOptions from '@util/_dateOptions';
  */
 
 function month(key, month, year) {
-    const months = dateOptions();
-    const date = this._find('month', month, months)[0];
-    const start = convertDate(0, `${ date.month }/1/${ year }`);
-    const end = convertDate(0, `${ date.month }/${ date.days }/${ year }`);
-    return this.between(key, [start, end], true);
+    const getMonths = dateOptions();
+    const findDate = this._find('month', month, getMonths)[0];
+    const startDate = convertDate(0, `${ findDate.month }/1/${ year }`);
+    const endDate = convertDate(0, `${ findDate.month }/${ findDate.days }/${ year }`);
+    return this.between(key, [startDate, endDate], true);
 }
 
 /** ----------------------------------------

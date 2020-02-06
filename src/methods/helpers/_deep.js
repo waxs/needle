@@ -18,7 +18,11 @@ import isArray from '@util/_isArray';
  */
 
 function _deep(key, item) {
-    return Object.keys(item).filter(key => !isArray(item[key]) && typeof item[key] === 'object' && item);
+    return Object.keys(item).filter(key => {
+        const isNotArray = !isArray(item[key]);
+        const isObject = typeof item[key] === 'object';
+        return isNotArray && isObject && item;
+    });
 }
 
 /** ----------------------------------------

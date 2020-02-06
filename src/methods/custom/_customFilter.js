@@ -15,8 +15,8 @@
 
 function customFilter(callback, data = this._data) {
     this._hasTrail();
-    const custom = data.filter(callback);
-    return this._chain(custom);
+    const customFilter = data.filter(callback);
+    return this._chain(customFilter);
 }
 
 /** ----------------------------------------

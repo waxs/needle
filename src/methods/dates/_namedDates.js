@@ -18,8 +18,8 @@ import periodOptions from '@util/_periodOptions';
  */
 
 function _namedDates(selector) {
-    const period = periodOptions();
-    return this._find('name', selector, period)[0];
+    const getPeriod = periodOptions();
+    return this._find('name', selector, getPeriod)[0];
 }
 
 /** ----------------------------------------

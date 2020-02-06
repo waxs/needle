@@ -13,8 +13,8 @@
 
 function customEach(callback, data = this._data) {
     this._hasTrail();
-    const custom = data.map(callback);
-    return this._chain(custom);
+    const customMap = data.map(callback);
+    return this._chain(customMap);
 }
 
 /** ----------------------------------------
