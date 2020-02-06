@@ -84,11 +84,14 @@ manipulate an array of contents. Let's dive a little deeper into the options you
     * `find()` find will retrieve objects with a key value pair match
     * `findDeep()` find will retrieve objects with a nested key value pair match
 
-* **Combinations** (5 methods) [Read documentation ⟶](https://github.com/waxs/needle/tree/master/docs/combinations/README.md)
+* **Combinations** (8 methods) [Read documentation ⟶](https://github.com/waxs/needle/tree/master/docs/combinations/README.md)
     * `where()` find matches based on operator matching key, value pair
     * `orWhere()` exception based data initiated before use of `where()` selector
     * `andWhere()` exception based data initiated after use of `where()` selector
-    * `orQuery()` pipe of queries with an inclusive outcome 
+    * `query()` write advanced custom query logic 
+    * `or()` to be linked to `query()` for inclusive queries
+    * `and()` to be linked to `query()` for exclusive queries 
+    * `orQuery()` pipe of queries with an inclusive outcome
     * `andQuery()` pipe of queries with an exclusive outcome
 
 * **Custom** (2 methods) [Read documentation ⟶](https://github.com/waxs/needle/tree/master/docs/custom/README.md)

@@ -45,6 +45,72 @@ const result = needle
 console.log(result);
 ```
 
+### query
+The `query()` method can be used to write more advanced logic. It will provide you with a new instance of Needle as 
+well as a data array that contains all data results. The query method can be initiated and nest multiple checks for 
+custom filtering while still providing all the flexibility of Needle. It's expected that the function will return an 
+array of items. 
+```javascript
+const result = needle
+    .query(query => {
+        const age = query.bigger('age', 40).take();
+        const name = query.find('name', 'Sander').take();
+        return [...age, ...name];
+    })
+    .take();
+
+console.log(result);
+```
+
+If needed a second parameter is available to retrieve the data as an array, for any custom selections you would like 
+to provide. 
+```javascript
+const result = needle
+    .query((query, data) => {
+        return data.filter(item => item.name === 'Sander');
+    })
+    .take();
+```
+
+If result are present within multiple times, the `query()` method will flatten the dataset to unique items. 
+Meaning an item can only be present once in the array. 
+
+### or
+To make inclusive selections based on the `query()` method the `or()` method can be used, it uses a similar syntax as
+ it's big brother, the `query()` method. Both an instance of Needle and an array of data are available as parameters. 
+```javascript
+const result = needle
+    .query(query => {
+        const age = query.bigger('age', 40).take();
+        const name = query.find('name', 'Sander').take();
+        return [...age, ...name];
+    })
+    .or(query => {
+        return query.find('name', 'Peter').take();
+    })
+    .take();
+
+console.log(result);
+```
+
+### and
+The `and()` method does the opposite of the `or()` method and will make an exclusive selection based on the `query()`
+ method. Meaning and will only work if chained to a `query()` method. 
+```javascript
+const result = needle
+    .query(query => {
+        const age = query.bigger('age', 40).take();
+        const name = query.find('name', 'Sander').take();
+        return [...age, ...name];
+    })
+    .and(query => {
+        return query.where('age', 55).take();
+    })
+    .take();
+
+console.log(result);
+```
+ 
 ### orQuery
 The `orQuery` can run multiple (custom) queries at the same time, and it will flatten, merge and return the matches. 
 The method takes a callback that has a query parameter containing Needle methods. Returning an array of queries will 
