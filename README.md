@@ -44,9 +44,8 @@ manipulate an array of contents. Let's dive a little deeper into the options you
     * `last()` will return the last item from the data set
     * `count()` will count the amount of results and return a number
 
-* **Sorting** (2 methods) [Read documentation ⟶](https://github.com/waxs/needle/tree/master/docs/sorting/README.md)
+* **Sorting** (1 methods) [Read documentation ⟶](https://github.com/waxs/needle/tree/master/docs/sorting/README.md)
     * `sort()` will sort the results `asc` or `desc`
-    * `sortDate()` will sort the results on date `asc` or `desc`
     
 * **Debugging** (3 methods) [Read documentation ⟶](https://github.com/waxs/needle/tree/master/docs/debugging/README.md)
     * `log()` will log results to the console

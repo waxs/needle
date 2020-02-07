@@ -11,8 +11,8 @@ const result = needle
 
 console.log(result);
 ``` 
-If needed the same thing can be achieved running date values, there is an separate method available fro preforming 
-this sort called `sortDate()`. Behind the scenes values will be converted into a date. Value must be a valid date.
+If needed the same thing can be achieved running date values. Behind the scenes values will be converted into a date. 
+Value must be a valid date.
 ```javascript
 const result = needle
     .sortDate('created')
@@ -20,3 +20,5 @@ const result = needle
 
 console.log(result);
 ``` 
+
+Overall sorting can be performed on numbers, strings and date values. 
