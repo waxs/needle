@@ -1,4 +1,4 @@
-name: Testing
+name: test
 
 on: [push]
 
@@ -16,6 +16,6 @@ jobs:
     - name: Install modules
       run: npm install
     - name: Run build
-      run: npm run build
+      run: npm run publish
     - name: Run tests
       run: npm test
