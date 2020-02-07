@@ -1,4 +1,10 @@
 /** ----------------------------------------
+    Utilities
+ ---------------------------------------- */
+
+import extreme from '@util/_extreme';
+
+/** ----------------------------------------
      Minimum
  ---------------------------------------- */
 
@@ -12,7 +18,7 @@
 
 function min(key) {
     this._hasTrail();
-    const min = Math.min(...this._data.map(item => item[key]));
+    const min = extreme(this._data, key, 'min');
     return this.find(key, min);
 }
 

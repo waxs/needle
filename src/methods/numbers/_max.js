@@ -1,4 +1,10 @@
 /** ----------------------------------------
+    Utilities
+ ---------------------------------------- */
+
+import extreme from '@util/_extreme';
+
+/** ----------------------------------------
      Maximum
  ---------------------------------------- */
 
@@ -12,7 +18,7 @@
 
 function max(key) {
     this._hasTrail();
-    const max = Math.max(...this._data.map(item => item[key]));
+    const max = extreme(this._data, key, 'max');
     return this.find(key, max);
 }
 
