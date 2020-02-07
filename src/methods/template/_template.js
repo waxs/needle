@@ -15,8 +15,10 @@
  */
 
 function template(callback, data = this._data) {
-    if (this._hasTrail()) return this._data.forEach(callback, this);
-    data.length > 0 && data.forEach(callback, {needle: this, info: this.info});
+    if(this._hasTrail()) return this._data.forEach(callback, this);
+    const info = { needle: this, info: this.info };
+
+    data.length > 0 && data.forEach(callback, info);
 
     return {
         info: this.info,
