@@ -9,8 +9,7 @@ const methods = {
      ---------------------------------------- */
 
     sort: {
-        sort: true,
-        sortDate: true
+        sort: true
     },
 
     /** ----------------------------------------
@@ -39,7 +38,6 @@ const methods = {
         bigger: true,
         smaller: true,
         between: true,
-        equal: true,
         min: true,
         max: true,
         positive: true,
@@ -106,7 +104,7 @@ const methods = {
         updateAll: true,
         remove: true,
         removeValue: true,
-        removeAll:true
+        removeAll: true
     },
 
     /** ----------------------------------------
