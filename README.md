@@ -2,7 +2,8 @@
 ![Testing](https://github.com/waxs/needle/workflows/Testing/badge.svg?branch=master)
 
 Needle is a fast, small, clean and flexible package for finding your needle in a haystack of data. Needle has some 
-simple helpers to quickly differentiate your data using chained methods while being only `17KB` in size.
+simple helpers to quickly differentiate your data using chained methods while being only `~20KB` (and ~5,5KB gzipped) in 
+size.
 
 Imagine having to retrieve all items that are active, pretty easy right? These days use an array `.filter()` and you're 
 pretty much done. Now consider retrieving all names of the active records in september 2020 where the age is equal to 30. 
