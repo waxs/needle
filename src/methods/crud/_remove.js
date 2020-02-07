@@ -12,8 +12,8 @@
 
 function remove(index) {
     this._hasTrail();
-    delete this._data[index];
-    this._chain(this._data);
+    this._data.splice(index, 1);
+    return this._chain(this._data);
 }
 
 /** ----------------------------------------
