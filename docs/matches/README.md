@@ -123,6 +123,7 @@ const data = [
 | find('hobbies', 'Music')                  | Will return both items from the data set (match hobbies Music)
 | find('hobbies', ['Dancing'])              | Will return the last item from the data set (match hobbies Dancing)
 | find('hobbies', ['Dancing', 'Movies'])    | Will return both items from the data set (match hobbies Dancing or Movies)
+| find('name', [])                          | Won't return any items (find is unforgiving)
 
 All these variations are covered in Needle, meaning, if you need to make multiple matches these can be retrieved 
 using arrays. Also, looking inside arrays can be done either by using an array value or a single bool, string or 
