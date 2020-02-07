@@ -14,10 +14,11 @@
 
 function chunk(amount) {
     this._hasTrail();
+
     this._chunks['data'] = [];
     this._chunks['current'] = 0;
 
-    for (let i = 0; i < this._data.length; i+= amount) {
+    for (let i = 0; i < this._data.length; i += amount) {
         this._chunks.data.push(this._data.slice(i, i + amount));
     }
 
@@ -50,9 +51,9 @@ function chunk(amount) {
  */
 
 function _prevChunk() {
-    const chunk = this._chunks;
-    chunk.current += chunk.current === 0 ? chunk.data.length - 1 : -1;
-    return this._chain(chunk.data[chunk.current]);
+    const c = this._chunks;
+    c.current += c.current === 0 ? c.data.length - 1 : -1;
+    return this._chain(c.data[c.current]);
 }
 
 /** ----------------------------------------
@@ -67,9 +68,9 @@ function _prevChunk() {
  */
 
 function _nextChunk() {
-    const chunk = this._chunks;
-    chunk.current += chunk.current < chunk.data.length - 1 ? 1 : -Math.abs(chunk.data.length - 1);
-    return this._chain(chunk.data[chunk.current]);
+    const c = this._chunks;
+    c.current += c.current < c.data.length - 1 ? 1 : -Math.abs(c.data.length - 1);
+    return this._chain(c.data[c.current]);
 }
 
 /** ----------------------------------------

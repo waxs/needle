@@ -51,14 +51,12 @@ function query(callback) {
 
 function _query(array, type) {
     this._hasTrail();
+
     const types = { unique, doubles };
     const results = array.map(fn => fn.data);
     const merge = types[type](flatten(results));
 
-    return {
-        amount: array.length,
-        merge
-    };
+    return { amount: array.length, merge };
 }
 
 /** ----------------------------------------

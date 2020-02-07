@@ -2,6 +2,19 @@
      Arrange
  ---------------------------------------- */
 
+/**
+ * This function will take an array of items
+ * that can be sorted based on a given key.
+ * The type describes the order and the date
+ * parameter will handle sorting of dates.
+ *
+ * @param { array } array - data set
+ * @param { string | date } key - given key
+ * @param { string } type - asc or desc
+ * @param { bool } date - matching date value
+ * @returns { array } - sorted array
+ */
+
 const arrange = (array, key, type, date = false) => {
     const convert = (a, b) => {
         a = date ? new Date(a[key]) : a[key];

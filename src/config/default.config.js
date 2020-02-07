@@ -46,7 +46,7 @@ const setDefaults = (data, trail) => {
 
         {
             name: 'chunks',
-            value: []
+            value: {}
         },
 
         /** ----------------------------------------
