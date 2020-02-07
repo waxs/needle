@@ -6,7 +6,8 @@
   "scripts": {
     "start": "webpack --env=dev --config webpack.config.js --progress --profile --colors --watch",
     "build": "webpack --env=prod --config webpack.config.js --progress --profile --bail",
-    "publish": "webpack --env=publish --config webpack.config.js --progress --profile --bail",
+    "package": "webpack --env=package --config webpack.config.js --progress --profile --bail",
+    "publish": "npm run build & npm run package",
     "test": "jest"
   },
   "author": "Sander Hidding",
