@@ -1,5 +1,11 @@
 /** ----------------------------------------
-     Arrange
+    Utilities
+ ---------------------------------------- */
+
+import isType from '@util/_isType';
+
+/** ----------------------------------------
+    Arrange
  ---------------------------------------- */
 
 /**
@@ -15,10 +21,12 @@
  * @returns { array } - sorted array
  */
 
-const arrange = (array, key, type, date = false) => {
+const arrange = (array, key, type) => {
+    const isDate = isType(array[0][key]) === 'date';
+
     const convert = (a, b) => {
-        a = date ? new Date(a[key]) : a[key];
-        b = date ? new Date(b[key]) : b[key];
+        a = isDate ? new Date(a[key]) : a[key];
+        b = isDate ? new Date(b[key]) : b[key];
         return { a, b };
     };
 
