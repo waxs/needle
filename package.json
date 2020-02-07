@@ -1,11 +1,12 @@
 {
   "name": "Needle",
-  "version": "0.7.9",
+  "version": "0.8.1",
   "description": "Find your needle in a haystack. Needle is a small and fast query builder for sorting, manipulating and retrieving data.",
   "main": "src/needle.js",
   "scripts": {
     "start": "webpack --env=dev --config webpack.config.js --progress --profile --colors --watch",
     "build": "webpack --env=prod --config webpack.config.js --progress --profile --bail",
+    "publish": "webpack --env=publish --config webpack.config.js --progress --profile --bail",
     "test": "jest"
   },
   "author": "Sander Hidding",
