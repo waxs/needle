@@ -2,14 +2,13 @@
 ![test](https://github.com/waxs/needle/workflows/test/badge.svg?branch=master)
 
 Needle is a fast, small, clean and flexible package for finding your needle in a haystack of data. Needle has some 
-simple helpers to quickly differentiate your data using chained methods while being only `~20KB` (and ~5,5KB gzipped) in 
+simple helpers to quickly differentiate your data using chained methods while being only `~19.2KB` (and ~5,5KB gzipped)
+ in 
 size.
 
 Imagine having to retrieve all items that are active, pretty easy right? These days use an array `.filter()` and you're 
 pretty much done. Now consider retrieving all names of the active records in september 2020 where the age is equal to 30. 
 This is where Needle comes with just 5 lines of code. 
-
-🚧 Package is under development as an beta version. 
 
 ```javascript
 needle
@@ -18,6 +17,8 @@ needle
     .where('age', '=', 30)
     .values('name');
 ```
+
+🚧 Package is under development as an beta version. 
 
 ## Initiate Needle JS
 To use Needle we initiate the class as follows, the class expects an array of objects. 
@@ -55,11 +56,10 @@ manipulate an array of contents. Let's dive a little deeper into the options you
 * **Template** (3 methods) [Read documentation ⟶](https://github.com/waxs/needle/tree/master/docs/template/README.md)
     * `template()` can be used to template results with custom markup contains `empty()` and `results()` function. 
     
-* **Numbers** (10 methods) [Read documentation ⟶](https://github.com/waxs/needle/tree/master/docs/numbers/README.md)
+* **Numbers** (9 methods) [Read documentation ⟶](https://github.com/waxs/needle/tree/master/docs/numbers/README.md)
     * `smaller()` retrieve items smaller than a given parameter
     * `bigger()` retrieve items bigger than a given parameter
     * `between()` retrieve items in between to given parameters
-    * `equal()` retrieve an equal to item from the data
     * `min()` retrieve the minimum value from a given key within the data
     * `max()` retrieve the maximum value from a given key within the data
     * `average()` retrieve the (closest) average value from a given key within the data

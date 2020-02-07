@@ -36,16 +36,6 @@ const result = needle
 console.log(result);
 ```
 
-### Equal
-With the `equal()` method a specific number can be found inside the array of given items. 
-```javascript
-const result = needle
-    .equal('age', 30)
-    .take();
-    
-console.log(result);
-```
-
 ### Min and max
 If needed you can easily retrieve the lowest or highest value from an given haystack. If multiple items in the array 
 match the query all items will be returned. The `min()` and `max()` take one parameter that will look for a matching 

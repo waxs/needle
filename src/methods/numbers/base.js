@@ -6,7 +6,6 @@ import average from './_average';
 import smaller from './_smaller';
 import bigger from './_bigger';
 import between from './_between';
-import equal from './_equal';
 import min from './_min';
 import max from './_max';
 import positive from './_positive';
@@ -22,7 +21,6 @@ export default {
     smaller,
     bigger,
     between,
-    equal,
     min,
     max,
     positive,
