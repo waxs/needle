@@ -9,7 +9,7 @@ Imagine having to retrieve all items that are active, pretty easy right? These d
 pretty much done. Now consider retrieving all names of the active records in september 2020 where the age is equal to 30. 
 This is where Needle comes with just 5 lines of code. 
 
-🚧 Package is under development as an alpha version. 
+🚧 Package is under development as an beta version. 
 
 ```javascript
 needle
