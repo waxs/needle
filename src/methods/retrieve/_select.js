@@ -3,6 +3,7 @@
  ---------------------------------------- */
 
 import objPath from '@util/_objPath';
+import objReduce from '@util/_objReduce';
 
 /** ----------------------------------------
     Select
@@ -26,7 +27,7 @@ function select(...keys) {
 
         keys.forEach(key => {
             const deep = key.indexOf('.') !== -1 && objPath(key);
-            if(item[key] || item[deep[0]]) deep ? obj[deep.slice(-1)[0]] = this._objReduce(deep, item) : obj[key] = item[key];
+            if(item[key] || item[deep[0]]) deep ? obj[deep.slice(-1)[0]] = objReduce(deep, item) : obj[key] = item[key];
         });
     
         return obj;

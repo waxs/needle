@@ -11,7 +11,7 @@
  * @returns { array } - manipulated object
  */
 
-function _objReduce(array, item) {
+function objReduce(array, item) {
     return array.map(key => key).reduce((array, key) => array[key], item);
 }
 
@@ -19,4 +19,4 @@ function _objReduce(array, item) {
     Exports
  ---------------------------------------- */
 
-export default _objReduce;
+export default objReduce;
