@@ -17,7 +17,7 @@ import isArray from '@util/_isArray';
  * @returns { array } - filtered items
  */
 
-function _deep(key, item) {
+function deep(key, item) {
     return Object.keys(item).filter(key => {
         const isNotArray = !isArray(item[key]);
         const isObject = typeof item[key] === 'object';
@@ -29,4 +29,4 @@ function _deep(key, item) {
     Exports
  ---------------------------------------- */
 
-export default _deep;
+export default deep;

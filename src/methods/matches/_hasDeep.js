@@ -1,4 +1,10 @@
 /** ----------------------------------------
+    Utilties
+ ---------------------------------------- */
+
+import deep from '@util/_deep';
+
+/** ----------------------------------------
     Has Deep
  ---------------------------------------- */
 
@@ -18,9 +24,9 @@ function hasDeep(key) {
     const finder = (key, data = this._data, prev) => {
         data.forEach(item => {
             const obj = prev || item;
-            const deep = this._deep(key, item);
+            const layer = deep(key, item);
             item.hasOwnProperty(key) && array.push(obj);
-            deep.length && finder(key, deep.map(key => item[key]), obj);
+            layer.length && finder(key, layer.map(key => item[key]), obj);
         });
     };
 
