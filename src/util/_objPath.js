@@ -1,5 +1,5 @@
 /** ----------------------------------------
-     Object Path
+    Object Path
  ---------------------------------------- */
 
 /**
@@ -11,7 +11,7 @@
  * @returns { array } array containing split of string
  */
 
-function _objPath(path) {
+function objPath(path) {
     return path.split('.');
 }
 
@@ -19,4 +19,4 @@ function _objPath(path) {
     Exports
  ---------------------------------------- */
 
-export default _objPath;
+export default objPath;

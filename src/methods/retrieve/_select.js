@@ -1,4 +1,10 @@
 /** ----------------------------------------
+    Utilities
+ ---------------------------------------- */
+
+import objPath from '@util/_objPath';
+
+/** ----------------------------------------
     Select
  ---------------------------------------- */
 
@@ -19,7 +25,7 @@ function select(...keys) {
         const obj = {};
 
         keys.forEach(key => {
-            const deep = key.indexOf('.') !== -1 && this._objPath(key);
+            const deep = key.indexOf('.') !== -1 && objPath(key);
             if(item[key] || item[deep[0]]) deep ? obj[deep.slice(-1)[0]] = this._objReduce(deep, item) : obj[key] = item[key];
         });
     
