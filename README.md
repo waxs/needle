@@ -2,9 +2,8 @@
 ![test](https://github.com/waxs/needle/workflows/test/badge.svg?branch=master)
 
 Needle is a fast, small, clean and flexible package for finding your needle in a haystack of data. Needle has some 
-simple helpers to quickly differentiate your data using chained methods while being only `~19.2KB` (and ~5,5KB gzipped)
- in 
-size.
+simple helpers to quickly differentiate your data using chained methods while being only `~19KB` (and ~5,5KB gzipped)
+ in size.
 
 Imagine having to retrieve all items that are active, pretty easy right? These days use an array `.filter()` and you're 
 pretty much done. Now consider retrieving all names of the active records in september 2020 where the age is equal to 30. 
@@ -14,7 +13,7 @@ This is where Needle comes with just 5 lines of code.
 needle
     .is('active')
     .month('created', 'sep', 2020)
-    .where('age', '=', 30)
+    .where('age', 30)
     .values('name');
 ```
 
@@ -183,6 +182,8 @@ strings or array's containing multiple strings. It's always wise to limit your d
 - [x] Decouple methods in folders
 - [x] Finish store methods
 - [ ] Set default parameters for keys
+- [ ] Refactor
+- [ ] 100% testing coverage
 
 ## About
 This repository is mainly intended as an experiment and to have some fun, a folder with examples is available within 
