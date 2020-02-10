@@ -5,7 +5,7 @@
 const extreme = (array, key, type) => Math[type](...array.map(item => item[key]));
 
 /** ----------------------------------------
- Exports
+    Exports
  ---------------------------------------- */
 
 export default extreme;
