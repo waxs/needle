@@ -10,12 +10,14 @@ const fs = require('fs');
 
 class InjectExportableClass {
     static execute(process) {
-        const output = process.options.output;
+        setTimeout(() => {
+            const output = process.options.output;
 
-        fs.appendFile(`dist/${ output.filename }`, `module.exports=${ output.library };`, error => {
-            if(error) throw error;
-            console.log(`Injected module export to build: ${ output.filename }!`);
-        });
+            fs.appendFile(`dist/${ output.filename }`, `module.exports=${ output.library };`, error => {
+                if(error) throw error;
+                console.log(`Injected module export to build: ${ output.filename }!`);
+            });
+        }, 500);
     }
 
     apply(compiler) {

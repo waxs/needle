@@ -10,6 +10,7 @@ const common = require('./webpack.common.config.js');
  ---------------------------------------- */
 
 const InjectExportableClass = require('./plugins/InjectExportableClass');
+const ReplaceFunctions = require('./plugins/ReplaceFunctions');
 
 /** ----------------------------------------
     Configuration
@@ -21,6 +22,7 @@ module.exports = merge(common, {
         filename: 'needle.pkg.js'
     },
     plugins: [
-        new InjectExportableClass()
+        new InjectExportableClass(),
+        new ReplaceFunctions()
     ]
 });
