@@ -2,7 +2,7 @@
 ![test](https://github.com/waxs/needle/workflows/test/badge.svg?branch=master)
 
 Needle is a fast, small, clean and flexible package for finding your needle in a haystack of data. Needle has some 
-simple helpers to quickly differentiate your data using chained methods while being only `~19KB` (and ~5,5KB gzipped)
+simple helpers to quickly differentiate your data using chained methods while being only `~18.5KB` (and ~5,5KB gzipped)
  in size.
 
 Imagine having to retrieve all items that are active, pretty easy right? These days use an array `.filter()` and you're 
@@ -17,7 +17,7 @@ needle
     .values('name');
 ```
 
-🚧 Package is under development as an beta version. 
+🚧 Package is under development in beta version. 
 
 ## Initiate Needle JS
 To use Needle we initiate the class as follows, the class expects an array of objects. 
@@ -167,7 +167,7 @@ strings or array's containing multiple strings. It's always wise to limit your d
 
 **Some tips on making the most out of the limitations of JS.** 
 * Chain your queries wisely, limit the size first with simple queries.
-* Some queries are more expensive to run, if you limit your dataset using the `select()` method first your 
+* Some queries are more expensive to run, if you limit your data set using the `select()` method first your 
       second query will have less intense data to work with.
 * Most API's have options to limit data, don't take it to far, have a talk with your backend engineer, or use 
      native functions to specify your needs first ;)
@@ -181,6 +181,7 @@ strings or array's containing multiple strings. It's always wise to limit your d
 - [x] Refactor on README.md
 - [x] Decouple methods in folders
 - [x] Finish store methods
+- [x] Split and reduce build
 - [ ] Set default parameters for keys
 - [ ] Refactor
 - [ ] 100% testing coverage
