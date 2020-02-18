@@ -404,30 +404,6 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _cus
 
 /***/ }),
 
-/***/ "./src/methods/dates/_after.js":
-/*!*************************************!*\
-  !*** ./src/methods/dates/_after.js ***!
-  \*************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/** ----------------------------------------\n    After\n ---------------------------------------- */\n\n/**\n * Basically the same as the bigger method\n * but will convert the value into a unix\n * timestamp and compare given value within\n * the data object.\n *\n * @param { string } key - selected key\n * @param { string } value - matching value\n * @returns { Needle } object - new instance\n */\nfunction after(key, value) {\n  return this.bigger(key, value, true);\n}\n/** ----------------------------------------\n    Exports\n ---------------------------------------- */\n\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (after);\n\n//# sourceURL=webpack://Needle/./src/methods/dates/_after.js?");
-
-/***/ }),
-
-/***/ "./src/methods/dates/_before.js":
-/*!**************************************!*\
-  !*** ./src/methods/dates/_before.js ***!
-  \**************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/** ----------------------------------------\n    Before\n ---------------------------------------- */\n\n/**\n * Basically the same as the smaller method\n * but will convert the value into a unix\n * timestamp and compare given value within\n * the data object.\n *\n * @param { string } key - selected key\n * @param { string } value - matching value\n * @returns { Needle } object - new instance\n */\nfunction before(key, value) {\n  return this.smaller(key, value, true);\n}\n/** ----------------------------------------\n    Exports\n ---------------------------------------- */\n\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (before);\n\n//# sourceURL=webpack://Needle/./src/methods/dates/_before.js?");
-
-/***/ }),
-
 /***/ "./src/methods/dates/_month.js":
 /*!*************************************!*\
   !*** ./src/methods/dates/_month.js ***!
@@ -508,7 +484,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/** -------------------------
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _after__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./_after */ \"./src/methods/dates/_after.js\");\n/* harmony import */ var _before__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./_before */ \"./src/methods/dates/_before.js\");\n/* harmony import */ var _month__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./_month */ \"./src/methods/dates/_month.js\");\n/* harmony import */ var _namedDates__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./_namedDates */ \"./src/methods/dates/_namedDates.js\");\n/* harmony import */ var _period__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./_period */ \"./src/methods/dates/_period.js\");\n/* harmony import */ var _previous__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./_previous */ \"./src/methods/dates/_previous.js\");\n/* harmony import */ var _upcoming__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./_upcoming */ \"./src/methods/dates/_upcoming.js\");\n/* harmony import */ var _year__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./_year */ \"./src/methods/dates/_year.js\");\n/** ----------------------------------------\n    Utilities\n ---------------------------------------- */\n\n\n\n\n\n\n\n\n/** ----------------------------------------\n    Exports\n ---------------------------------------- */\n\n/* harmony default export */ __webpack_exports__[\"default\"] = ({\n  after: _after__WEBPACK_IMPORTED_MODULE_0__[\"default\"],\n  before: _before__WEBPACK_IMPORTED_MODULE_1__[\"default\"],\n  month: _month__WEBPACK_IMPORTED_MODULE_2__[\"default\"],\n  _namedDates: _namedDates__WEBPACK_IMPORTED_MODULE_3__[\"default\"],\n  period: _period__WEBPACK_IMPORTED_MODULE_4__[\"default\"],\n  previous: _previous__WEBPACK_IMPORTED_MODULE_5__[\"default\"],\n  upcoming: _upcoming__WEBPACK_IMPORTED_MODULE_6__[\"default\"],\n  year: _year__WEBPACK_IMPORTED_MODULE_7__[\"default\"]\n});\n\n//# sourceURL=webpack://Needle/./src/methods/dates/base.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _month__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./_month */ \"./src/methods/dates/_month.js\");\n/* harmony import */ var _namedDates__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./_namedDates */ \"./src/methods/dates/_namedDates.js\");\n/* harmony import */ var _period__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./_period */ \"./src/methods/dates/_period.js\");\n/* harmony import */ var _previous__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./_previous */ \"./src/methods/dates/_previous.js\");\n/* harmony import */ var _upcoming__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./_upcoming */ \"./src/methods/dates/_upcoming.js\");\n/* harmony import */ var _year__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./_year */ \"./src/methods/dates/_year.js\");\n/** ----------------------------------------\n    Utilities\n ---------------------------------------- */\n\n\n\n\n\n\n/** ----------------------------------------\n    Exports\n ---------------------------------------- */\n\n/* harmony default export */ __webpack_exports__[\"default\"] = ({\n  month: _month__WEBPACK_IMPORTED_MODULE_0__[\"default\"],\n  _namedDates: _namedDates__WEBPACK_IMPORTED_MODULE_1__[\"default\"],\n  period: _period__WEBPACK_IMPORTED_MODULE_2__[\"default\"],\n  previous: _previous__WEBPACK_IMPORTED_MODULE_3__[\"default\"],\n  upcoming: _upcoming__WEBPACK_IMPORTED_MODULE_4__[\"default\"],\n  year: _year__WEBPACK_IMPORTED_MODULE_5__[\"default\"]\n});\n\n//# sourceURL=webpack://Needle/./src/methods/dates/base.js?");
 
 /***/ }),
 
@@ -724,7 +700,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _uti
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/** ----------------------------------------\n    Bigger\n ---------------------------------------- */\n\n/**\n * The bigger method will compare each item\n * to a given value and return the items\n * that match the given criteria.\n *\n * @param { string } key - selected key\n * @param { string | number } value - matching value\n * @param { bool } date - will parse values to date\n * @returns { Needle } object - new instance\n */\nfunction bigger(key, value) {\n  var date = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : false;\n\n  this._hasTrail();\n\n  var filter = !value ? this._data : this._operator(key, '>=', value, date);\n  return this._chain(filter);\n}\n/** ----------------------------------------\n    Exports\n ---------------------------------------- */\n\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (bigger);\n\n//# sourceURL=webpack://Needle/./src/methods/numbers/_bigger.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _util_isType__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @util/_isType */ \"./src/util/_isType.js\");\n/** ----------------------------------------\n    Utilities\n ---------------------------------------- */\n\n/** ----------------------------------------\n    Bigger\n ---------------------------------------- */\n\n/**\n * The bigger method will compare each item\n * to a given value and return the items\n * that match the given criteria.\n *\n * @param { string } key - selected key\n * @param { string | number } value - matching value\n * @param { bool } date - will parse values to date\n * @returns { Needle } object - new instance\n */\n\nfunction bigger(key, value) {\n  var date = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : false;\n\n  this._hasTrail();\n\n  var isDate = Object(_util_isType__WEBPACK_IMPORTED_MODULE_0__[\"default\"])(value) === 'date';\n  var filter = !value ? this._data : this._operator(key, '>=', value, isDate || date);\n  return this._chain(filter);\n}\n/** ----------------------------------------\n    Exports\n ---------------------------------------- */\n\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (bigger);\n\n//# sourceURL=webpack://Needle/./src/methods/numbers/_bigger.js?");
 
 /***/ }),
 
@@ -784,7 +760,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/** -------------------------
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/** ----------------------------------------\n    Smaller\n ---------------------------------------- */\n\n/**\n * The smaller method will compare each item\n * to a given value and return the items\n * that match the given criteria.\n *\n * @param { string } key - selected key\n * @param { string | number } value - matching value\n * @param { bool } date - will parse values to date\n * @returns { Needle } object - new instance\n */\nfunction smaller(key, value) {\n  var date = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : false;\n\n  this._hasTrail();\n\n  var filter = this._operator(key, '<=', value, date);\n\n  return this._chain(filter);\n}\n/** ----------------------------------------\n     Exports\n ---------------------------------------- */\n\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (smaller);\n\n//# sourceURL=webpack://Needle/./src/methods/numbers/_smaller.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _util_isType__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @util/_isType */ \"./src/util/_isType.js\");\n/** ----------------------------------------\n    Utilities\n ---------------------------------------- */\n\n/** ----------------------------------------\n    Smaller\n ---------------------------------------- */\n\n/**\n * The smaller method will compare each item\n * to a given value and return the items\n * that match the given criteria.\n *\n * @param { string } key - selected key\n * @param { string | number } value - matching value\n * @param { bool } date - will parse values to date\n * @returns { Needle } object - new instance\n */\n\nfunction smaller(key, value) {\n  var date = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : false;\n\n  this._hasTrail();\n\n  var isDate = Object(_util_isType__WEBPACK_IMPORTED_MODULE_0__[\"default\"])(value) === 'date';\n  var filter = !value ? this._data : this._operator(key, '<=', value, isDate || date);\n  return this._chain(filter);\n}\n/** ----------------------------------------\n     Exports\n ---------------------------------------- */\n\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (smaller);\n\n//# sourceURL=webpack://Needle/./src/methods/numbers/_smaller.js?");
 
 /***/ }),
 
@@ -1132,7 +1108,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) *
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"extend\", function() { return extend; });\n/** ----------------------------------------\n     Extend\n ---------------------------------------- */\nvar extend = function extend(model, fn) {\n  var name = Object.keys(fn)[0];\n  Object.keys(fn).forEach(function (method) {\n    console.log(method);\n    model.prototype[method] = fn[method];\n  });\n};\n/** ----------------------------------------\n     Exports\n ---------------------------------------- */\n\n\n\n\n//# sourceURL=webpack://Needle/./src/setup/_extends.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"extend\", function() { return extend; });\n/** ----------------------------------------\n     Extend\n ---------------------------------------- */\nvar extend = function extend(model, fn) {\n  var name = Object.keys(fn)[0];\n  Object.keys(fn).forEach(function (method) {\n    return model.prototype[method] = fn[method];\n  });\n};\n/** ----------------------------------------\n     Exports\n ---------------------------------------- */\n\n\n\n\n//# sourceURL=webpack://Needle/./src/setup/_extends.js?");
 
 /***/ }),
 
