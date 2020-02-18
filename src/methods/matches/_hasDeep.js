@@ -17,20 +17,9 @@ import deep from '@util/_deep';
  * @returns { Needle } object - new instance
  */
 
-function hasDeep(key) {
+function hasDeep(key, value = '') {
     this._hasTrail();
-    const array = [];
-
-    const finder = (key, data = this._data, prev) => {
-        data.forEach(item => {
-            const obj = prev || item;
-            const layer = deep(key, item);
-            item.hasOwnProperty(key) && array.push(obj);
-            layer.length && finder(key, layer.map(key => item[key]), obj);
-        });
-    };
-
-    finder(key);
+    const array = this._deep('has', key, value);
     return this._chain(array);
 }
 

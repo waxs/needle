@@ -21,19 +21,7 @@ import deep from '@util/_deep';
 
 function findDeep(key, value) {
     this._hasTrail();
-    const array = [];
-
-    const finder = (key, value, data = this._data, prev) => {
-        data.forEach(item => {
-            const obj = prev || item;
-            const layer = deep(key, item);
-            if(obj === item) this._find(key, value, [item]).length > 0 && !array.includes(obj) && array.push(obj);
-            (layer.length === 0 || Object.keys(item).includes(key)) && this._find(key, value, [item]).length > 0 && !array.includes(obj) && array.push(obj);
-            layer.length && finder(key, value, layer.map(key => item[key]), obj);
-        });
-    };
-
-    finder(key, value);
+    const array = this._deep('find', key, value);
     return this._chain(array);
 }
 
