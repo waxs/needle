@@ -1,4 +1,10 @@
 /** ----------------------------------------
+    Utilities
+ ---------------------------------------- */
+
+import isType from '@util/_isType';
+
+/** ----------------------------------------
     Smaller
  ---------------------------------------- */
 
@@ -15,7 +21,8 @@
 
 function smaller(key, value, date = false) {
     this._hasTrail();
-    const filter = this._operator(key, '<=', value, date);
+    const isDate = isType(value) === 'date';
+    const filter = !value ? this._data : this._operator(key, '<=', value, isDate || date);
     return this._chain(filter);
 }
 
