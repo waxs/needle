@@ -2,7 +2,7 @@
 ![test](https://github.com/waxs/needle/workflows/test/badge.svg?branch=master)
 
 Needle is a fast, small, clean and flexible package for finding your needle in a haystack of data. Needle has some 
-simple helpers to quickly differentiate your data using chained methods while being only `~18.5KB` (and ~5,5KB gzipped)
+simple helpers to quickly differentiate your data using chained methods while being only `~17.9KB` (and ~5,4KB gzipped)
  in size.
 
 Imagine having to retrieve all items that are active, pretty easy right? These days use an array `.filter()` and you're 
@@ -66,9 +66,7 @@ manipulate an array of contents. Let's dive a little deeper into the options you
     * `negative()` retrieve all negative items from a given key within the data
     * `sum()` sum an amount of numbers from a given key in current data
     
-* **Dates** (7 methods) [Read documentation ⟶](https://github.com/waxs/needle/tree/master/docs/dates/README.md)
-    * `before()` take items from before a given date
-    * `after()` take items from after a given date
+* **Dates** (5 methods) [Read documentation ⟶](https://github.com/waxs/needle/tree/master/docs/dates/README.md)
     * `period()` take items from in between two dates
     * `month()` take items from a given month
     * `year()` take items from a given year
@@ -154,10 +152,13 @@ The example folder contains multiple simple queries and visualisations in tables
 real time. 
 
 ## Development
+So why should you use frontend filtering? 
+
+### Testing
 Needle methods can be tested using Jest, running the `npm run test` command will execute a number of test to make 
 sure basic functionality is working as expected. Test scripts can be found in the `test` folder.  
 
-### Testing   
+### Working with a large data set
 We did a stress test on working with a large data set. We can never assume, at least not for now, that JS 
 will outperform the magic of SQL, and this is also not what we were aiming for. In this case Needle hold up pretty well 
 going through a massive mockup file containing over `250.000 lines` of data with over `5500 unique items`. This is 

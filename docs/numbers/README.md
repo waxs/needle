@@ -6,7 +6,8 @@ users. Working with numbers can be made easy using several options to retrieve i
 following examples I will reuse the data array as used within the top example.
 
 ### Smaller or bigger
-With the smaller method a `key` and `value` need to be passed to retrieve all items that match the given query.
+With the smaller method a `key` and `value` need to be passed to retrieve all items that match the given query. This 
+function will also accept date values. 
 ```javascript
 const result = needle
     .smaller('age', 40)

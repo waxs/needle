@@ -3,17 +3,6 @@
 ## Dates
 Besides numbers you might want to select all items `before()` or `after()` a certain time. This can be achieved using
  the date helpers that can be chained on Needle.
- 
-### Before or after
-Using the before or after method a selection of items can be retrieved from either before or after a specific date. 
-Both a `key` and `value` need to be passed to retrieve all items that match the given query. 
-```javascript
-const result = needle
-    .before('created', '10/1/2020')
-    .take();
-    
-console.log(result);
-```
 
 ### Period
 It's also possible to retrieve all items within a range of dates, this can be done in a similar way using the 
