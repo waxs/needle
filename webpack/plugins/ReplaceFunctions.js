@@ -21,6 +21,10 @@ const multiReplace = (string, array) => {
         const find = alias.name;
         const replaceFn = new RegExp(find, 'g');
         data = data.replace(replaceFn, alias.replace);
+
+        const findVar = 'name:"' + alias.name.substr(1) + '"';
+        const replaceVar = new RegExp(findVar, 'g');
+        data = data.replace(replaceVar, 'name:"' + alias.replace.substr(1) + '"');
     });
 
     return data;
@@ -47,7 +51,9 @@ class ReplaceFunctions {
     }
 
     apply(compiler) {
-        compiler.hooks.afterEmit.tap('ReplaceFunctions', () => ReplaceFunctions.execute(compiler));
+        compiler.hooks.afterEmit.tap('ReplaceFunctions', () => {
+            ReplaceFunctions.execute(compiler);
+        });
     }
 }
 

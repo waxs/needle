@@ -21,7 +21,9 @@ class InjectExportableClass {
     }
 
     apply(compiler) {
-        compiler.hooks.afterEmit.tap('InjectExportableClass', () => InjectExportableClass.execute(compiler));
+        compiler.hooks.afterEmit.tap('InjectExportableClass', () => {
+            InjectExportableClass.execute(compiler);
+        });
     }
 }
 
