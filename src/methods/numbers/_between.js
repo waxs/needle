@@ -3,6 +3,7 @@
  ---------------------------------------- */
 
 import evaluate from '@util/_evaluate';
+import isType from '@util/_isType';
 
 /** ----------------------------------------
     Between
@@ -21,9 +22,10 @@ import evaluate from '@util/_evaluate';
 
 function between(key, values, date = false) {
     this._hasTrail();
+    const isDate = isType(values[0]) === 'date';
 
     const filter = this._data.filter(item => {
-        return evaluate(item[key], '>=', values[0], date) && evaluate(item[key], '<=', values[1], date);
+        return evaluate(item[key], '>=', values[0], isDate || date) && evaluate(item[key], '<=', values[1], isDate || date);
     });
 
     return this._chain(filter);
