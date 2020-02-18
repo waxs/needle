@@ -30,6 +30,11 @@ const alias = [
     },
 
     {
+        name: '_namedDates',
+        replace: '_nD'
+    },
+
+    {
         name: '_resetTrail',
         replace: '_rT'
     },
