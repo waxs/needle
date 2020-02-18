@@ -2,7 +2,7 @@
 ![test](https://github.com/waxs/needle/workflows/test/badge.svg?branch=master)
 
 Needle is a fast, small, clean and flexible package for finding your needle in a haystack of data. Needle has some 
-simple helpers to quickly differentiate your data using chained methods while being only `~17.9KB` (and ~5,4KB gzipped)
+simple helpers to quickly differentiate your data using chained methods while being only `~17.5KB` (and ~5KB gzipped)
  in size.
 
 Imagine having to retrieve all items that are active, pretty easy right? These days use an array `.filter()` and you're 
@@ -66,7 +66,7 @@ manipulate an array of contents. Let's dive a little deeper into the options you
     * `negative()` retrieve all negative items from a given key within the data
     * `sum()` sum an amount of numbers from a given key in current data
     
-* **Dates** (5 methods) [Read documentation ⟶](https://github.com/waxs/needle/tree/master/docs/dates/README.md)
+* **Dates** (4 methods) [Read documentation ⟶](https://github.com/waxs/needle/tree/master/docs/dates/README.md)
     * `month()` take items from a given month
     * `year()` take items from a given year
     * `previous()` take last amount of items based named dates
