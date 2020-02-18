@@ -67,7 +67,6 @@ manipulate an array of contents. Let's dive a little deeper into the options you
     * `sum()` sum an amount of numbers from a given key in current data
     
 * **Dates** (5 methods) [Read documentation ⟶](https://github.com/waxs/needle/tree/master/docs/dates/README.md)
-    * `period()` take items from in between two dates
     * `month()` take items from a given month
     * `year()` take items from a given year
     * `previous()` take last amount of items based named dates

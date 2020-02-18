@@ -4,17 +4,6 @@
 Besides numbers you might want to select all items `before()` or `after()` a certain time. This can be achieved using
  the date helpers that can be chained on Needle.
 
-### Period
-It's also possible to retrieve all items within a range of dates, this can be done in a similar way using the 
-period method. It takes two parameters, a `key` and an `array` containing both ends of the range.
-```javascript
-const result = needle
-    .period('created', ['1/1/2020', '1/1/2021'])
-    .take();
-    
-console.log(result);
-```
-
 ### Month
 If you need to retrieve information about a certain month this can be done using the `month()` method. It will 
 retrieve all items within a given month. For example `month('created', 'sep', 2020)`. It uses a abbreviation of the 
