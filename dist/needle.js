@@ -1,5 +1,5 @@
 /*!
- * Needle (0.8.1) by Sander Hidding
+ * Needle (0.8.2) by Sander Hidding
  * Find your needle in a haystack. Needle is a small and fast query builder for sorting, manipulating and retrieving data.
  * This source code is licensed under the MIT license found in the GitHub repository (git+https://github.com/waxs/needle.git)
  */
