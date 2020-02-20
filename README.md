@@ -151,16 +151,15 @@ The example folder contains multiple simple queries and visualisations in tables
 real time. 
 
 ## Development
-So why should you use frontend filtering? 
-
-### Testing
-Needle methods can be tested using Jest, running the `npm run test` command will execute a number of test to make 
-sure basic functionality is working as expected. Test scripts can be found in the `test` folder.  
+So why should you use frontend filtering? Not every website calls for a frontend solution when it comes to filtering,
+ actually you'll find that when the data set is just to large backend is preferred. However, frontend filtering is 
+ fast and can add to the overall experience and performance of your website. Also it can be liberating not depending 
+ on an endpoint and having the freedom to add a smart user experience and some smooth transitions in the mix. 
 
 ### Working with a large data set
 We did a stress test on working with a large data set. We can never assume, at least not for now, that JS 
 will outperform the magic of SQL, and this is also not what we were aiming for. In this case Needle hold up pretty well 
-going through a massive mockup file containing over `250.000 lines` of data with over `5500 unique items`. This is 
+going through a massive mockup file containing over `5500 unique items`. This is 
 however no guarantee that your dataset will hold up. Overall performance will vary, some keys might hold extensive 
 strings or array's containing multiple strings. It's always wise to limit your dataset as much as possible to achieve
  a better performance. If you like to experience performance yourself generate some JSON online and pass it to Needle. 
@@ -172,6 +171,10 @@ strings or array's containing multiple strings. It's always wise to limit your d
 * Most API's have options to limit data, don't take it to far, have a talk with your backend engineer, or use 
      native functions to specify your needs first ;)
 
+### Testing
+Needle methods can be tested using Jest, running the `npm run test` command will execute a number of test to make 
+sure basic functionality is working as expected. Test scripts can be found in the `test` folder.  
+
 ### Roadmap
 - [x] Deconstruct responsibilities
 - [x] Refactor on constructor values
@@ -182,7 +185,6 @@ strings or array's containing multiple strings. It's always wise to limit your d
 - [x] Decouple methods in folders
 - [x] Finish store methods
 - [x] Split and reduce build
-- [ ] Set default parameters for keys
 - [ ] Refactor
 - [ ] 100% testing coverage
 
