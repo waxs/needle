@@ -1,0 +1,181 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Needle Demo 11: Vue x Bootstrap</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+</head>
+<body>
+
+<div id="app">
+    <example inline-template>
+        <div class="p-2" :class="loaded ? 'visible' : 'invisible'" style="visibility: hidden">
+
+            <!-- HOBBIES -->
+            <div class="container-fluid my-2">
+                <div class="row">
+
+                    <!-- HOBBIES -->
+                    <form class="col-lg-6 p-3 m-0 border">
+                        <h5 class="card-title">Selected hobbies ({{ selectedHobbies.length }}):</h5>
+                        <div v-for="hobby in hobbies" class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" :value="hobby" :id="hobby" v-model="selectedHobbies">
+                            <label class="form-check-label" :for="hobby">{{ hobby }}</label>
+                        </div>
+                    </form>
+
+                    <!-- NAMES -->
+                    <form class="col-lg-6 p-3 m-0 border">
+                        <h5 class="card-title">Excluded names ({{ selectedNames.length }}):</h5>
+                        <div v-for="name in names" class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" :value="name" :id="name" v-model="selectedNames">
+                            <label class="form-check-label" :for="name">{{ name }}</label>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <!-- AGE -->
+            <div class="container-fluid border my-2">
+                <div class="row">
+                    <form class="col-lg-12 p-3 m-0">
+                        <h5 class="card-title">Select age ({{ selectedAge }}):</h5>
+                        <input type="range" class="custom-range" :min="minAge" :max="maxAge" v-model="selectedAge" ref="range">
+                    </form>
+                </div>
+            </div>
+
+            <!-- SORT -->
+            <div class="container-fluid border my-2">
+                <div class="row">
+                    <form class="col-lg-5 p-3 m-0">
+                        <h5>Sort by ({{ selectedSort }}):</h5>
+                        <div class="form-group">
+                            <select class="form-control" v-model="selectedSort">
+                                <option v-for="sort in ['name', 'age', 'city']" :value="sort">{{ sort }}</option>
+                            </select>
+                        </div>
+                    </form>
+                    <form class="col-lg-5 p-3 m-0">
+                        <h5>Sort direction ({{ selectedDirection }}):</h5>
+                        <div class="form-group">
+                            <select class="form-control" v-model="selectedDirection">
+                                <option v-for="direction in ['asc', 'desc']" :value="direction">{{ direction }}</option>
+                            </select>
+                        </div>
+                    </form>
+                    <div class="col-lg-2 p-3">
+                        <h5>Reset results:</h5>
+                        <button type="button" class="btn btn-primary" @click="resetFilters">Reset</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- RESULTS -->
+            <div class="container-fluid border my-2">
+                <div class="row">
+
+                    <!-- TABLE -->
+                    <table class="table m-0">
+                        <thead>
+                            <tr>
+                                <th scope="col">#</th>
+                                <th scope="col"><div class="th-inner sortable both asc">Name</div></th>
+                                <th scope="col">Age</th>
+                                <th scope="col">City</th>
+                                <th scope="col">Hobbies</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr v-for="(result, index) in results">
+                                <th scope="row">{{ index }}</th>
+                                <td>{{ result.name }}</td>
+                                <td>{{ result.age }}</td>
+                                <td>{{ result.city }}</td>
+                                <td>{{ result.hobbies.join(', ') }}</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <!-- NO RESULTS -->
+                    <div v-if="!results.length" class="p-2">
+                        Sorry, no results found
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </example>
+</div>
+
+<!-- SCRIPTS -->
+<script src="./../mockup/extended.js"></script>
+<script src="./../dist/needle.pkg.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.10/vue.min.js"></script>
+
+<script>
+
+    const needle = new Needle(data);
+
+    Vue.component('example', {
+        data() {
+            return {
+                loaded: false,
+                selectedDirection: 'asc',
+                selectedSort: 'name',
+                selectedAge: 0,
+                selectedHobbies: [],
+                selectedNames: []
+            }
+        },
+        computed: {
+            hobbies: function() {
+                return needle.values('hobbies');
+            },
+            names: function() {
+                return needle.sort('name').values('name');
+            },
+            minAge: function() {
+                const min = needle.min('age').take(1);
+                return min[0].age;
+            },
+            maxAge: function() {
+                const max = needle.max('age').take(1);
+                return max[0].age;
+            },
+            results: function() {
+                return needle
+                    .andQuery(query => [
+                        query.where('hobbies', this.selectedHobbies),
+                        query.where('name', '!=', this.selectedNames),
+                        query.where('age', '<', this.selectedAge)
+                    ])
+                    .sort(this.selectedSort, this.selectedDirection)
+                    .take();
+            }
+        },
+        methods: {
+            resetFilters: function() {
+                this.selectedDirection = 'asc';
+                this.selectedSort = 'name';
+                this.selectedAge = this.maxAge;
+                this.selectedHobbies = [];
+                this.selectedNames = [];
+            }
+        },
+        mounted(){
+            this.selectedAge = this.maxAge;
+            this.loaded = true;
+        }
+    });
+
+    new Vue({
+        el: '#app'
+    });
+
+</script>
+</body>
+</html>
