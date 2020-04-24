@@ -17,7 +17,8 @@ needle
     .values('name');
 ```
 
-🚧 Package is under development in beta version. 
+Also read the article about Needle on [Medium](https://medium.com/@sander_vruchtvlees/making-frontend-filtering-expressive-618ef69fcbfa) and what it philosophy. 🚧 Package is 
+currently in beta.  
 
 ## Initiate Needle JS
 To use Needle we initiate the class as follows, the class expects an array of objects. 
