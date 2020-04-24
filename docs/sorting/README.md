@@ -15,7 +15,7 @@ If needed the same thing can be achieved running date values. Behind the scenes 
 Value must be a valid date.
 ```javascript
 const result = needle
-    .sortDate('created')
+    .sort('created')
     .take();
 
 console.log(result);
