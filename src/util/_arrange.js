@@ -22,6 +22,7 @@ import isType from '@util/_isType';
  */
 
 const arrange = (array, key, type) => {
+    if(!array.length) return array;
     const isDate = isType(array[0][key]) === 'date';
 
     const convert = (a, b) => {
