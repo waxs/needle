@@ -5,9 +5,10 @@
   "main": "dist/needle.pkg.js",
   "scripts": {
     "start": "webpack --env=dev --config webpack.config.js --progress --profile --colors --watch",
+    "base": "webpack --env=dev --config webpack.config.js --progress --profile --bail",
     "build": "webpack --env=prod --config webpack.config.js --progress --profile --bail",
     "package": "webpack --env=package --config webpack.config.js --progress --profile --bail",
-    "prod": "npm run build & npm run package",
+    "prod": "npm run base && npm run build & npm run package",
     "test": "jest"
   },
   "author": "Sander Hidding",
