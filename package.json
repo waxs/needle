@@ -1,6 +1,6 @@
 {
   "name": "@waxs/needle",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Find your needle in a haystack. Needle is a small and fast query builder for sorting, manipulating and retrieving data.",
   "main": "dist/needle.pkg.js",
   "scripts": {
@@ -36,7 +36,9 @@
     "modulePaths": [
       "<rootDir>"
     ],
-    "testMatch": ["**/test/**/*.test.js"],
+    "testMatch": [
+      "**/test/**/*.test.js"
+    ],
     "moduleNameMapper": {
       "^@build(.*)$": "<rootDir>/dist$1",
       "^@js(.*)$": "<rootDir>/src$1",
