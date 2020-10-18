@@ -1,8 +1,8 @@
 {
-  "name": "Needle",
-  "version": "0.8.2",
+  "name": "@waxs/needle",
+  "version": "1.0.0",
   "description": "Find your needle in a haystack. Needle is a small and fast query builder for sorting, manipulating and retrieving data.",
-  "main": "src/needle.js",
+  "main": "dist/needle.pkg.js",
   "scripts": {
     "start": "webpack --env=dev --config webpack.config.js --progress --profile --colors --watch",
     "build": "webpack --env=prod --config webpack.config.js --progress --profile --bail",
@@ -15,6 +15,9 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/waxs/needle"
+  },
+  "publishConfig": {
+    "access": "public"
   },
   "devDependencies": {
     "@babel/core": "^7.7.5",

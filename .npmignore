@@ -1,0 +1,16 @@
+.babelrc
+.editorconfig
+.eslintignore
+.eslintrc
+.git
+.gitignore
+.github
+.idea
+.jest
+.npmignore
+example
+node_modules
+src
+test
+webpack
+webpack.config.js
