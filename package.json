@@ -1,6 +1,6 @@
 {
   "name": "@waxs/needle",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "Find your needle in a haystack. Needle is a small and fast query builder for sorting, manipulating and retrieving data.",
   "main": "dist/needle.pkg.js",
   "scripts": {
