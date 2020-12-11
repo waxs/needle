@@ -27,8 +27,11 @@ function values(key) {
         data.forEach(item => {
             const obj = prev || item;
             const layer = deep(key, item);
-            item[key] && array.push(item[key]);
-            layer.length && finder(key, layer.map(key => item[key]), obj);
+
+            if(item[key]) {
+                array.push(item[key]);
+                layer.length && finder(key, layer.map(key => item[key]), obj);
+            }
         });
     };
 
