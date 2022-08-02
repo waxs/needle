@@ -17,16 +17,3 @@ jobs:
           node-version: 12
       - run: npm install
       - run: npm run test
-  bump:
-    name: bump version
-    needs: test
-    runs-on: ubuntu-latest
-    steps:
-      - uses: 'actions/checkout@v2'
-        with:
-          ref: ${{ github.ref }}
-      - uses: 'phips28/gh-action-bump-version@master'
-        with:
-          tag-prefix: ''
-        env:
-          GITHUB_TOKEN: ${{ secrets.github_token }}
