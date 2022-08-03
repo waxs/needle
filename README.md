@@ -17,8 +17,10 @@ needle
     .values('name');
 ```
 
-Also read the article about Needle on [Medium](https://medium.com/@sander_hidding/making-frontend-filtering-expressive-618ef69fcbfa) and it's philosophy. 🚧 Package is 
-currently in beta.  
+Also read the article about Needle on [Medium](https://medium.com/@sander_hidding/making-frontend-filtering-expressive-618ef69fcbfa) and it's philosophy. You can play around in a [sandbox online](https://codesandbox.io/s/1biljg). 🚧 Package is currently in beta.  
+
+## Download Needle JS
+Needle can be found in the NPM registry, install the module using `npm i @waxs/needle`, for yarn users use the following command in your terminal `yarn add @waxs/needle`.
 
 ## Initiate Needle JS
 To use Needle we initiate the class as follows, the class expects an array of objects. 
